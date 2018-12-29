@@ -1,0 +1,503 @@
+Begining the file parsing.
+Start tag: HTML
+Text: 
+    
+Start tag: HEAD
+Text: 
+	    
+Start tag: TITLE
+Text: Space Invaders
+Ending Label: TITLE
+Text: 
+	    
+Start tag: VERSION
+Text: 1.0.0
+Ending Label: VERSION
+Text: 
+	    
+Start tag: TYPE
+Text: FSM
+Ending Label: TYPE
+Text: 
+    
+Ending Label: HEAD
+Text: 
+    
+Start tag: BODY
+Text: 
+		
+Start tag: STATE_CONT
+Text: 5
+Ending Label: STATE_CONT
+Text: 
+		
+Start tag: STATE_INIT
+Text: 0
+Ending Label: STATE_INIT
+Text: 
+		
+Start tag: VEC_STATE
+Text: 
+			
+Start tag: STATE_NAME
+Text: DEFAULT
+Ending Label: STATE_NAME
+Text: 
+			
+Start tag: STATE_NAME
+Text: BORN
+Ending Label: STATE_NAME
+Text: 
+			
+Start tag: STATE_NAME
+Text: LIVING
+Ending Label: STATE_NAME
+Text: 
+			
+Start tag: STATE_NAME
+Text: DYING
+Ending Label: STATE_NAME
+Text: 
+			
+Start tag: STATE_NAME
+Text: DEAD
+Ending Label: STATE_NAME
+Text: 
+		
+Ending Label: VEC_STATE
+Text: 
+		
+Start tag: VEC_TRANSITION
+Text: 
+			
+Start tag: TRANSITION
+Text: 
+				
+Start tag: T_NAME
+Text: BORNING
+Ending Label: T_NAME
+Text: 
+				
+Start tag: T_ORIGIN
+Text: 0
+Ending Label: T_ORIGIN
+Text: 
+				
+Start tag: T_DESTINATION
+Text: 1
+Ending Label: T_DESTINATION
+Text: 
+			
+Ending Label: TRANSITION
+Text: 
+			
+Start tag: TRANSITION
+Text: 
+				
+Start tag: T_NAME
+Text: GETTING_ALIVE
+Ending Label: T_NAME
+Text: 
+				
+Start tag: T_ORIGIN
+Text: 1
+Ending Label: T_ORIGIN
+Text: 
+				
+Start tag: T_DESTINATION
+Text: 2
+Ending Label: T_DESTINATION
+Text: 
+			
+Ending Label: TRANSITION
+Text: 
+			
+Start tag: TRANSITION
+Text: 
+				
+Start tag: T_NAME
+Text: MOVING
+Ending Label: T_NAME
+Text: 
+				
+Start tag: T_ORIGIN
+Text: 2
+Ending Label: T_ORIGIN
+Text: 
+				
+Start tag: T_DESTINATION
+Text: 2
+Ending Label: T_DESTINATION
+Text: 
+			
+Ending Label: TRANSITION
+Text: 
+			
+Start tag: TRANSITION
+Text: 
+				
+Start tag: T_NAME
+Text: DISPLAYING
+Ending Label: T_NAME
+Text: 
+				
+Start tag: T_ORIGIN
+Text: 2
+Ending Label: T_ORIGIN
+Text: 
+				
+Start tag: T_DESTINATION
+Text: 2
+Ending Label: T_DESTINATION
+Text: 
+			
+Ending Label: TRANSITION
+Text: 
+			
+Start tag: TRANSITION
+Text: 
+				
+Start tag: T_NAME
+Text: HEALTHING
+Ending Label: T_NAME
+Text: 
+				
+Start tag: T_ORIGIN
+Text: 2
+Ending Label: T_ORIGIN
+Text: 
+				
+Start tag: T_DESTINATION
+Text: 2
+Ending Label: T_DESTINATION
+Text: 
+			
+Ending Label: TRANSITION
+Text: 
+			
+Start tag: TRANSITION
+Text: 
+				
+Start tag: T_NAME
+Text: BURST
+Ending Label: T_NAME
+Text: 
+				
+Start tag: T_ORIGIN
+Text: 2
+Ending Label: T_ORIGIN
+Text: 
+				
+Start tag: T_DESTINATION
+Text: 3
+Ending Label: T_DESTINATION
+Text: 
+			
+Ending Label: TRANSITION
+Text: 
+			
+Start tag: TRANSITION
+Text: 
+				
+Start tag: T_NAME
+Text: FINISHED
+Ending Label: T_NAME
+Text: 
+				
+Start tag: T_ORIGIN
+Text: 2
+Ending Label: T_ORIGIN
+Text: 
+				
+Start tag: T_DESTINATION
+Text: 4
+Ending Label: T_DESTINATION
+Text: 
+			
+Ending Label: TRANSITION
+Text: 
+			
+Start tag: TRANSITION
+Text: 
+				
+Start tag: T_NAME
+Text: DIE
+Ending Label: T_NAME
+Text: 
+				
+Start tag: T_ORIGIN
+Text: 3
+Ending Label: T_ORIGIN
+Text: 
+				
+Start tag: T_DESTINATION
+Text: 4
+Ending Label: T_DESTINATION
+Text: 
+			
+Ending Label: TRANSITION
+Text: 
+			
+Start tag: TRANSITION
+Text: 
+				
+Start tag: T_NAME
+Text: RESURRECTING
+Ending Label: T_NAME
+Text: 
+				
+Start tag: T_ORIGIN
+Text: 4
+Ending Label: T_ORIGIN
+Text: 
+				
+Start tag: T_DESTINATION
+Text: 0
+Ending Label: T_DESTINATION
+Text: 
+			
+Ending Label: TRANSITION
+Text: 
+		
+Ending Label: VEC_TRANSITION
+Text: 
+		
+Start tag: VEC_ACTION
+Text: 
+			
+Start tag: ON_EXIT
+Text: 
+				
+Start tag: EXIT_TYPE
+Text: 0
+Ending Label: EXIT_TYPE
+Text: 
+				
+Start tag: EXIT_NAME
+Text: Action: Unborn supplyship
+Ending Label: EXIT_NAME
+Text: 
+				
+Start tag: EXIT_FUNC
+Text: NULL
+Ending Label: EXIT_FUNC
+Text: 
+				
+Start tag: EXIT_ORIGIN
+Text: 0
+Ending Label: EXIT_ORIGIN
+Text: 
+			
+Ending Label: ON_EXIT
+Text: 
+			
+Start tag: ON_ENTRY
+Text: 
+				
+Start tag: ENTRY_TYPE
+Text: 0
+Ending Label: ENTRY_TYPE
+Text: 
+				
+Start tag: ENTRY_NAME
+Text: Action: Initializing supplyships
+Ending Label: ENTRY_NAME
+Text: 
+				
+Start tag: ENTRY_FUNC
+Text: NULL
+Ending Label: ENTRY_FUNC
+Text: 
+				
+Start tag: ENTRY_ORIGIN
+Text: 1
+Ending Label: ENTRY_ORIGIN
+Text: 
+			
+Ending Label: ON_ENTRY
+Text: 
+			
+Start tag: ON_EVENT
+Text: 
+				
+Start tag: EVENT_TYPE
+Text: 0
+Ending Label: EVENT_TYPE
+Text: 
+				
+Start tag: EVENT_NAME
+Text: Action: Moving-Shooting supplyships
+Ending Label: EVENT_NAME
+Text: 
+				
+Start tag: EVENT_FUNC
+Text: CSS_FSM_Move
+Ending Label: EVENT_FUNC
+Text: 
+				
+Start tag: EVENT_ORIGIN
+Text: 2
+Ending Label: EVENT_ORIGIN
+Text: 
+				
+Start tag: EVENT_TRANSITION
+Text: MOVING
+Ending Label: EVENT_TRANSITION
+Text: 
+			
+Ending Label: ON_EVENT
+Text: 
+			
+Start tag: ON_EVENT
+Text: 
+				
+Start tag: EVENT_TYPE
+Text: 0
+Ending Label: EVENT_TYPE
+Text: 
+				
+Start tag: EVENT_NAME
+Text: Action: Displaying supplyships
+Ending Label: EVENT_NAME
+Text: 
+				
+Start tag: EVENT_FUNC
+Text: CSS_display
+Ending Label: EVENT_FUNC
+Text: 
+				
+Start tag: EVENT_ORIGIN
+Text: 2
+Ending Label: EVENT_ORIGIN
+Text: 
+				
+Start tag: EVENT_TRANSITION
+Text: DISPLAYING
+Ending Label: EVENT_TRANSITION
+Text: 
+			
+Ending Label: ON_EVENT
+Text: 
+			
+Start tag: ON_EVENT
+Text: 
+				
+Start tag: EVENT_TYPE
+Text: 0
+Ending Label: EVENT_TYPE
+Text: 
+				
+Start tag: EVENT_NAME
+Text: Action: Healthing supplyships
+Ending Label: EVENT_NAME
+Text: 
+				
+Start tag: EVENT_FUNC
+Text: CSS_FSM_Healthing
+Ending Label: EVENT_FUNC
+Text: 
+				
+Start tag: EVENT_ORIGIN
+Text: 2
+Ending Label: EVENT_ORIGIN
+Text: 
+				
+Start tag: EVENT_TRANSITION
+Text: HEALTHING
+Ending Label: EVENT_TRANSITION
+Text: 
+			
+Ending Label: ON_EVENT
+Text: 
+			
+Start tag: ON_EVENT
+Text: 
+				
+Start tag: EVENT_TYPE
+Text: 0
+Ending Label: EVENT_TYPE
+Text: 
+				
+Start tag: EVENT_NAME
+Text: Action: Bursting
+Ending Label: EVENT_NAME
+Text: 
+				
+Start tag: EVENT_FUNC
+Text: NULL
+Ending Label: EVENT_FUNC
+Text: 
+				
+Start tag: EVENT_ORIGIN
+Text: 2
+Ending Label: EVENT_ORIGIN
+Text: 
+				
+Start tag: EVENT_TRANSITION
+Text: BURST
+Ending Label: EVENT_TRANSITION
+Text: 
+			
+Ending Label: ON_EVENT
+Text: 
+			
+Start tag: ON_ENTRY
+Text: 
+				
+Start tag: ENTRY_TYPE
+Text: 0
+Ending Label: ENTRY_TYPE
+Text: 
+				
+Start tag: ENTRY_NAME
+Text: Action: Dying supplyships
+Ending Label: ENTRY_NAME
+Text: 
+				
+Start tag: ENTRY_FUNC
+Text: CSS_FSM_Dye
+Ending Label: ENTRY_FUNC
+Text: 
+				
+Start tag: ENTRY_ORIGIN
+Text: 3
+Ending Label: ENTRY_ORIGIN
+Text: 
+			
+Ending Label: ON_ENTRY
+Text: 
+			
+Start tag: ON_ENTRY
+Text: 
+				
+Start tag: ENTRY_TYPE
+Text: 0
+Ending Label: ENTRY_TYPE
+Text: 
+				
+Start tag: ENTRY_NAME
+Text: Action: supplyship is definetely dead
+Ending Label: ENTRY_NAME
+Text: 
+				
+Start tag: ENTRY_FUNC
+Text: CSS_FSM_Death
+Ending Label: ENTRY_FUNC
+Text: 
+				
+Start tag: ENTRY_ORIGIN
+Text: 4
+Ending Label: ENTRY_ORIGIN
+Text: 
+			
+Ending Label: ON_ENTRY
+Text: 
+						
+		
+Ending Label: VEC_ACTION
+Text: 		
+    
+Ending Label: BODY
+Text: 
+
+Ending Label: HTML

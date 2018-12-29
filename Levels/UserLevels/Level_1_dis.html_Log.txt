@@ -1,0 +1,124 @@
+Begining the initialization file parsing.
+Start tag: HTML
+Texto: 
+    
+Start tag: HEAD
+Texto: 
+	    
+Start tag: TITLE
+Texto: Space Invaders
+Etiqueta fin: TITLE
+Texto: 
+	    
+Start tag: VERSION
+Texto: 1.0.0
+Etiqueta fin: VERSION
+Texto: 
+	    
+Start tag: TYPE
+Texto: Level
+Etiqueta fin: TYPE
+Texto: 
+	    
+Start tag: LEVEL
+Texto: 1
+Etiqueta fin: LEVEL
+Texto:  
+    
+Etiqueta fin: HEAD
+Texto: 
+    
+Start tag: BODY
+Texto: 
+        
+Start tag: CHARACTER
+Texto: 
+            
+Start tag: NAME
+Texto: GAME
+Etiqueta fin: NAME
+Texto: 
+            
+Start tag: RENDERMODE
+Texto: 3D
+Etiqueta fin: RENDERMODE
+Texto: 
+            
+Start tag: SIMULATIONMODE
+Texto: DISCRETE
+Etiqueta fin: SIMULATIONMODE
+Texto:      
+Texto: 
+            
+Start tag: BOUNCE
+Texto: 0
+Etiqueta fin: BOUNCE
+Texto:                               
+Texto: 
+            
+Start tag: TIMERENDER
+Texto: 16.67
+Etiqueta fin: TIMERENDER
+Texto:                   
+Texto: 
+            
+Start tag: TIMEUPDATE
+Texto: 16.67
+Etiqueta fin: TIMEUPDATE
+Texto:                   
+Texto: 	
+        
+Etiqueta fin: CHARACTER
+Texto: 
+
+        
+Start tag: CHARACTER
+Texto: 
+            
+Start tag: NAME
+Texto: PLAYER
+Etiqueta fin: NAME
+Texto: 
+            
+Start tag: HEALTH
+Texto: 20
+Etiqueta fin: HEALTH
+Texto: 
+            
+Start tag: EXPLOSION
+Texto: 500
+Etiqueta fin: EXPLOSION
+Texto: 
+            
+Start tag: LIVES
+Texto: 3
+Etiqueta fin: LIVES
+Texto: 
+            
+Start tag: MESH
+Texto: player.3ds
+Etiqueta fin: MESH
+Parser error: MESH clossing tag without correspondent opening tag in a BODY segment.
+Texto: 
+        
+Etiqueta fin: CHARACTER
+Texto: 
+
+        
+Start tag: CHARACTER
+Texto: 
+            
+Start tag: NAME
+Texto: SUPPLYSHIP
+Etiqueta fin: NAME
+Texto: 
+        
+Etiqueta fin: CHARACTER
+Texto: 
+
+        
+Start tag: CHARACTER
+Texto: 
+            
+Start tag: NAME
+Texto: CIRCLESHIP

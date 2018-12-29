@@ -1,0 +1,627 @@
+﻿<HTML> 
+<HEAD> 
+<TITLE> Space Invaders </TITLE> 
+<VERSION> 1.0.0 </VERSION> 
+<TYPE> Language </TYPE> 
+<LANGUAGE>CA</LANGUAGE> 
+</HEAD> 
+
+<BODY> 
+<RESOURCE> 
+<ID>1</ID> 
+<CONTENT> Error d'Internet </CONTENT> 
+</RESOURCE> 
+<RESOURCE> 
+<ID>2</ID> 
+<CONTENT> Informació: connexió a Internet no es poden utilitzar. </CONTENT> 
+</RESOURCE> 
+<RESOURCE> 
+<ID>3</ID> 
+<CONTENT> Advertència </CONTENT> 
+</RESOURCE> 
+
+<RESOURCE> 
+<ID>11</ID> 
+<CONTENT> Feu 1 clic a = </CONTENT> 
+</RESOURCE> 
+<RESOURCE> 
+<ID>12</ID> 
+<CONTENT> Tiempo.ms premeu tecla </CONTENT> 
+</RESOURCE> 
+<RESOURCE> 
+<ID>13</ID> 
+<CONTENT> No s'ha pogut crear el control d'edició </CONTENT> 
+</RESOURCE> 
+<RESOURCE> 
+<ID>14</ID> 
+<CONTENT> Error </CONTENT> 
+</RESOURCE> 
+
+<RESOURCE> 
+<ID>21</ID> 
+<CONTENT> Crea diferents mides de textures per a millor qualitat visual. \ R Necessitats uns megabytes més de memòria. </CONTENT> 
+</RESOURCE> 
+<RESOURCE> 
+<ID>22</ID> 
+<CONTENT> MIPMAP TEXTURES </CONTENT> 
+</RESOURCE> 
+<RESOURCE> 
+<ID>23</ID> 
+<CONTENT> Ajustar la velocitat de fotogrames a freqüència de trama per suavitzen els moviments. \ R FPS està limitada per la freqüència. \ R \ r <v> clau per intercanviar ON / OFF durant joc. </CONTENT> 
+</RESOURCE> 
+<RESOURCE> 
+<ID>24</ID> 
+<CONTENT> SINCRONITZACIÓ VERTICAL </CONTENT> 
+</RESOURCE> 
+<RESOURCE> 
+<ID>25</ID> 
+<CONTENT> Habilita flux de música d'Internet música. \ R Trieu a partir de: \ r - Cable / DSL (128 K) \ r - (dual) de ISDN (XDSI) (56 K) \ r - Configurar l'accés telefònic (de 24 k) \ r - Personalitzada (introduir una URL.) </CONTENT> 
+</RESOURCE> 
+<RESOURCE> 
+<ID>26</ID> 
+<CONTENT> MUSICA EN STREAMING </CONTENT> 
+</RESOURCE> 
+<RESOURCE> 
+<ID>27</ID> 
+<CONTENT> Ajusta l'orientació d'objectes 2D (com partícules), de manera que s'enfronten la càmera per millor representació (només en la manera 3D). \ R Cal més CPU. </CONTENT> 
+</RESOURCE> 
+<RESOURCE> 
+<ID>28</ID> 
+<CONTENT> Billboarding </CONTENT> 
+</RESOURCE> 
+<RESOURCE> 
+<ID>29</ID> 
+<CONTENT> Habilita el suavitzat, principalment per objectes 3D per a la millor qualitat visual. \ R Necessita un compatible targeta gràfica i molt més CPU / targetes gràfiques de RAM. \ R \ r <a> clau per intercanviar ON / OFF durant joc. </CONTENT> 
+</RESOURCE> 
+<RESOURCE> 
+<ID>30</ID> 
+<CONTENT> Anti-aliasing </CONTENT> 
+</RESOURCE> 
+<RESOURCE> 
+<ID>31</ID> 
+<CONTENT> La qualitat i velocitat depèn de manera significativa al controlador de la targeta gràfica. \ R \ r x2 (2 mostres, 2 aixetes) més ràpid manera. \ R x2 (Qx) (2,5) ~ velocitat d'anterior , la qualitat de la propera. \ r x4 (4,4) poc més que anteriors però més lenta. \ r x4S (4,9) més que anteriors però més lent. </CONTENT> 
+</RESOURCE> 
+<RESOURCE> 
+<ID>32</ID> 
+<CONTENT> Anti-aliasing MODE </CONTENT> 
+</RESOURCE> 
+<RESOURCE> 
+<ID>33</ID> 
+<CONTENT> Sio: TrackMouseEvent Error </CONTENT> 
+</RESOURCE> 
+<RESOURCE> 
+<ID>34</ID> 
+<CONTENT> Pogut crear OpenGL Finestra </CONTENT> 
+</RESOURCE> 
+<RESOURCE> 
+<ID>35</ID> 
+<CONTENT> Marcar </CONTENT> 
+</RESOURCE> 
+<RESOURCE> 
+<ID>36</ID> 
+<CONTENT> Personalitzada </CONTENT> 
+</RESOURCE> 
+<RESOURCE> 
+<ID>37</ID> 
+<CONTENT> So Error d'inicialització de </CONTENT> 
+</RESOURCE> 
+
+<RESOURCE> 
+<ID>51</ID> 
+<CONTENT> InitCommonControlEx () ha fallat. </CONTENT> 
+</RESOURCE> 
+<RESOURCE> 
+<ID>52</ID> 
+<CONTENT> Error en registrar la classe Window. </CONTENT> 
+</RESOURCE> 
+<RESOURCE> 
+<ID>53</ID> 
+<CONTENT> Error </CONTENT> 
+</RESOURCE> 
+<RESOURCE> 
+<ID>54</ID> 
+<CONTENT> [Inici] </CONTENT> 
+</RESOURCE> 
+<RESOURCE> 
+<ID>55</ID> 
+<CONTENT> Error </CONTENT> 
+</RESOURCE> 
+
+<RESOURCE> 
+<ID>101</ID> 
+<CONTENT> URL de Transmissió està buit </CONTENT> 
+</RESOURCE> 
+<RESOURCE> 
+<ID>102</ID> 
+<CONTENT> Transmissió: NumberOfEntries no trobat a l'arxiu pls </CONTENT> 
+</RESOURCE> 
+<RESOURCE> 
+<ID>103</ID> 
+<CONTENT> Transmissió: valor numèric per NumberOfEntries no trobada </CONTENT> 
+</RESOURCE> 
+<RESOURCE> 
+<ID>104</ID> 
+<CONTENT> De transmissió per seqüències: no es pot assignar memòria per pls arxiu (llista de reproducció) </CONTENT> 
+</RESOURCE> 
+<RESOURCE> 
+<ID>105</ID> 
+<CONTENT> De transmissió per seqüències: no es pot assignar memòria per pls arxiu (playlist-> nom) </CONTENT> 
+</RESOURCE> 
+<RESOURCE> 
+<ID>106</ID> 
+<CONTENT> De transmissió per seqüències: no es pot assignar memòria per pls arxiu (playlist-> displayname) </CONTENT> 
+</RESOURCE> 
+
+<RESOURCE> 
+<ID>111</ID> 
+<CONTENT> Mostra </CONTENT> 
+</RESOURCE> 
+<RESOURCE> 
+<ID>112</ID> 
+<CONTENT> Pantalla completa ràpida (mode actiu) </CONTENT> 
+</RESOURCE> 
+<RESOURCE> 
+<ID>113</ID> 
+<CONTENT> Pantalla completa </ ​​CONTENT> 
+</RESOURCE> 
+<RESOURCE> 
+<ID>114</ID> 
+<CONTENT> Finestra </CONTENT> 
+</RESOURCE> 
+<RESOURCE> 
+<ID>115</ID> 
+<CONTENT> Misc. </CONTENT> 
+</RESOURCE> 
+<RESOURCE> 
+<ID>116</ID> 
+<CONTENT> VSync </CONTENT> 
+</RESOURCE> 
+<RESOURCE> 
+<ID>117</ID> 
+<CONTENT> Tranmisión / CONTENT> 
+</RESOURCE> 
+<RESOURCE> 
+<ID>118</ID> 
+<CONTENT> Qualitat </CONTENT> 
+</RESOURCE> 
+<RESOURCE> 
+<ID>119</ID> 
+<CONTENT> Antialias </CONTENT> 
+</RESOURCE> 
+<RESOURCE> 
+<ID>121</ID> 
+<CONTENT> Mipmap de les textures </CONTENT> 
+</RESOURCE> 
+<RESOURCE> 
+<ID>122</ID> 
+<CONTENT> Començar joc </CONTENT> 
+</RESOURCE> 
+<RESOURCE> 
+<ID>123</ID> 
+<CONTENT> Marcat </CONTENT> 
+</RESOURCE> 
+<RESOURCE> 
+<ID>124</ID> 
+<CONTENT> Personalitzat </CONTENT> 
+</RESOURCE> 
+
+<RESOURCE> 
+<ID>151</ID> 
+<CONTENT> Pàgina Web </CONTENT> 
+</RESOURCE> 
+<RESOURCE> 
+<ID>152</ID> 
+<CONTENT> Fòrum </CONTENT> 
+</RESOURCE> 
+<RESOURCE> 
+<ID>153</ID> 
+<CONTENT> Wikik pantalla teclat virtual </CONTENT> 
+</RESOURCE> 
+<RESOURCE> 
+<ID>154</ID> 
+<CONTENT> Tancar finestra </CONTENT> 
+</RESOURCE> 
+<RESOURCE> 
+<ID>155</ID> 
+<CONTENT> Personalitzada amb la direcció URL </CONTENT> 
+</RESOURCE> 
+<RESOURCE> 
+<ID>156</ID> 
+<CONTENT> Insereix adreça URL de la llista de reproducció Shoutcast (*. Pls), </CONTENT> 
+</RESOURCE> 
+<RESOURCE> 
+<ID>157</ID> 
+<CONTENT> O MP3. Comproveu </CONTENT> 
+</RESOURCE> 
+
+<RESOURCE> 
+<ID>201</ID> 
+<CONTENT> Carregant nivell: </CONTENT> 
+</RESOURCE> 
+<RESOURCE>
+ <ID>202</ID>
+ <CONTENT> Cargar Nivel:</CONTENT>
+</RESOURCE>
+
+<RESOURCE> 
+<ID>211</ID> 
+<CONTENT> Carregant nivell guardat </CONTENT> 
+</RESOURCE> 
+
+<RESOURCE> 
+<ID>221</ID> 
+<CONTENT> Data </ ​​CONTENT> 
+</RESOURCE> 
+<RESOURCE> 
+<ID>222</ID> 
+<CONTENT> Carregant Sons ... </CONTENT> 
+</RESOURCE> 
+<RESOURCE> 
+<ID>223</ID> 
+<CONTENT> Lectura d'arxiu d'inicialització ... </CONTENT> 
+</RESOURCE> 
+<RESOURCE> 
+<ID>224</ID> 
+<CONTENT> Un joc desat s'ha detectat. Voleu carregar aquest? </CONTENT> 
+</RESOURCE> 
+<RESOURCE> 
+<ID>225</ID> 
+<CONTENT> Càrrega joc </CONTENT> 
+</RESOURCE> 
+<RESOURCE> 
+<ID>226</ID> 
+<CONTENT> Lectura joc guardat ... </CONTENT> 
+</RESOURCE> 
+<RESOURCE> 
+<ID>227</ID> 
+<CONTENT> Lectura primer nivell del joc ... </CONTENT> 
+</RESOURCE> 
+<RESOURCE> 
+<ID>228</ID> 
+<CONTENT> Generant nau per defecte ... </CONTENT> 
+</RESOURCE> 
+<RESOURCE> 
+<ID>229</ID> 
+<CONTENT> Trets ... </CONTENT> 
+</RESOURCE> 
+<RESOURCE> 
+<ID>230</ID> 
+<CONTENT> Variables d'entorn ... </CONTENT> 
+</RESOURCE> 
+<RESOURCE> 
+<ID>231</ID> 
+<CONTENT> Error en la inicialització del so </CONTENT> 
+</RESOURCE> 
+
+<RESOURCE> 
+<ID>241</ID> 
+<CONTENT> Carregant textures ... </CONTENT> 
+</RESOURCE> 
+<RESOURCE> 
+<ID>242</ID> 
+<CONTENT> Carregant Malles ... </CONTENT> 
+</RESOURCE> 
+<RESOURCE> 
+<ID>243</ID> 
+<CONTENT> Excepció: S'ha produït un problema durant la càrrega dels objectes 3D. </CONTENT> 
+</RESOURCE> 
+<RESOURCE> 
+<ID>244</ID> 
+<CONTENT> Espai Invaders OpenGL [End càrrega] </CONTENT> 
+</RESOURCE> 
+
+<RESOURCE> 
+<ID>301</ID> 
+<CONTENT> Carregant nivell: </CONTENT> 
+</RESOURCE> 
+<RESOURCE> 
+<ID>302</ID> 
+<CONTENT> Error </CONTENT> 
+</RESOURCE> 
+<RESOURCE> 
+<ID>303</ID> 
+<CONTENT> Entrant manera immortal. </CONTENT> 
+</RESOURCE> 
+<RESOURCE> 
+<ID>304</ID> 
+<CONTENT> Entrant manera mortal. </CONTENT> 
+</RESOURCE> 
+<RESOURCE> 
+<ID>305</ID> 
+<CONTENT> Poso alguns arxius mp3 en el directori del joc. </CONTENT> 
+</RESOURCE> 
+<RESOURCE> 
+<ID>306</ID> 
+<CONTENT> Trieu l'opció de suavitzat d'inici. </CONTENT> 
+</RESOURCE> 
+<RESOURCE> 
+<ID>307</ID> 
+<CONTENT> El suavitzat no s'utilitza en Línia 3D manera. </CONTENT> 
+</RESOURCE> 
+<RESOURCE> 
+<ID>308</ID> 
+<CONTENT> Suavitzat: ON </CONTENT> 
+</RESOURCE> 
+<RESOURCE> 
+<ID>309</ID> 
+<CONTENT> Suavitzat: OFF </CONTENT> 
+</RESOURCE> 
+<RESOURCE> 
+<ID>310</ID> 
+<CONTENT> Ho sentim, SwapIntervalExt () no està disponible. </CONTENT> 
+</RESOURCE> 
+<RESOURCE> 
+<ID>311</ID> 
+<CONTENT> Sincronització vertical: ON </CONTENT> 
+</RESOURCE> 
+<RESOURCE> 
+<ID>312</ID> 
+<CONTENT> Sincronització vertical: OFF </CONTENT> 
+</RESOURCE> 
+
+<RESOURCE> 
+<ID>321</ID> 
+<CONTENT> So </CONTENT> 
+</RESOURCE> 
+<RESOURCE> 
+<ID>322</ID> 
+<CONTENT> Àudio </CONTENT> 
+</RESOURCE> 
+<RESOURCE> 
+<ID>323</ID> 
+<CONTENT> Hora </CONTENT> 
+</RESOURCE> 
+<RESOURCE> 
+<ID>324</ID> 
+<CONTENT> Angle </CONTENT> 
+</RESOURCE> 
+<RESOURCE> 
+<ID>325</ID> 
+<CONTENT> Camara.zoom </CONTENT> 
+</RESOURCE> 
+<RESOURCE> 
+<ID>326</ID> 
+<CONTENT> Sortir ESC </CONTENT> 
+</RESOURCE> 
+<RESOURCE> 
+<ID>327</ID> 
+<CONTENT> Rotació del MOUSE </CONTENT> 
+</RESOURCE> 
+<RESOURCE> 
+<ID>328</ID> 
+<CONTENT> M \ r música (en) </CONTENT> 
+</RESOURCE> 
+<RESOURCE> 
+<ID>329</ID> 
+<CONTENT> M \ r música (desactivat) </CONTENT> 
+</RESOURCE> 
+<RESOURCE> 
+<ID>330</ID> 
+<CONTENT> B \ r Fons </CONTENT> 
+</RESOURCE> 
+<RESOURCE> 
+<ID>331</ID> 
+<CONTENT> R \ r Reemplaçar lleva </CONTENT> 
+</RESOURCE> 
+<RESOURCE> 
+<ID>332</ID> 
+<CONTENT> T \ r Amaga el text </CONTENT> 
+</RESOURCE> 
+<RESOURCE> 
+<ID>333</ID> 
+<CONTENT> + / - Zoom </CONTENT> 
+</RESOURCE> 
+<RESOURCE> 
+<ID>334</ID> 
+<CONTENT> Alçada </CONTENT> 
+</RESOURCE> 
+<RESOURCE> 
+<ID>335</ID> 
+<CONTENT> Ample </CONTENT> 
+</RESOURCE> 
+<RESOURCE> 
+<ID>336</ID> 
+<CONTENT> Premeu espai per canviar música  </CONTENT> 
+</RESOURCE> 
+
+<RESOURCE> 
+<ID>351</ID> 
+<CONTENT> ENTRAT NIVELL </CONTENT> 
+</RESOURCE> 
+<RESOURCE> 
+<ID>352</ID> 
+<CONTENT> VOSTÈ GUANYA! </CONTENT> 
+</RESOURCE> 
+<RESOURCE> 
+<ID>353</ID> 
+<CONTENT> FI DEL JOC! </CONTENT> 
+</RESOURCE> 
+<RESOURCE> 
+<ID>354</ID> 
+<CONTENT> VOSTÈ PERD! </CONTENT> 
+</RESOURCE> 
+
+<RESOURCE> 
+<ID>361</ID> 
+<CONTENT> Error en el chgt de zik </CONTENT> 
+</RESOURCE> 
+
+<RESOURCE> 
+<ID>401</ID> 
+<CONTENT> Tipus de caràcter (</CONTENT> 
+</RESOURCE> 
+<RESOURCE> 
+<ID>402</ID> 
+<CONTENT>) No compatible. </CONTENT> 
+</RESOURCE> 
+
+<RESOURCE> 
+<ID>411</ID> 
+<CONTENT> Inici interpretació de l'arxiu d'inicialització. </CONTENT> 
+</RESOURCE> 
+
+<RESOURCE> 
+<ID>461</ID> 
+<CONTENT> Text: </CONTENT> 
+</RESOURCE> 
+<RESOURCE> 
+<ID>462</ID> 
+<CONTENT> Capacitat màxima de vida indicat (</CONTENT> 
+</RESOURCE> 
+<RESOURCE> 
+<ID>463</ID> 
+<CONTENT>) És menor que el mínim permès pel programa (1). Valor truncat al mínim. </CONTENT> 
+</RESOURCE> 
+<RESOURCE> 
+<ID>464</ID> 
+<CONTENT> Capacitat màxima de vida indicat (</CONTENT> 
+</RESOURCE> 
+<RESOURCE> 
+<ID>465</ID> 
+<CONTENT>) És més gran que l'import màxim permès pel programa (1). Truncat que el valor màxim. </CONTENT> 
+</RESOURCE> 
+<RESOURCE> 
+<ID>466</ID> 
+<CONTENT> El fitxer no correspon un aquest videojoc. </CONTENT> 
+</RESOURCE> 
+<RESOURCE> 
+<ID>467</ID> 
+<CONTENT> El fitxer és de tipus \ "</CONTENT> 
+</RESOURCE> 
+<RESOURCE> 
+<ID>468</ID> 
+<CONTENT> \ ". Cal un fitxer de tipus \" inicialització \ ". </CONTENT> 
+</RESOURCE> 
+<RESOURCE> 
+<ID>469</ID> 
+<CONTENT> Versió de l'arxiu és v </CONTENT> 
+</RESOURCE> 
+<RESOURCE> 
+<ID>470</ID> 
+<CONTENT>, Que no es correspon amb aquesta versió v </CONTENT> 
+</RESOURCE> 
+
+<RESOURCE> 
+<ID>481</ID> 
+<CONTENT> Comentaris: </CONTENT> 
+</RESOURCE> 
+
+<RESOURCE> 
+<ID>491</ID> 
+<CONTENT> Interpretació del fitxer finalitzat. </CONTENT> 
+</RESOURCE>
+
+<RESOURCE>
+<ID>601</ID>
+<CONTENT>Cargant Textures...</CONTENT>
+</RESOURCE>
+<RESOURCE>
+<ID>602</ID>
+<CONTENT>Cargant Textures...(100%)\n</CONTENT>
+</RESOURCE>
+
+<RESOURCE>
+<ID>651</ID>
+<CONTENT>Error carregant PNG</CONTENT>
+</RESOURCE>
+
+
+<RESOURCE>
+ <ID>701</ID>
+ <CONTENT>Tipus de caracter (</CONTENT>
+</RESOURCE>
+<RESOURCE>
+ <ID>702</ID>
+ <CONTENT>) no compatible.</CONTENT>
+</RESOURCE>
+
+<RESOURCE>
+ <ID>711</ID>
+ <CONTENT>Etiqueta </CONTENT>
+</RESOURCE>
+<RESOURCE>
+ <ID>712</ID>
+ <CONTENT> no permitida en </CONTENT>
+</RESOURCE>
+<RESOURCE>
+ <ID>713</ID>
+ <CONTENT> grup.</CONTENT>
+</RESOURCE>
+
+<RESOURCE>
+ <ID>721</ID>
+ <CONTENT>Inici del parseat del fichero de initcilizatió.\n</CONTENT>
+</RESOURCE>
+
+
+<RESOURCE>
+ <ID>731</ID>
+ <CONTENT>Etiqueta de inicio: </CONTENT>
+</RESOURCE>
+<RESOURCE>
+ <ID>732</ID>
+ <CONTENT>Primera etiqueta no es una etiqueta HTML.</CONTENT>
+</RESOURCE>
+<RESOURCE>
+ <ID>733</ID>
+ <CONTENT>Etiqueta no permitida en el grup BODY.</CONTENT>
+</RESOURCE>
+<RESOURCE>
+ <ID>734</ID>
+ <CONTENT>Etiqueta no permitida en el grup RESOURCE.</CONTENT>
+</RESOURCE>
+<RESOURCE>
+ <ID>735</ID>
+ <CONTENT>Etiqueta no permitida en el grup HEAD.</CONTENT>
+</RESOURCE>
+
+
+<RESOURCE>
+ <ID>773</ID>
+ <CONTENT>El tipus de arxiu es \"</CONTENT>
+</RESOURCE>
+<RESOURCE>
+ <ID>774</ID>
+ <CONTENT>\". Es requerit el tipus de arxiu \"LANGUAGE\".</CONTENT>
+</RESOURCE>
+
+<RESOURCE>
+  <ID> 800 </ID>
+  <CONTENT> Eixir del joc. </CONTENT>
+</RESOURCE>
+<RESOURCE>
+  <ID> 801 </ID>
+  <CONTENT> Space Invaders </CONTENT>
+</RESOURCE>
+<RESOURCE>
+  <ID> 802 </ID>
+  <CONTENT> Ajuda </CONTENT>
+</RESOURCE>
+<RESOURCE>
+  <ID> 803 </ID>
+  <CONTENT> Sobre... </CONTENT>
+</RESOURCE>
+
+<!-- Codification ISO of the language names -->
+<RESOURCE>
+  <ID> 1000 </ID>
+  <CONTENT> Mostrar idiomes </CONTENT>
+</ RESOURCE>
+<RESOURCE>
+  <ID> 1001 </ID>
+  <CONTENT> Anglès </CONTENT>
+</ RESOURCE>
+<RESOURCE>
+  <ID> 1002 </ID>
+  <CONTENT> Espanyol </CONTENT>
+</ RESOURCE>
+<RESOURCE>
+  <ID> 1003 </ID>
+  <CONTENT> Catalan </CONTENT>
+</ RESOURCE>
+<RESOURCE>
+  <ID> 1004 </ID>
+  <CONTENT> Francés </CONTENT>
+</ RESOURCE>
+</BODY>
+</ HTML>

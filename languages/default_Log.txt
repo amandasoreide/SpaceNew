@@ -1,0 +1,2537 @@
+Begining the file parsing.
+Start tag: HTML
+Text: 
+
+Start tag: HEAD
+Text: 
+
+Start tag: TITLE
+Text: Space Invaders
+End tag: TITLE
+Text: 
+
+Start tag: VERSION
+Text: 1.0.0
+End tag: VERSION
+Text: 
+
+Start tag: TYPE
+Text: Language
+End tag: TYPE
+Text: 
+
+Start tag: LANGUAGE
+Text: FR
+End tag: LANGUAGE
+Text: 
+
+End tag: HEAD
+Text: 
+
+
+Start tag: BODY
+Text: 
+
+Start tag: RESOURCE
+Text: 
+
+Start tag: ID
+Text: 1
+End tag: ID
+Text: 
+
+Start tag: CONTENT
+Text: Erreur Internet
+End tag: CONTENT
+Text: 
+
+End tag: RESOURCE
+Text: 
+
+Start tag: RESOURCE
+Text: 
+
+Start tag: ID
+Text: 2
+End tag: ID
+Text: 
+
+Start tag: CONTENT
+Text: Information: connexion Internet ne peut pas étre utilisé
+End tag: CONTENT
+Text: .
+
+End tag: RESOURCE
+Text: 
+
+Start tag: RESOURCE
+Text: 
+
+Start tag: ID
+Text: 3
+End tag: ID
+Text: 
+
+Start tag: CONTENT
+Text: Attention
+End tag: CONTENT
+Text: 
+
+End tag: RESOURCE
+Text: 
+
+
+Start tag: RESOURCE
+Text: 
+
+Start tag: ID
+Text: 11
+End tag: ID
+Text: 
+
+Start tag: CONTENT
+Text: clic droit = ??1
+End tag: CONTENT
+Text: 
+
+End tag: RESOURCE
+Text: 
+
+Start tag: RESOURCE
+Text: 
+
+Start tag: ID
+Text: 12
+End tag: ID
+Text: 
+
+Start tag: CONTENT
+Text: Tiempo.ms maintenez la touche
+End tag: CONTENT
+Text: 
+
+End tag: RESOURCE
+Text: 
+
+Start tag: RESOURCE
+Text: 
+
+Start tag: ID
+Text: 13
+End tag: ID
+Text: 
+
+Start tag: CONTENT
+Text: Impossible de créer le contréle d'édition!
+End tag: CONTENT
+Text: 
+
+End tag: RESOURCE
+Text: 
+
+Start tag: RESOURCE
+Text: 
+
+Start tag: ID
+Text: 14
+End tag: ID
+Text: 
+
+Start tag: CONTENT
+Text: Erreur
+End tag: CONTENT
+Text: 
+
+End tag: RESOURCE
+Text: 
+
+
+Start tag: RESOURCE
+Text: 
+
+Start tag: ID
+Text: 21
+End tag: ID
+Text: 
+
+Start tag: CONTENT
+Text: Créer différentes tailles de textures pour une meilleure qualité visuelle. \ R besoin de plus de mégaoctets de mémoire.
+End tag: CONTENT
+Text: 
+
+End tag: RESOURCE
+Text: 
+
+Start tag: RESOURCE
+Text: 
+
+Start tag: ID
+Text: 22
+End tag: ID
+Text: 
+
+Start tag: CONTENT
+Text: Mipmap TEXTURES
+End tag: CONTENT
+Text: 
+
+End tag: RESOURCE
+Text: 
+
+Start tag: RESOURCE
+Text: 
+
+Start tag: ID
+Text: 23
+End tag: ID
+Text: 
+
+Start tag: CONTENT
+Text: Régle le taux de trame pour lisses mouvements des taux de trame. \ R FPS est limitée par la fréquence. \ R \ r
+Start tag: V
+Text: pour échanger ON / OFF pendant la lecture.
+End tag: CONTENT
+Text: 
+
+End tag: RESOURCE
+Text: 
+
+Start tag: RESOURCE
+Text: 
+
+Start tag: ID
+Text: 24
+End tag: ID
+Text: 
+
+Start tag: CONTENT
+Text: Vertical Sync
+End tag: CONTENT
+Text: 
+
+End tag: RESOURCE
+Text: 
+
+Start tag: RESOURCE
+Text: 
+
+Start tag: ID
+Text: 25
+End tag: ID
+Text: 
+
+Start tag: CONTENT
+Text: Permet musique sur Internet de la musique de flux \ r Choisissez parmi :. \ R - Cable / DSL (128K) \ r - (double) ISDN (RNIS) (56 K) \ r - Réglez la molette (24 k) \ r - mesure (entrer une URL.)
+End tag: CONTENT
+Text: 
+
+End tag: RESOURCE
+Text: 
+
+Start tag: RESOURCE
+Text: 
+
+Start tag: ID
+Text: 26
+End tag: ID
+Text: 
+
+Start tag: CONTENT
+Text: musique en streaming
+End tag: CONTENT
+Text: 
+
+End tag: RESOURCE
+Text: 
+
+Start tag: RESOURCE
+Text: 
+
+Start tag: ID
+Text: 27
+End tag: ID
+Text: 
+
+Start tag: CONTENT
+Text: Définit l'orientation des objets 2D (telles que des particules), de sorte que la caméra pour une meilleure représentation (mode 3D uniquement) visage. \ R CPU est nécessaire.
+End tag: CONTENT
+Text: 
+
+End tag: RESOURCE
+Text: 
+
+Start tag: RESOURCE
+Text: 
+
+Start tag: ID
+Text: 28
+End tag: ID
+Text: 
+
+Start tag: CONTENT
+Text: billboarding
+End tag: CONTENT
+Text: 
+
+End tag: RESOURCE
+Text: 
+
+Start tag: RESOURCE
+Text: 
+
+Start tag: ID
+Text: 29
+End tag: ID
+Text: 
+
+Start tag: CONTENT
+Text: Permet de lissage, principalement pour des objets 3D pour une meilleure qualité visuelle. \ R nécessite une carte graphique compatible et plus de cartes graphiques CPU / RAM. \ R \ r
+Start tag: A
+Text: touche pour commuter ON / OFF pendant la lecture.
+End tag: CONTENT
+Text: 
+
+End tag: RESOURCE
+Text: 
+
+Start tag: RESOURCE
+Text: 
+
+Start tag: ID
+Text: 30
+End tag: ID
+Text: 
+
+Start tag: CONTENT
+Text: Anti-Aliasing
+End tag: CONTENT
+Text: 
+
+End tag: RESOURCE
+Text: 
+
+Start tag: RESOURCE
+Text: 
+
+Start tag: ID
+Text: 31
+End tag: ID
+Text: 
+
+Start tag: CONTENT
+Text: La qualité et la vitesse dépend de maniére significative sur le pilote de la carte vidéo. \ R \ r X2 (2 échantillons, 2 robinets) plus rapidement. \ R x2 (Qx) (2,5) ~ vitesse supérieure La qualité de la suivante. \ r x4 (4.4) ci-dessus, mais un peu plus lent. \ r X4 (4,9) plutét qu'au-dessus, mais plus lentement.
+End tag: CONTENT
+Text: 
+
+End tag: RESOURCE
+Text: 
+
+Start tag: RESOURCE
+Text: 
+
+Start tag: ID
+Text: 32
+End tag: ID
+Text: 
+
+Start tag: CONTENT
+Text: Mode Anti-Aliasing
+End tag: CONTENT
+Text: 
+
+End tag: RESOURCE
+Text: 
+
+Start tag: RESOURCE
+Text: 
+
+Start tag: ID
+Text: 33
+End tag: ID
+Text: 
+
+Start tag: CONTENT
+Text: sio: TrackMouseEvent Erreur
+End tag: CONTENT
+Text: 
+
+End tag: RESOURCE
+Text: 
+
+Start tag: RESOURCE
+Text: 
+
+Start tag: ID
+Text: 34
+End tag: ID
+Text: 
+
+Start tag: CONTENT
+Text: Erreur de création de fenétre OpenGL
+End tag: CONTENT
+Text: 
+
+End tag: RESOURCE
+Text: 
+
+Start tag: RESOURCE
+Text: 
+
+Start tag: ID
+Text: 35
+End tag: ID
+Text: 
+
+Start tag: CONTENT
+Text: marque
+End tag: CONTENT
+Text: 
+
+End tag: RESOURCE
+Text: 
+
+Start tag: RESOURCE
+Text: 
+
+Start tag: ID
+Text: 36
+End tag: ID
+Text: 
+
+Start tag: CONTENT
+Text: Custom
+End tag: CONTENT
+Text: 
+
+End tag: RESOURCE
+Text: 
+
+Start tag: RESOURCE
+Text: 
+
+Start tag: ID
+Text: 37
+End tag: ID
+Text: 
+
+Start tag: CONTENT
+Text: Son erreur d'initialisation
+End tag: CONTENT
+Text: 
+
+End tag: RESOURCE
+Text: 
+
+
+Start tag: RESOURCE
+Text: 
+
+Start tag: ID
+Text: 51
+End tag: ID
+Text: 
+
+Start tag: CONTENT
+Text: InitCommonControlEx () a échoué.
+End tag: CONTENT
+Text: 
+
+End tag: RESOURCE
+Text: 
+
+Start tag: RESOURCE
+Text: 
+
+Start tag: ID
+Text: 52
+End tag: ID
+Text: 
+
+Start tag: CONTENT
+Text: échec d'enregistrement de la classe Window.
+End tag: CONTENT
+Text: 
+
+End tag: RESOURCE
+Text: 
+
+Start tag: RESOURCE
+Text: 
+
+Start tag: ID
+Text: 53
+End tag: ID
+Text: 
+
+Start tag: CONTENT
+Text: Erreur
+End tag: CONTENT
+Text: 
+
+End tag: RESOURCE
+Text: 
+
+Start tag: RESOURCE
+Text: 
+
+Start tag: ID
+Text: 54
+End tag: ID
+Text: 
+
+Start tag: CONTENT
+Text: [Home]
+End tag: CONTENT
+Text: 
+
+End tag: RESOURCE
+Text: 
+
+Start tag: RESOURCE
+Text: 
+
+Start tag: ID
+Text: 55
+End tag: ID
+Text: 
+
+Start tag: CONTENT
+Text: Erreur
+End tag: CONTENT
+Text: 
+
+End tag: RESOURCE
+Text: 
+
+
+Start tag: RESOURCE
+Text: 
+
+Start tag: ID
+Text: 101
+End tag: ID
+Text: 
+
+Start tag: CONTENT
+Text: Transmission URL est vide
+End tag: CONTENT
+Text: 
+
+End tag: RESOURCE
+Text: 
+
+Start tag: RESOURCE
+Text: 
+
+Start tag: ID
+Text: 102
+End tag: ID
+Text: 
+
+Start tag: CONTENT
+Text: Transmission: NumberOfEntries pls introuvables dans le fichier
+End tag: CONTENT
+Text: 
+
+End tag: RESOURCE
+Text: 
+
+Start tag: RESOURCE
+Text: 
+
+Start tag: ID
+Text: 103
+End tag: ID
+Text: 
+
+Start tag: CONTENT
+Text: Transmission: valeur numérique pour NumberOfEntries introuvable
+End tag: CONTENT
+Text: 
+
+End tag: RESOURCE
+Text: 
+
+Start tag: RESOURCE
+Text: 
+
+Start tag: ID
+Text: 104
+End tag: ID
+Text: 
+
+Start tag: CONTENT
+Text: streaming: Vous ne pouvez pas allouer de la mémoire pour le fichier pls (liste de lecture)
+End tag: CONTENT
+Text: 
+
+End tag: RESOURCE
+Text: 
+
+Start tag: RESOURCE
+Text: 
+
+Start tag: ID
+Text: 105
+End tag: ID
+Text: 
+
+Start tag: CONTENT
+Text: streaming: Vous ne pouvez pas allouer de la mémoire pour les pls de fichiers (playlist->nom)
+End tag: CONTENT
+Text: 
+
+End tag: RESOURCE
+Text: 
+
+Start tag: RESOURCE
+Text: 
+
+Start tag: ID
+Text: 106
+End tag: ID
+Text: 
+
+Start tag: CONTENT
+Text: streaming: Vous ne pouvez pas allouer de la mémoire pour les pls de fichiers (playlist->displayname)
+End tag: CONTENT
+Text: 
+
+End tag: RESOURCE
+Text: 
+
+
+Start tag: RESOURCE
+Text: 
+
+Start tag: ID
+Text: 111
+End tag: ID
+Text: 
+
+Start tag: CONTENT
+Text: Afficher
+End tag: CONTENT
+Text: 
+
+End tag: RESOURCE
+Text: 
+
+Start tag: RESOURCE
+Text: 
+
+Start tag: ID
+Text: 112
+End tag: ID
+Text: 
+
+Start tag: CONTENT
+Text: Plein écran rapidement (mode actif)
+End tag: CONTENT
+Text: 
+
+End tag: RESOURCE
+Text: 
+
+Start tag: RESOURCE
+Text: 
+
+Start tag: ID
+Text: 113
+End tag: ID
+Text: 
+
+Start tag: CONTENT
+Text: Plein écran
+End tag: CONTENT
+Text: 
+
+End tag: RESOURCE
+Text: 
+
+Start tag: RESOURCE
+Text: 
+
+Start tag: ID
+Text: 114
+End tag: ID
+Text: 
+
+Start tag: CONTENT
+Text: Fenétre
+End tag: CONTENT
+Text: 
+
+End tag: RESOURCE
+Text: 
+
+Start tag: RESOURCE
+Text: 
+
+Start tag: ID
+Text: 115
+End tag: ID
+Text: 
+
+Start tag: CONTENT
+Text: Divers.
+End tag: CONTENT
+Text: 
+
+End tag: RESOURCE
+Text: 
+
+Start tag: RESOURCE
+Text: 
+
+Start tag: ID
+Text: 116
+End tag: ID
+Text: 
+
+Start tag: CONTENT
+Text: VSync
+End tag: CONTENT
+Text: 
+
+End tag: RESOURCE
+Text: 
+
+Start tag: RESOURCE
+Text: 
+
+Start tag: ID
+Text: 117
+End tag: ID
+Text: 
+
+Start tag: CONTENT
+Text: Modifier Transmission /CONTENT>
+
+End tag: RESOURCE
+Language parser error: RESOURCE clossing tag without correspondent opening tag.RESOURCE clossing tag without correspondent opening tag in a 
+Text: 
+
+Start tag: RESOURCE
+Text: 
+
+Start tag: ID
+Text: 118
+End tag: ID
+Language parser error: ID clossing tag without correspondent opening tag.RESOURCE clossing tag without correspondent opening tag in a 
+Text: 
+
+Start tag: CONTENT
+Text: Qualité
+End tag: CONTENT
+Text: 
+
+End tag: RESOURCE
+Text: 
+
+Start tag: RESOURCE
+Text: 
+
+Start tag: ID
+Text: 119
+End tag: ID
+Text: 
+
+Start tag: CONTENT
+Text: Antialias
+End tag: CONTENT
+Text: 
+
+End tag: RESOURCE
+Text: 
+
+
+Start tag: RESOURCE
+Text: 
+
+Start tag: ID
+Text: 121
+End tag: ID
+Text: 
+
+Start tag: CONTENT
+Text: textures Mipmap
+End tag: CONTENT
+Text: 
+
+End tag: RESOURCE
+Text: 
+
+Start tag: RESOURCE
+Text: 
+
+Start tag: ID
+Text: 122
+End tag: ID
+Text: 
+
+Start tag: CONTENT
+Text: Démarrer le jeu
+End tag: CONTENT
+Text: 
+
+End tag: RESOURCE
+Text: 
+
+Start tag: RESOURCE
+Text: 
+
+Start tag: ID
+Text: 123
+End tag: ID
+Text: 
+
+Start tag: CONTENT
+Text: Marquage
+End tag: CONTENT
+Text: 
+
+End tag: RESOURCE
+Text: 
+
+Start tag: RESOURCE
+Text: 
+
+Start tag: ID
+Text: 124
+End tag: ID
+Text: 
+
+Start tag: CONTENT
+Text: Custom
+End tag: CONTENT
+Text: 
+
+End tag: RESOURCE
+Text: 
+
+
+Start tag: RESOURCE
+Text: 
+
+Start tag: ID
+Text: 151
+End tag: ID
+Text: 
+
+Start tag: CONTENT
+Text: Site
+End tag: CONTENT
+Text: 
+
+End tag: RESOURCE
+Text: 
+
+Start tag: RESOURCE
+Text: 
+
+Start tag: ID
+Text: 152
+End tag: ID
+Text: 
+
+Start tag: CONTENT
+Text: Forum
+End tag: CONTENT
+Text: 
+
+End tag: RESOURCE
+Text: 
+
+Start tag: RESOURCE
+Text: 
+
+Start tag: ID
+Text: 153
+End tag: ID
+Text: 
+
+Start tag: CONTENT
+Text: écran Wikik clavier virtuel
+End tag: CONTENT
+Text: 
+
+End tag: RESOURCE
+Text: 
+
+Start tag: RESOURCE
+Text: 
+
+Start tag: ID
+Text: 154
+End tag: ID
+Text: 
+
+Start tag: CONTENT
+Text: Fermer la fenétre
+End tag: CONTENT
+Text: 
+
+End tag: RESOURCE
+Text: 
+
+Start tag: RESOURCE
+Text: 
+
+Start tag: ID
+Text: 155
+End tag: ID
+Text: 
+
+Start tag: CONTENT
+Text: personnalisé avec l'URL
+End tag: CONTENT
+Text: 
+
+End tag: RESOURCE
+Text: 
+
+Start tag: RESOURCE
+Text: 
+
+Start tag: ID
+Text: 156
+End tag: ID
+Text: 
+
+Start tag: CONTENT
+Text: Insérer URL de la playlist Shoutcast (* .pls)
+End tag: CONTENT
+Text: 
+
+End tag: RESOURCE
+Text: 
+
+Start tag: RESOURCE
+Text: 
+
+Start tag: ID
+Text: 157
+End tag: ID
+Text: 
+
+Start tag: CONTENT
+Text: ou MP3. Vérifier
+End tag: CONTENT
+Text: 
+
+End tag: RESOURCE
+Text: 
+
+
+Start tag: RESOURCE
+Text: 
+
+Start tag: ID
+Text: 201
+End tag: ID
+Text: 
+
+Start tag: CONTENT
+Text: niveau de chargement:
+End tag: CONTENT
+Text: 
+
+End tag: RESOURCE
+Text: 
+
+
+Start tag: RESOURCE
+Text: 
+
+Start tag: ID
+Text: 211
+End tag: ID
+Text: 
+
+Start tag: CONTENT
+Text: Chargement niveau sauvé
+End tag: CONTENT
+Text: 
+
+End tag: RESOURCE
+Text: 
+
+
+Start tag: RESOURCE
+Text: 
+
+Start tag: ID
+Text: 221
+End tag: ID
+Text: 
+
+Start tag: CONTENT
+Text: Date
+End tag: CONTENT
+Text: 
+
+End tag: RESOURCE
+Text: 
+
+Start tag: RESOURCE
+Text: 
+
+Start tag: ID
+Text: 222
+End tag: ID
+Text: 
+
+Start tag: CONTENT
+Text: Chargement en cours ... Sons
+End tag: CONTENT
+Text: 
+
+End tag: RESOURCE
+Text: 
+
+Start tag: RESOURCE
+Text: 
+
+Start tag: ID
+Text: 223
+End tag: ID
+Text: 
+
+Start tag: CONTENT
+Text: Lecture du fichier d'initialisation ...
+End tag: CONTENT
+Text: 
+
+End tag: RESOURCE
+Text: 
+
+Start tag: RESOURCE
+Text: 
+
+Start tag: ID
+Text: 224
+End tag: ID
+Text: 
+
+Start tag: CONTENT
+Text: Un jeu enregistré a été détecté. Vous souhaitez transférer ce?
+End tag: CONTENT
+Text: 
+
+End tag: RESOURCE
+Text: 
+
+Start tag: RESOURCE
+Text: 
+
+Start tag: ID
+Text: 225
+End tag: ID
+Text: 
+
+Start tag: CONTENT
+Text: Load game
+End tag: CONTENT
+Text: 
+
+End tag: RESOURCE
+Text: 
+
+Start tag: RESOURCE
+Text: 
+
+Start tag: ID
+Text: 226
+End tag: ID
+Text: 
+
+Start tag: CONTENT
+Text: Lecture jeu enregistré ...
+End tag: CONTENT
+Text: 
+
+End tag: RESOURCE
+Text: 
+
+Start tag: RESOURCE
+Text: 
+
+Start tag: ID
+Text: 227
+End tag: ID
+Text: 
+
+Start tag: CONTENT
+Text: Lecture premier niveau du jeu ...
+End tag: CONTENT
+Text: 
+
+End tag: RESOURCE
+Text: 
+
+Start tag: RESOURCE
+Text: 
+
+Start tag: ID
+Text: 228
+End tag: ID
+Text: 
+
+Start tag: CONTENT
+Text: Génération navire de défaut ...
+End tag: CONTENT
+Text: 
+
+End tag: RESOURCE
+Text: 
+
+Start tag: RESOURCE
+Text: 
+
+Start tag: ID
+Text: 229
+End tag: ID
+Text: 
+
+Start tag: CONTENT
+Text: tournage ...
+End tag: CONTENT
+Text: 
+
+End tag: RESOURCE
+Text: 
+
+Start tag: RESOURCE
+Text: 
+
+Start tag: ID
+Text: 230
+End tag: ID
+Text: 
+
+Start tag: CONTENT
+Text: Variables d'environnement ...
+End tag: CONTENT
+Text: 
+
+End tag: RESOURCE
+Text: 
+
+Start tag: RESOURCE
+Text: 
+
+Start tag: ID
+Text: 231
+End tag: ID
+Text: 
+
+Start tag: CONTENT
+Text: son initialisation d'erreur
+End tag: CONTENT
+Text: 
+
+End tag: RESOURCE
+Text: 
+
+
+Start tag: RESOURCE
+Text: 
+
+Start tag: ID
+Text: 241
+End tag: ID
+Text: 
+
+Start tag: CONTENT
+Text: textures Chargement ...
+End tag: CONTENT
+Text: 
+
+End tag: RESOURCE
+Text: 
+
+Start tag: RESOURCE
+Text: 
+
+Start tag: ID
+Text: 242
+End tag: ID
+Text: 
+
+Start tag: CONTENT
+Text: Chargement Mallas ...
+End tag: CONTENT
+Text: 
+
+End tag: RESOURCE
+Text: 
+
+Start tag: RESOURCE
+Text: 
+
+Start tag: ID
+Text: 243
+End tag: ID
+Text: 
+
+Start tag: CONTENT
+Text: Exception: Un probléme est survenu lors du chargement des objets 3D
+End tag: CONTENT
+Text: .
+
+End tag: RESOURCE
+Text: 
+
+Start tag: RESOURCE
+Text: 
+
+Start tag: ID
+Text: 244
+End tag: ID
+Text: 
+
+Start tag: CONTENT
+Text: Space Invaders OpenGL [Charger Fin]
+End tag: CONTENT
+Text: 
+
+End tag: RESOURCE
+Text: 
+
+
+Start tag: RESOURCE
+Text: 
+
+Start tag: ID
+Text: 301
+End tag: ID
+Text: 
+
+Start tag: CONTENT
+Text: niveau de chargement:
+End tag: CONTENT
+Text: 
+
+End tag: RESOURCE
+Text: 
+
+Start tag: RESOURCE
+Text: 
+
+Start tag: ID
+Text: 302
+End tag: ID
+Text: 
+
+Start tag: CONTENT
+Text: Erreur
+End tag: CONTENT
+Text: 
+
+End tag: RESOURCE
+Text: 
+
+Start tag: RESOURCE
+Text: 
+
+Start tag: ID
+Text: 303
+End tag: ID
+Text: 
+
+Start tag: CONTENT
+Text: Entrer en mode immortel.
+End tag: CONTENT
+Text: 
+
+End tag: RESOURCE
+Text: 
+
+Start tag: RESOURCE
+Text: 
+
+Start tag: ID
+Text: 304
+End tag: ID
+Text: 
+
+Start tag: CONTENT
+Text: Saisie de faéon mortelle.
+End tag: CONTENT
+Text: 
+
+End tag: RESOURCE
+Text: 
+
+Start tag: RESOURCE
+Text: 
+
+Start tag: ID
+Text: 305
+End tag: ID
+Text: 
+
+Start tag: CONTENT
+Text: Je mis quelques fichiers MP3 dans le répertoire du jeu.
+End tag: CONTENT
+Text: 
+
+End tag: RESOURCE
+Text: 
+
+Start tag: RESOURCE
+Text: 
+
+Start tag: ID
+Text: 306
+End tag: ID
+Text: 
+
+Start tag: CONTENT
+Text: Choisissez l'option pour démarrer ramollissement.
+End tag: CONTENT
+Text: 
+
+End tag: RESOURCE
+Text: 
+
+Start tag: RESOURCE
+Text: 
+
+Start tag: ID
+Text: 307
+End tag: ID
+Text: 
+
+Start tag: CONTENT
+Text: La ligne lissée est pas utilisé en mode 3D.
+End tag: CONTENT
+Text: 
+
+End tag: RESOURCE
+Text: 
+
+Start tag: RESOURCE
+Text: 
+
+Start tag: ID
+Text: 308
+End tag: ID
+Text: 
+
+Start tag: CONTENT
+Text: Lissage: ON
+End tag: CONTENT
+Text: 
+
+End tag: RESOURCE
+Text: 
+
+Start tag: RESOURCE
+Text: 
+
+Start tag: ID
+Text: 309
+End tag: ID
+Text: 
+
+Start tag: CONTENT
+Text: Lissage: OFF
+End tag: CONTENT
+Text: 
+
+End tag: RESOURCE
+Text: 
+
+Start tag: RESOURCE
+Text: 
+
+Start tag: ID
+Text: 310
+End tag: ID
+Text: 
+
+Start tag: CONTENT
+Text: Désolé, SwapIntervalExt () ne sont pas disponibles.
+End tag: CONTENT
+Text: 
+
+End tag: RESOURCE
+Text: 
+
+Start tag: RESOURCE
+Text: 
+
+Start tag: ID
+Text: 311
+End tag: ID
+Text: 
+
+Start tag: CONTENT
+Text: Synchronisation verticale: ON
+End tag: CONTENT
+Text: 
+
+End tag: RESOURCE
+Text: 
+
+Start tag: RESOURCE
+Text: 
+
+Start tag: ID
+Text: 312
+End tag: ID
+Text: 
+
+Start tag: CONTENT
+Text: Synchronisation verticale: OFF
+End tag: CONTENT
+Text: 
+
+End tag: RESOURCE
+Text: 
+
+
+Start tag: RESOURCE
+Text: 
+
+Start tag: ID
+Text: 321
+End tag: ID
+Text: 
+
+Start tag: CONTENT
+Text: son
+End tag: CONTENT
+Text: 
+
+End tag: RESOURCE
+Text: 
+
+Start tag: RESOURCE
+Text: 
+
+Start tag: ID
+Text: 322
+End tag: ID
+Text: 
+
+Start tag: CONTENT
+Text: audio
+End tag: CONTENT
+Text: 
+
+End tag: RESOURCE
+Text: 
+
+Start tag: RESOURCE
+Text: 
+
+Start tag: ID
+Text: 323
+End tag: ID
+Text: 
+
+Start tag: CONTENT
+Text: Temps
+End tag: CONTENT
+Text: 
+
+End tag: RESOURCE
+Text: 
+
+Start tag: RESOURCE
+Text: 
+
+Start tag: ID
+Text: 324
+End tag: ID
+Text: 
+
+Start tag: CONTENT
+Text: angle
+End tag: CONTENT
+Text: 
+
+End tag: RESOURCE
+Text: 
+
+Start tag: RESOURCE
+Text: 
+
+Start tag: ID
+Text: 325
+End tag: ID
+Text: 
+
+Start tag: CONTENT
+Text: Camara.zoom
+End tag: CONTENT
+Text: 
+
+End tag: RESOURCE
+Text: 
+
+Start tag: RESOURCE
+Text: 
+
+Start tag: ID
+Text: 326
+End tag: ID
+Text: 
+
+Start tag: CONTENT
+Text: Quitter ESC
+End tag: CONTENT
+Text: 
+
+End tag: RESOURCE
+Text: 
+
+Start tag: RESOURCE
+Text: 
+
+Start tag: ID
+Text: 327
+End tag: ID
+Text: 
+
+Start tag: CONTENT
+Text: rotation MOUSE
+End tag: CONTENT
+Text: 
+
+End tag: RESOURCE
+Text: 
+
+Start tag: RESOURCE
+Text: 
+
+Start tag: ID
+Text: 328
+End tag: ID
+Text: 
+
+Start tag: CONTENT
+Text: M \ r musique (en)
+End tag: CONTENT
+Text: 
+
+End tag: RESOURCE
+Text: 
+
+Start tag: RESOURCE
+Text: 
+
+Start tag: ID
+Text: 329
+End tag: ID
+Text: 
+
+Start tag: CONTENT
+Text: M \ r musique (off)
+End tag: CONTENT
+Text: 
+
+End tag: RESOURCE
+Text: 
+
+Start tag: RESOURCE
+Text: 
+
+Start tag: ID
+Text: 330
+End tag: ID
+Text: 
+
+Start tag: CONTENT
+Text: B Fonds \ r
+End tag: CONTENT
+Text: 
+
+End tag: RESOURCE
+Text: 
+
+Start tag: RESOURCE
+Text: 
+
+Start tag: ID
+Text: 331
+End tag: ID
+Text: 
+
+Start tag: CONTENT
+Text: R \ r cam Remplacez
+End tag: CONTENT
+Text: 
+
+End tag: RESOURCE
+Text: 
+
+Start tag: RESOURCE
+Text: 
+
+Start tag: ID
+Text: 332
+End tag: ID
+Text: 
+
+Start tag: CONTENT
+Text: T \ r Masquer le texte
+End tag: CONTENT
+Text: 
+
+End tag: RESOURCE
+Text: 
+
+Start tag: RESOURCE
+Text: 
+
+Start tag: ID
+Text: 333
+End tag: ID
+Text: 
+
+Start tag: CONTENT
+Text: Zoom +/-
+End tag: CONTENT
+Text: 
+
+End tag: RESOURCE
+Text: 
+
+Start tag: RESOURCE
+Text: 
+
+Start tag: ID
+Text: 334
+End tag: ID
+Text: 
+
+Start tag: CONTENT
+Text: Hauteur
+End tag: CONTENT
+Text: 
+
+End tag: RESOURCE
+Text: 
+
+Start tag: RESOURCE
+Text: 
+
+Start tag: ID
+Text: 335
+End tag: ID
+Text: 
+
+Start tag: CONTENT
+Text: Largeur
+End tag: CONTENT
+Text: 
+
+End tag: RESOURCE
+Text: 
+
+Start tag: RESOURCE
+Text: 
+
+Start tag: ID
+Text: 336
+End tag: ID
+Text: 
+
+Start tag: CONTENT
+Text: Espace presse pour changer la musique
+End tag: CONTENT
+Text: 
+
+End tag: RESOURCE
+Text: 
+
+
+Start tag: RESOURCE
+Text: 
+
+Start tag: ID
+Text: 351
+End tag: ID
+Text: 
+
+Start tag: CONTENT
+Text: INPUT LEVEL
+End tag: CONTENT
+Text: 
+
+End tag: RESOURCE
+Text: 
+
+Start tag: RESOURCE
+Text: 
+
+Start tag: ID
+Text: 352
+End tag: ID
+Text: 
+
+Start tag: CONTENT
+Text: vous gagnez!
+End tag: CONTENT
+Text: 
+
+End tag: RESOURCE
+Text: 
+
+Start tag: RESOURCE
+Text: 
+
+Start tag: ID
+Text: 353
+End tag: ID
+Text: 
+
+Start tag: CONTENT
+Text: FIN DE JEU!
+End tag: CONTENT
+Text: 
+
+End tag: RESOURCE
+Text: 
+
+Start tag: RESOURCE
+Text: 
+
+Start tag: ID
+Text: 354
+End tag: ID
+Text: 
+
+Start tag: CONTENT
+Text: vous perdez!
+End tag: CONTENT
+Text: 
+
+End tag: RESOURCE
+Text: 
+
+
+Start tag: RESOURCE
+Text: 
+
+Start tag: ID
+Text: 361
+End tag: ID
+Text: 
+
+Start tag: CONTENT
+Text: erreur de chgt zik
+End tag: CONTENT
+Text: 
+
+End tag: RESOURCE
+Text: 
+
+
+Start tag: RESOURCE
+Text: 
+
+Start tag: ID
+Text: 401
+End tag: ID
+Text: 
+
+Start tag: CONTENT
+Text: type de caractére (
+End tag: CONTENT
+Text: 
+
+End tag: RESOURCE
+Text: 
+
+Start tag: RESOURCE
+Text: 
+
+Start tag: ID
+Text: 402
+End tag: ID
+Text: 
+
+Start tag: CONTENT
+Text: ) non pris en charge.
+End tag: CONTENT
+Text: 
+
+End tag: RESOURCE
+Text: 
+
+
+Start tag: RESOURCE
+Text: 
+
+Start tag: ID
+Text: 411
+End tag: ID
+Text: 
+
+Start tag: CONTENT
+Text: Accueil interprétation fichier d'initialisation.
+End tag: CONTENT
+Text: 
+
+End tag: RESOURCE
+Text: 
+
+
+Start tag: RESOURCE
+Text: 
+
+Start tag: ID
+Text: 461 /ID>
+
+Start tag: CONTENT
+Text: Texte:
+End tag: CONTENT
+Language parser error: CONTENT clossing tag without correspondent opening tag.RESOURCE clossing tag without correspondent opening tag in a 
+Text: 
+
+End tag: RESOURCE
+Language parser error: RESOURCE clossing tag without correspondent opening tag.RESOURCE clossing tag without correspondent opening tag in a 
+Text: 
+
+Start tag: RESOURCE
+Text: 
+
+Start tag: ID
+Text: 462
+End tag: ID
+Text: 
+
+Start tag: CONTENT
+Text: Nombre maximum de vie indiquée (
+End tag: CONTENT
+Text: 
+
+End tag: RESOURCE
+Text: 
+
+Start tag: RESOURCE
+Text: 
+
+Start tag: ID
+Text: 463
+End tag: ID
+Text: 
+
+Start tag: CONTENT
+Text: est inférieure au minimum autorisé par le programme (1). Valeur tronquée é un minimum.
+End tag: CONTENT
+Text: 
+
+End tag: RESOURCE
+Text: 
+
+Start tag: RESOURCE
+Text: 
+
+Start tag: ID
+Text: 464
+End tag: ID
+Text: 
+
+Start tag: CONTENT
+Text: Nombre maximum de vie indiquée (
+End tag: CONTENT
+Text: 
+
+End tag: RESOURCE
+Text: 
+
+Start tag: RESOURCE
+Text: 
+
+Start tag: ID
+Text: 465
+End tag: ID
+Text: 
+
+Start tag: CONTENT
+Text: ) est supérieure é la quantité maximale autorisée par le programme (1). Maximale tronquée.
+End tag: CONTENT
+Text: 
+
+End tag: RESOURCE
+Text: 
+
+Start tag: RESOURCE
+Text: 
+
+Start tag: ID
+Text: 466
+End tag: ID
+Text: 
+
+Start tag: CONTENT
+Text: Le fichier correspondant pas é ce jeu.
+End tag: CONTENT
+Text: 
+
+End tag: RESOURCE
+Text: 
+
+Start tag: RESOURCE
+Text: 
+
+Start tag: ID
+Text: 467
+End tag: ID
+Text: 
+
+Start tag: CONTENT
+Text: Le fichier est de type \ "
+End tag: CONTENT
+Text: 
+
+End tag: RESOURCE
+Text: 
+
+Start tag: RESOURCE
+Text: 
+
+Start tag: ID
+Text: 468
+End tag: ID
+Text: 
+
+Start tag: CONTENT
+Text: \ boot \ ". Un fichier de type \ est nécessaire". "
+End tag: CONTENT
+Text: 
+
+End tag: RESOURCE
+Text: 
+
+Start tag: RESOURCE
+Text: 
+
+Start tag: ID
+Text: 469
+End tag: ID
+Text: 
+
+Start tag: CONTENT
+Text: version du fichier est v
+End tag: CONTENT
+Text: 
+
+End tag: RESOURCE
+Text: 
+
+Start tag: RESOURCE
+Text: 
+
+Start tag: ID
+Text: 470
+End tag: ID
+Text: 
+
+Start tag: CONTENT
+Text: , qui ne correspond pas avec cette version v
+End tag: CONTENT
+Text: 
+
+End tag: RESOURCE
+Text: 
+
+
+Start tag: RESOURCE
+Text: 
+
+Start tag: ID
+Text: 481
+End tag: ID
+Text: 
+
+Start tag: CONTENT
+Text: Commentaires:
+End tag: CONTENT
+Text: 
+
+End tag: RESOURCE
+Text: 
+
+
+Start tag: RESOURCE
+Text: 
+
+Start tag: ID
+Text: 491
+End tag: ID
+Text: 
+
+Start tag: CONTENT
+Text: Interprétation dossier complet.
+End tag: CONTENT
+Text: 
+
+End tag: RESOURCE
+Text: 
+
+
+Start tag: RESOURCE
+Text: 
+
+Start tag: ID
+Text: 501
+End tag: ID
+Text: 
+
+Start tag: CONTENT
+Text: textures Chargement ...
+End tag: CONTENT
+Text: 
+
+End tag: RESOURCE
+Text: 
+
+Start tag: RESOURCE
+Text: 
+
+Start tag: ID
+Text: 502
+End tag: ID
+Text: 
+
+Start tag: CONTENT
+Text: Chargement de textures ... (100%) \ n
+End tag: CONTENT
+Text: 
+
+End tag: RESOURCE
+Text: 
+
+
+Start tag: RESOURCE
+Text: 
+
+Start tag: ID
+Text: 551
+End tag: ID
+Text: 
+
+Start tag: CONTENT
+Text: Erreur lors du chargement PNG
+End tag: CONTENT
+Text: 
+
+End tag: RESOURCE
+Text: 
+
+<- Menu principal ->
+
+Start tag: RESOURCE
+Text: 
+
+Start tag: ID
+Text: 600
+End tag: ID
+Text: 
+
+Start tag: CONTENT
+Text: Jeu
+End tag: CONTENT
+Text: 
+
+End tag: RESOURCE
+Text: 
+
+Start tag: RESOURCE
+Text: 
+
+Start tag: ID
+Text: 610
+End tag: ID
+Text: 
+
+Start tag: CONTENT
+Text: Niveau
+End tag: CONTENT
+Text: 
+
+End tag: RESOURCE
+Text: 
+
+Start tag: RESOURCE
+Text: 
+
+Start tag: ID
+Text: 620
+End tag: ID
+Text: 
+
+Start tag: CONTENT
+Text: Une configuration
+End tag: CONTENT
+Text: 
+
+End tag: RESOURCE
+Text: 
+
+Start tag: RESOURCE
+Text: 
+
+Start tag: ID
+Text: 630
+End tag: ID
+Text: 
+
+Start tag: CONTENT
+Text: Aide
+End tag: CONTENT
+Text: 
+
+End tag: RESOURCE
+Text: 
+
+Start tag: RESOURCE
+Text: 
+
+Start tag: ID
+Text: 640
+End tag: ID
+Text: 
+
+Start tag: CONTENT
+Text: A propos
+End tag: CONTENT
+Text: 
+
+End tag: RESOURCE
+Text: 
+
+<- Menu principal premiéres options de niveau ->
+
+Start tag: RESOURCE
+Text: 
+
+Start tag: ID
+Text: 611
+End tag: ID
+Text: 
+
+Start tag: CONTENT
+Text: Démarrer
+End tag: CONTENT
+Text: 
+
+End tag: RESOURCE
+Text: 
+
+Start tag: RESOURCE
+Text: 
+
+Start tag: ID
+Text: 612
+End tag: ID
+Text: 
+
+Start tag: CONTENT
+Text: Quitter
+End tag: CONTENT
+Text: 
+
+End tag: RESOURCE
+Text: 
+
+<! - Nouveau contenu pour dialogue de démarrage ->
+
+Start tag: RESOURCE
+Text: 
+
+Start tag: ID
+Text: 700
+End tag: ID
+Text: 
+
+Start tag: CONTENT
+Text: Afficher
+End tag: CONTENT
+Text: 
+
+End tag: RESOURCE
+Text: 
+
+Start tag: RESOURCE
+Text: 
+
+Start tag: ID
+Text: 701
+End tag: ID
+Text: 
+
+Start tag: CONTENT
+Text: Plein écran (mode courant)
+End tag: CONTENT
+Text: 
+
+End tag: RESOURCE
+Text: 
+
+Start tag: RESOURCE
+Text: 
+
+Start tag: ID
+Text: 702
+End tag: ID
+Text: 
+
+Start tag: CONTENT
+Text: Plein écran
+End tag: CONTENT
+Text: 
+
+End tag: RESOURCE
+Text: 
+
+Start tag: RESOURCE
+Text: 
+
+Start tag: ID
+Text: 703
+End tag: ID
+Text: 
+
+Start tag: CONTENT
+Text: Fenétre
+End tag: CONTENT
+Text: 
+
+End tag: RESOURCE
+Text: 
+
+Start tag: RESOURCE
+Text: 
+
+Start tag: ID
+Text: 704
+End tag: ID
+Text: 
+
+Start tag: CONTENT
+Text: Divers.
+End tag: CONTENT
+Text: 
+
+End tag: RESOURCE
+Text: 
+
+Start tag: RESOURCE
+Text: 
+
+Start tag: ID
+Text: 705
+End tag: ID
+Text: 
+
+Start tag: CONTENT
+Text: VSync
+End tag: CONTENT
+Text: 
+
+End tag: RESOURCE
+Text: 
+
+Start tag: RESOURCE
+Text: 
+
+Start tag: ID
+Text: 706
+End tag: ID
+Text: 
+
+Start tag: CONTENT
+Text: Bande passante
+End tag: CONTENT
+Text: 
+
+End tag: RESOURCE
+Text: 
+
+Start tag: RESOURCE
+Text: 
+
+Start tag: ID
+Text: 707
+End tag: ID
+Text: 
+
+Start tag: CONTENT
+Text: Qualité
+End tag: CONTENT
+Text: 
+
+End tag: RESOURCE
+Text: 
+
+Start tag: RESOURCE
+Text: 
+
+Start tag: ID
+Text: 708
+End tag: ID
+Text: 
+
+Start tag: CONTENT
+Text: Antialiasing
+End tag: CONTENT
+Text: 
+
+End tag: RESOURCE
+Text: 
+
+Start tag: RESOURCE
+Text: 
+
+Start tag: ID
+Text: 710
+End tag: ID
+Text: 
+
+Start tag: CONTENT
+Text: Textures Mipmap
+End tag: CONTENT
+Text: 
+
+End tag: RESOURCE
+Text: 
+
+Start tag: RESOURCE
+Text: 
+
+Start tag: ID
+Text: 711
+End tag: ID
+Text: 
+
+Start tag: CONTENT
+Text: Start Game
+End tag: CONTENT
+Text: 
+
+End tag: RESOURCE
+Text: 
+
+Start tag: RESOURCE
+Text: 
+
+Start tag: ID
+Text: 712
+End tag: ID
+Text: 
+
+Start tag: CONTENT
+Text: Marquage
+End tag: CONTENT
+Text: 
+
+End tag: RESOURCE
+Text: 
+
+Start tag: RESOURCE
+Text: 
+
+Start tag: ID
+Text: 713
+End tag: ID
+Text: 
+
+Start tag: CONTENT
+Text: Custom
+End tag: CONTENT
+Text: 
+
+End tag: RESOURCE
+Text: 
+
+Start tag: RESOURCE
+Text: 
+
+Start tag: ID
+Text: 714
+End tag: ID
+Text: 
+
+Start tag: CONTENT
+Text: Site
+End tag: CONTENT
+Text: 
+
+End tag: RESOURCE
+Text: 
+
+Start tag: RESOURCE
+Text: 
+
+Start tag: ID
+Text: 715
+End tag: ID
+Text: 
+
+Start tag: CONTENT
+Text: Forum
+End tag: CONTENT
+Text: 
+
+End tag: RESOURCE
+Text: 
+
+Start tag: RESOURCE
+Text: 
+
+Start tag: ID
+Text: 716
+End tag: ID
+Text: 
+
+Start tag: CONTENT
+Text: écran Wikik clavier virtuel
+End tag: CONTENT
+Text: 
+
+End tag: RESOURCE
+Text: 
+
+Start tag: RESOURCE
+Text: 
+
+Start tag: ID
+Text: 717
+End tag: ID
+Text: 
+
+Start tag: CONTENT
+Text: Fermer la fenétre
+End tag: CONTENT
+Text: 
+
+End tag: RESOURCE
+Text: 
+
+Start tag: RESOURCE
+Text: 
+
+Start tag: ID
+Text: 718
+End tag: ID
+Text: 
+
+Start tag: CONTENT
+Text: Entrez une URL é une playlist (.pls *) d'une station,
+End tag: CONTENT
+Text: 
+
+End tag: RESOURCE
+Text: 
+
+Start tag: RESOURCE
+Text: 
+
+Start tag: ID
+Text: 719
+End tag: ID
+Text: 
+
+Start tag: CONTENT
+Text: une radio ou un lecteur MP3. Vérifier
+End tag: CONTENT
+Text: 
+
+End tag: RESOURCE
+Text: 
+
+
+Text: s-->
+
+Start tag: RESOURCE
+Text: 
+ 
+Start tag: ID
+Text: 751
+End tag: ID
+Text: 
+ 
+Start tag: CONTENT
+Text: Langue
+End tag: CONTENT
+Text: 
+
+End tag: RESOURCE
+Text: 
+
+Start tag: RESOURCE
+Text: 
+ 
+Start tag: ID
+Text: 752
+End tag: ID
+Text: 
+ 
+Start tag: CONTENT
+Text: Modification de la langue avec succès . jeu redémarrage
+End tag: CONTENT
+Text: 
+
+End tag: RESOURCE
+Text: 
+
+Start tag: RESOURCE
+Text: 
+ 
+Start tag: ID
+Text: 753
+End tag: ID
+Text: 
+ 
+Start tag: CONTENT
+Text: Système d'alarme
+End tag: CONTENT
+Text: 
+
+End tag: RESOURCE
+Text: 
+
+Start tag: RESOURCE
+Text: 
+ 
+Start tag: ID
+Text: 754
+End tag: ID
+Text: 
+ 
+Start tag: CONTENT
+Text: Acceptz
+End tag: CONTENT
+Text: 
+
+End tag: RESOURCE
+Text: 
+
+Start tag: RESOURCE
+Text: 
+ 
+Start tag: ID
+Text: 755
+End tag: ID
+Text: 
+ 
+Start tag: CONTENT
+Text: Fenêtre Paramètres de langue
+End tag: CONTENT
+Text: 
+
+End tag: RESOURCE
+Text: 
+
+End tag: BODY
+Text: 
+
+End tag: HTML

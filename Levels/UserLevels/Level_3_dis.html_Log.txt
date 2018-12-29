@@ -1,0 +1,812 @@
+Begining the initialization file parsing.
+Start tag: HTML
+Texto: 
+    
+Start tag: HEAD
+Texto: 
+	    
+Start tag: TITLE
+Texto: Space Invaders
+Etiqueta fin: TITLE
+Texto: 
+	    
+Start tag: VERSION
+Texto: 1.0.0
+Etiqueta fin: VERSION
+Texto: 
+	    
+Start tag: TYPE
+Texto: Level
+Etiqueta fin: TYPE
+Texto: 
+	    
+Start tag: LEVEL
+Texto: 3
+Etiqueta fin: LEVEL
+Texto:  
+    
+Etiqueta fin: HEAD
+Texto: 
+    
+Start tag: BODY
+Texto: 
+        
+Start tag: CHARACTER
+Texto: 
+            
+Start tag: NAME
+Texto: GAME
+Etiqueta fin: NAME
+Texto: 
+            
+Start tag: RENDERMODE
+Texto: 3D
+Etiqueta fin: RENDERMODE
+Texto: 
+            
+Start tag: SIMULATIONMODE
+Texto: DISCRETE
+Etiqueta fin: SIMULATIONMODE
+Texto:      
+Texto: 
+            
+Start tag: BOUNCE
+Texto: 0
+Etiqueta fin: BOUNCE
+Texto:                               
+Texto: 
+            
+Start tag: TIMERENDER
+Texto: 16.67
+Etiqueta fin: TIMERENDER
+Texto:                   
+Texto: 
+            
+Start tag: TIMEUPDATE
+Texto: 16.67
+Etiqueta fin: TIMEUPDATE
+Texto:                   
+Texto: 	
+        
+Etiqueta fin: CHARACTER
+Texto: 
+                                                
+Texto: 
+        
+Start tag: CHARACTER
+Texto: 
+            
+Start tag: NAME
+Texto: PLAYER
+Etiqueta fin: NAME
+Texto: 
+            
+Start tag: HEALTH
+Texto: 20
+Etiqueta fin: HEALTH
+Texto: 
+            
+Start tag: EXPLOSION
+Texto: 500
+Etiqueta fin: EXPLOSION
+Texto: 
+            
+Start tag: LIVES
+Texto: 3
+Etiqueta fin: LIVES
+Texto: 
+            
+Start tag: MESH
+Texto: player.3ds
+Etiqueta fin: MESH
+Parser error: MESH clossing tag without correspondent opening tag in a BODY segment.
+Texto: 
+	        
+Start tag: ACCELERATION
+Texto: 0.1
+Etiqueta fin: ACCELERATION
+Texto: 
+        
+Etiqueta fin: CHARACTER
+Texto: 
+
+        
+Start tag: CHARACTER
+Texto: 
+            
+Start tag: NAME
+Texto: CIRCLESHIP
+Etiqueta fin: NAME
+Texto: 
+            
+Start tag: VELOCITY
+Texto: 0.001
+Etiqueta fin: VELOCITY
+Texto: 
+			
+Start tag: RADIO
+Texto: 1
+Etiqueta fin: RADIO
+Texto: 
+        
+Etiqueta fin: CHARACTER
+Texto: 
+		
+		
+Start tag: CHARACTER
+Texto: 
+            
+Start tag: NAME
+Texto: CIRCLESHIP
+Etiqueta fin: NAME
+Texto: 
+            
+Start tag: VELOCITY
+Texto: 0.001
+Etiqueta fin: VELOCITY
+Texto: 
+			
+Start tag: RADIO
+Texto: 1
+Etiqueta fin: RADIO
+Texto: 
+            
+Start tag: CENTER
+Texto:  
+		    
+Start tag: X
+Texto: 3.0
+Etiqueta fin: X
+Texto: 
+	    
+Etiqueta fin: CENTER
+Texto: 
+        
+Etiqueta fin: CHARACTER
+Texto: 
+
+        
+Start tag: CHARACTER
+Texto: 
+            
+Start tag: NAME
+Texto: CIRCLESHIP
+Etiqueta fin: NAME
+Texto: 
+            
+Start tag: VELOCITY
+Texto: 0.001   
+Etiqueta fin: VELOCITY
+Texto: 
+			
+Start tag: RADIO
+Texto: 1
+Etiqueta fin: RADIO
+Texto: 
+            
+Start tag: CENTER
+Texto:  
+		    
+Start tag: X
+Texto: -3.0
+Etiqueta fin: X
+Texto: 
+	    
+Etiqueta fin: CENTER
+Texto: 
+        
+Etiqueta fin: CHARACTER
+Texto: 
+
+        
+Start tag: CHARACTER
+Texto: 
+            
+Start tag: NAME
+Texto: CIRCLESHIP
+Etiqueta fin: NAME
+Texto: 
+            
+Start tag: VELOCITY
+Texto: 0.001   
+Etiqueta fin: VELOCITY
+Texto: 
+			
+Start tag: RADIO
+Texto: 2
+Etiqueta fin: RADIO
+Texto: 
+            
+Start tag: CENTER
+Texto:  
+		    
+Start tag: X
+Texto: 0.0
+Etiqueta fin: X
+Texto: 
+            
+Start tag: Y
+Texto: 0.0
+Etiqueta fin: Y
+Texto: 
+	    
+Etiqueta fin: CENTER
+Texto: 
+        
+Etiqueta fin: CHARACTER
+Texto: 
+
+        
+Start tag: CHARACTER
+Texto: 
+            
+Start tag: NAME
+Texto: CIRCLESHIP
+Etiqueta fin: NAME
+Texto: 
+            
+Start tag: VELOCITY
+Texto: 0.001   
+Etiqueta fin: VELOCITY
+Texto: 
+			
+Start tag: RADIO
+Texto: 3
+Etiqueta fin: RADIO
+Texto: 
+            
+Start tag: CENTER
+Texto:  
+		    
+Start tag: X
+Texto: -2.0
+Etiqueta fin: X
+Texto: 
+            
+Start tag: Y
+Texto: 0.0
+Etiqueta fin: Y
+Texto: 
+	    
+Etiqueta fin: CENTER
+Texto: 
+        
+Etiqueta fin: CHARACTER
+Texto: 
+
+        
+Start tag: CHARACTER
+Texto: 
+            
+Start tag: NAME
+Texto: SUPPLYSHIP
+Etiqueta fin: NAME
+Texto: 
+            
+Start tag: SPEED
+Texto:  
+		    
+Start tag: X
+Texto: 0.001
+Etiqueta fin: X
+Texto: 	
+Texto: 
+		    
+Start tag: Y
+Texto: 0.0
+Etiqueta fin: Y
+Texto: 
+		    
+Start tag: Z
+Texto: 0.0
+Etiqueta fin: Z
+Texto: 
+			
+Etiqueta fin: SPEED
+Texto: 
+        
+Etiqueta fin: CHARACTER
+Texto: 
+
+        
+Start tag: CHARACTER
+Texto: 
+            
+Start tag: NAME
+Texto: SUPPLYSHIP
+Etiqueta fin: NAME
+Texto: 
+            
+Start tag: SPEED
+Texto:  
+		    
+Start tag: X
+Texto: 0.005
+Etiqueta fin: X
+Texto: 	
+Texto: 
+		    
+Start tag: Y
+Texto: 0.0
+Etiqueta fin: Y
+Texto: 
+		    
+Start tag: Z
+Texto: 0.0
+Etiqueta fin: Z
+Texto: 
+			
+Etiqueta fin: SPEED
+Texto: 
+        
+Etiqueta fin: CHARACTER
+Texto: 
+
+        
+Start tag: CHARACTER
+Texto: 
+            
+Start tag: NAME
+Texto: NAVY
+Etiqueta fin: NAME
+Texto: 
+			
+Start tag: MOVEDOWN
+Texto: 1
+Etiqueta fin: MOVEDOWN
+Texto: 				
+Texto: 
+            
+Start tag: SHOOTS
+Texto: 1
+Etiqueta fin: SHOOTS
+Texto: 					
+Texto: 
+            
+Start tag: NUMLINES
+Texto: 5
+Etiqueta fin: NUMLINES
+Texto: 
+            
+Start tag: FROM
+Texto:                               
+Texto: 
+                
+Start tag: X
+Texto: -7.0
+Etiqueta fin: X
+Texto: 
+                
+Start tag: Y
+Texto: 4.0
+Etiqueta fin: Y
+Texto: 
+                
+Start tag: Z
+Texto: 0.0
+Etiqueta fin: Z
+Texto: 
+            
+Etiqueta fin: FROM
+Texto: 
+            
+Start tag: LINE
+Texto: 1423451444
+Etiqueta fin: LINE
+Texto:              
+Texto: 
+            
+Start tag: LINE
+Texto: 0000000000
+Etiqueta fin: LINE
+Texto: 
+            
+Start tag: LINE
+Texto: 0000000000
+Etiqueta fin: LINE
+Texto: 
+            
+Start tag: LINE
+Texto: 0000000000
+Etiqueta fin: LINE
+Texto: 
+            
+Start tag: LINE
+Texto: 0000000000
+Etiqueta fin: LINE
+Texto: 
+            
+Start tag: SPEED
+Texto:  
+		        
+Start tag: X
+Texto: 0.001
+Etiqueta fin: X
+Texto: 	
+Texto: 
+		        
+Start tag: Y
+Texto: -0.0005
+Etiqueta fin: Y
+Texto: 
+		        
+Start tag: Z
+Texto: 0.0
+Etiqueta fin: Z
+Texto: 
+		    
+Etiqueta fin: SPEED
+Texto: 
+        
+Etiqueta fin: CHARACTER
+Texto: 
+
+        
+Start tag: CHARACTER
+Texto: 
+            
+Start tag: NAME
+Texto: BUNKER
+Etiqueta fin: NAME
+Texto: 
+            
+Start tag: TYPE
+Texto: USER
+Etiqueta fin: TYPE
+Parser error: TYPE clossing tag without correspondent opening tag in a BODY segment.
+Texto: 
+            
+Start tag: EXPLOSION
+Texto: 400
+Etiqueta fin: EXPLOSION
+Texto: 
+            
+Start tag: HEALTH
+Texto: 1
+Etiqueta fin: HEALTH
+Texto: 
+            
+Start tag: POSITION
+Texto:           
+Texto: 
+                
+Start tag: X
+Texto: -5.0
+Etiqueta fin: X
+Texto: 
+                
+Start tag: Y
+Texto: -4.5
+Etiqueta fin: Y
+Texto: 
+                
+Start tag: Z
+Texto: 0.0
+Etiqueta fin: Z
+Texto: 
+            
+Etiqueta fin: POSITION
+Texto: 
+            
+Texto: 
+            
+Start tag: LINE
+Texto: 00111111111100
+Etiqueta fin: LINE
+Texto: 
+            
+Start tag: LINE
+Texto: 01111111111110
+Etiqueta fin: LINE
+Texto: 
+            
+Start tag: LINE
+Texto: 11111111111111
+Etiqueta fin: LINE
+Texto: 
+            
+Start tag: LINE
+Texto: 11111111111111
+Etiqueta fin: LINE
+Texto: 
+            
+Start tag: LINE
+Texto: 11111111111111
+Etiqueta fin: LINE
+Texto: 
+            
+Start tag: LINE
+Texto: 11111000011111
+Etiqueta fin: LINE
+Texto: 
+            
+Start tag: LINE
+Texto: 11110000001111
+Etiqueta fin: LINE
+Texto: 
+            
+Start tag: LINE
+Texto: 11100000000111
+Etiqueta fin: LINE
+Texto: 
+        
+Etiqueta fin: CHARACTER
+Texto: 
+        
+Start tag: CHARACTER
+Texto: 
+            
+Start tag: NAME
+Texto: BUNKER
+Etiqueta fin: NAME
+Texto: 
+            
+Start tag: TYPE
+Texto: USER
+Etiqueta fin: TYPE
+Parser error: TYPE clossing tag without correspondent opening tag in a BODY segment.
+Texto:             
+            
+Start tag: EXPLOSION
+Texto: 400
+Etiqueta fin: EXPLOSION
+Texto: 
+            
+Start tag: HEALTH
+Texto: 1
+Etiqueta fin: HEALTH
+Texto: 
+            
+Start tag: POSITION
+Texto:           
+Texto: 
+                
+Start tag: X
+Texto: -2.0
+Etiqueta fin: X
+Texto: 
+                
+Start tag: Y
+Texto: -4.5
+Etiqueta fin: Y
+Texto: 
+                
+Start tag: Z
+Texto: 0.0
+Etiqueta fin: Z
+Texto: 
+            
+Etiqueta fin: POSITION
+Texto: 
+           
+Texto: 
+            
+Start tag: LINE
+Texto: 00111111111100
+Etiqueta fin: LINE
+Texto: 
+            
+Start tag: LINE
+Texto: 01111111111110
+Etiqueta fin: LINE
+Texto: 
+            
+Start tag: LINE
+Texto: 11111111111111
+Etiqueta fin: LINE
+Texto: 
+            
+Start tag: LINE
+Texto: 11111111111111
+Etiqueta fin: LINE
+Texto: 
+            
+Start tag: LINE
+Texto: 11111111111111
+Etiqueta fin: LINE
+Texto: 
+            
+Start tag: LINE
+Texto: 11111000011111
+Etiqueta fin: LINE
+Texto: 
+            
+Start tag: LINE
+Texto: 11110000001111
+Etiqueta fin: LINE
+Texto: 
+            
+Start tag: LINE
+Texto: 11100000000111
+Etiqueta fin: LINE
+Texto: 
+        
+Etiqueta fin: CHARACTER
+Texto: 
+        
+Start tag: CHARACTER
+Texto: 
+            
+Start tag: NAME
+Texto: BUNKER
+Etiqueta fin: NAME
+Texto: 
+            
+Start tag: TYPE
+Texto: USER
+Etiqueta fin: TYPE
+Parser error: TYPE clossing tag without correspondent opening tag in a BODY segment.
+Texto: 
+            
+Start tag: EXPLOSION
+Texto: 400
+Etiqueta fin: EXPLOSION
+Texto: 
+            
+Start tag: HEALTH
+Texto: 1
+Etiqueta fin: HEALTH
+Texto: 
+            
+Start tag: POSITION
+Texto:           
+Texto: 
+                
+Start tag: X
+Texto: 1.0
+Etiqueta fin: X
+Texto: 
+                
+Start tag: Y
+Texto: -4.5
+Etiqueta fin: Y
+Texto: 
+                
+Start tag: Z
+Texto: 0.0
+Etiqueta fin: Z
+Texto: 
+            
+Etiqueta fin: POSITION
+Texto: 
+            
+Texto: 
+            
+Start tag: LINE
+Texto: 00111111111100
+Etiqueta fin: LINE
+Texto: 
+            
+Start tag: LINE
+Texto: 01111111111110
+Etiqueta fin: LINE
+Texto: 
+            
+Start tag: LINE
+Texto: 11111111111111
+Etiqueta fin: LINE
+Texto: 
+            
+Start tag: LINE
+Texto: 11111111111111
+Etiqueta fin: LINE
+Texto: 
+            
+Start tag: LINE
+Texto: 11111111111111
+Etiqueta fin: LINE
+Texto: 
+            
+Start tag: LINE
+Texto: 11111000011111
+Etiqueta fin: LINE
+Texto: 
+            
+Start tag: LINE
+Texto: 11110000001111
+Etiqueta fin: LINE
+Texto: 
+            
+Start tag: LINE
+Texto: 11100000000111
+Etiqueta fin: LINE
+Texto: 
+        
+Etiqueta fin: CHARACTER
+Texto: 
+        
+Start tag: CHARACTER
+Texto: 
+            
+Start tag: NAME
+Texto: BUNKER
+Etiqueta fin: NAME
+Texto: 
+            
+Start tag: TYPE
+Texto: USER
+Etiqueta fin: TYPE
+Parser error: TYPE clossing tag without correspondent opening tag in a BODY segment.
+Texto: 
+            
+Start tag: EXPLOSION
+Texto: 400
+Etiqueta fin: EXPLOSION
+Texto: 
+            
+Start tag: HEALTH
+Texto: 1
+Etiqueta fin: HEALTH
+Texto: 
+             
+Start tag: POSITION
+Texto:           
+Texto: 
+                
+Start tag: X
+Texto: 4.0
+Etiqueta fin: X
+Texto: 
+                
+Start tag: Y
+Texto: -4.5
+Etiqueta fin: Y
+Texto: 
+                
+Start tag: Z
+Texto: 0.0
+Etiqueta fin: Z
+Texto: 
+            
+Etiqueta fin: POSITION
+Texto: 
+           
+Texto: 
+            
+Start tag: LINE
+Texto: 00111111111100
+Etiqueta fin: LINE
+Texto: 
+            
+Start tag: LINE
+Texto: 01111111111110
+Etiqueta fin: LINE
+Texto: 
+            
+Start tag: LINE
+Texto: 11111111111111
+Etiqueta fin: LINE
+Texto: 
+            
+Start tag: LINE
+Texto: 11111111111111
+Etiqueta fin: LINE
+Texto: 
+            
+Start tag: LINE
+Texto: 11111111111111
+Etiqueta fin: LINE
+Texto: 
+            
+Start tag: LINE
+Texto: 11111000011111
+Etiqueta fin: LINE
+Texto: 
+            
+Start tag: LINE
+Texto: 11110000001111
+Etiqueta fin: LINE
+Texto: 
+            
+Start tag: LINE
+Texto: 11100000000111
+Etiqueta fin: LINE
+Texto: 
+        
+Etiqueta fin: CHARACTER
+Texto: 
+    
+Etiqueta fin: BODY
+Texto: 
+
+Etiqueta fin: HTML

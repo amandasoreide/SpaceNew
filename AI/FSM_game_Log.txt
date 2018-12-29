@@ -1,0 +1,1070 @@
+Begining the file parsing.
+Start tag: HTML
+Text: 
+    
+Start tag: HEAD
+Text: 
+	    
+Start tag: TITLE
+Text: Space Invaders
+Ending Label: TITLE
+Text: 
+	    
+Start tag: VERSION
+Text: 1.0.0
+Ending Label: VERSION
+Text: 
+	    
+Start tag: TYPE
+Text: FSM
+Ending Label: TYPE
+Text: 
+    
+Ending Label: HEAD
+Text: 
+    
+Start tag: BODY
+Text: 
+		
+Start tag: STATE_CONT
+Text: 17
+Ending Label: STATE_CONT
+Text: 
+		
+Start tag: STATE_INIT
+Text: 0
+Ending Label: STATE_INIT
+Text: 
+		
+Start tag: VEC_STATE
+Text: 
+			
+Start tag: STATE_NAME
+Text: INITIAL
+Ending Label: STATE_NAME
+Text: 
+			
+Start tag: STATE_NAME
+Text: CONFIGURE
+Ending Label: STATE_NAME
+Text: 
+			
+Start tag: STATE_NAME
+Text: FADING IN
+Ending Label: STATE_NAME
+Text: 
+			
+Start tag: STATE_NAME
+Text: FADING OUT PLAY
+Ending Label: STATE_NAME
+Text: 
+			
+Start tag: STATE_NAME
+Text: PLAYING
+Ending Label: STATE_NAME
+Text: 
+			
+Start tag: STATE_NAME
+Text: SAVING
+Ending Label: STATE_NAME
+Text: 
+			
+Start tag: STATE_NAME
+Text: CHANGING TO 3D
+Ending Label: STATE_NAME
+Text: 
+			
+Start tag: STATE_NAME
+Text: INTERMISSION
+Ending Label: STATE_NAME
+Text: 
+			
+Start tag: STATE_NAME
+Text: LOST LIFE
+Ending Label: STATE_NAME
+Text: 
+			
+Start tag: STATE_NAME
+Text: WON
+Ending Label: STATE_NAME
+Text: 
+			
+Start tag: STATE_NAME
+Text: LOST GAME
+Ending Label: STATE_NAME
+Text: 			
+			
+Start tag: STATE_NAME
+Text: FADING OUT WON
+Ending Label: STATE_NAME
+Text: 
+			
+Start tag: STATE_NAME
+Text: FADING OUT END
+Ending Label: STATE_NAME
+Text: 
+			
+Start tag: STATE_NAME
+Text: FADING OUT LOST
+Ending Label: STATE_NAME
+Text: 
+			
+Start tag: STATE_NAME
+Text: PAUSED
+Ending Label: STATE_NAME
+Text: 		
+			
+Start tag: STATE_NAME
+Text: WAITING FOR KEY
+Ending Label: STATE_NAME
+Text: 	
+			
+Start tag: STATE_NAME
+Text: END
+Ending Label: STATE_NAME
+Text: 
+		
+Ending Label: VEC_STATE
+Text: 
+		
+Start tag: VEC_TRANSITION
+Text: 
+			
+Start tag: TRANSITION
+Text: 
+				
+Start tag: T_NAME
+Text: STARTING
+Ending Label: T_NAME
+Text: 
+				
+Start tag: T_ORIGIN
+Text: 0
+Ending Label: T_ORIGIN
+Text: 
+				
+Start tag: T_DESTINATION
+Text: 1
+Ending Label: T_DESTINATION
+Text: 
+			
+Ending Label: TRANSITION
+Text: 
+			
+Start tag: TRANSITION
+Text: 
+				
+Start tag: T_NAME
+Text: LOADING
+Ending Label: T_NAME
+Text: 
+				
+Start tag: T_ORIGIN
+Text: 1
+Ending Label: T_ORIGIN
+Text: 
+				
+Start tag: T_DESTINATION
+Text: 2
+Ending Label: T_DESTINATION
+Text: 
+			
+Ending Label: TRANSITION
+Text: 
+			
+Start tag: TRANSITION
+Text: 
+				
+Start tag: T_NAME
+Text: FADING_OUT
+Ending Label: T_NAME
+Text: 
+				
+Start tag: T_ORIGIN
+Text: 2
+Ending Label: T_ORIGIN
+Text: 
+				
+Start tag: T_DESTINATION
+Text: 3
+Ending Label: T_DESTINATION
+Text: 
+			
+Ending Label: TRANSITION
+Text: 
+			
+Start tag: TRANSITION
+Text: 
+				
+Start tag: T_NAME
+Text: LOADED
+Ending Label: T_NAME
+Text: 
+				
+Start tag: T_ORIGIN
+Text: 3
+Ending Label: T_ORIGIN
+Text: 
+				
+Start tag: T_DESTINATION
+Text: 15
+Ending Label: T_DESTINATION
+Text: 
+			
+Ending Label: TRANSITION
+Text: 
+			
+Start tag: TRANSITION
+Text: 
+				
+Start tag: T_NAME
+Text: LIFE LOST
+Ending Label: T_NAME
+Text: 
+				
+Start tag: T_ORIGIN
+Text: 4
+Ending Label: T_ORIGIN
+Text: 
+				
+Start tag: T_DESTINATION
+Text: 7
+Ending Label: T_DESTINATION
+Text: 
+			
+Ending Label: TRANSITION
+Text: 
+			
+Start tag: TRANSITION
+Text: 
+				
+Start tag: T_NAME
+Text: CHANGING_TO_3D
+Ending Label: T_NAME
+Text: 
+				
+Start tag: T_ORIGIN
+Text: 4
+Ending Label: T_ORIGIN
+Text: 
+				
+Start tag: T_DESTINATION
+Text: 6
+Ending Label: T_DESTINATION
+Text: 
+			
+Ending Label: TRANSITION
+Text: 
+			
+Start tag: TRANSITION
+Text: 
+				
+Start tag: T_NAME
+Text: FADING2WON
+Ending Label: T_NAME
+Text: 
+				
+Start tag: T_ORIGIN
+Text: 4
+Ending Label: T_ORIGIN
+Text: 
+				
+Start tag: T_DESTINATION
+Text: 11
+Ending Label: T_DESTINATION
+Text: 
+			
+Ending Label: TRANSITION
+Text: 
+			
+Start tag: TRANSITION
+Text: 
+				
+Start tag: T_NAME
+Text: FADING2END
+Ending Label: T_NAME
+Text: 
+				
+Start tag: T_ORIGIN
+Text: 4
+Ending Label: T_ORIGIN
+Text: 
+				
+Start tag: T_DESTINATION
+Text: 12
+Ending Label: T_DESTINATION
+Text: 
+			
+Ending Label: TRANSITION
+Text: 
+            
+Start tag: TRANSITION
+Text: 
+				
+Start tag: T_NAME
+Text: WON2END
+Ending Label: T_NAME
+Text: 
+				
+Start tag: T_ORIGIN
+Text: 9
+Ending Label: T_ORIGIN
+Text: 
+				
+Start tag: T_DESTINATION
+Text: 12
+Ending Label: T_DESTINATION
+Text: 
+			
+Ending Label: TRANSITION
+Text: 
+			
+Start tag: TRANSITION
+Text: 
+				
+Start tag: T_NAME
+Text: FADING2LOST
+Ending Label: T_NAME
+Text: 
+				
+Start tag: T_ORIGIN
+Text: 4
+Ending Label: T_ORIGIN
+Text: 
+				
+Start tag: T_DESTINATION
+Text: 14
+Ending Label: T_DESTINATION
+Text: 
+			
+Ending Label: TRANSITION
+Text: 
+			
+Start tag: TRANSITION
+Text: 
+				
+Start tag: T_NAME
+Text: SAVE
+Ending Label: T_NAME
+Text: 
+				
+Start tag: T_ORIGIN
+Text: 4
+Ending Label: T_ORIGIN
+Text: 
+				
+Start tag: T_DESTINATION
+Text: 5
+Ending Label: T_DESTINATION
+Text: 
+			
+Ending Label: TRANSITION
+Text: 
+			
+Start tag: TRANSITION
+Text: 
+				
+Start tag: T_NAME
+Text: SAVED
+Ending Label: T_NAME
+Text: 
+				
+Start tag: T_ORIGIN
+Text: 5
+Ending Label: T_ORIGIN
+Text: 
+				
+Start tag: T_DESTINATION
+Text: 4
+Ending Label: T_DESTINATION
+Text: 
+			
+Ending Label: TRANSITION
+Text: 
+			
+Start tag: TRANSITION
+Text: 
+				
+Start tag: T_NAME
+Text: PAUSE
+Ending Label: T_NAME
+Text: 
+				
+Start tag: T_ORIGIN
+Text: 4
+Ending Label: T_ORIGIN
+Text: 
+				
+Start tag: T_DESTINATION
+Text: 14
+Ending Label: T_DESTINATION
+Text: 
+			
+Ending Label: TRANSITION
+Text: 
+            
+Start tag: TRANSITION
+Text: 
+                
+Start tag: T_NAME
+Text: CONTINUE
+Ending Label: T_NAME
+Text: 
+                
+Start tag: T_ORIGIN
+Text: 14
+Ending Label: T_ORIGIN
+Text: 
+                
+Start tag: T_DESTINATION
+Text: 4
+Ending Label: T_DESTINATION
+Text: 
+            
+Ending Label: TRANSITION
+Text: 
+			
+Start tag: TRANSITION
+Text: 
+				
+Start tag: T_NAME
+Text: 3D_CHANGED
+Ending Label: T_NAME
+Text: 
+				
+Start tag: T_ORIGIN
+Text: 6
+Ending Label: T_ORIGIN
+Text: 
+				
+Start tag: T_DESTINATION
+Text: 4
+Ending Label: T_DESTINATION
+Text: 
+			
+Ending Label: TRANSITION
+Text: 
+			
+Start tag: TRANSITION
+Text: 
+				
+Start tag: T_NAME
+Text: INTERMISS_ENDED
+Ending Label: T_NAME
+Text: 
+				
+Start tag: T_ORIGIN
+Text: 7
+Ending Label: T_ORIGIN
+Text: 
+				
+Start tag: T_DESTINATION
+Text: 8
+Ending Label: T_DESTINATION
+Text: 
+			
+Ending Label: TRANSITION
+Text: 
+			
+Start tag: TRANSITION
+Text: 
+				
+Start tag: T_NAME
+Text: PLAY
+Ending Label: T_NAME
+Text: 
+				
+Start tag: T_ORIGIN
+Text: 8
+Ending Label: T_ORIGIN
+Text: 
+				
+Start tag: T_DESTINATION
+Text: 4
+Ending Label: T_DESTINATION
+Text: 
+			
+Ending Label: TRANSITION
+Text: 
+			
+Start tag: TRANSITION
+Text: 
+				
+Start tag: T_NAME
+Text: FADING2LOST
+Ending Label: T_NAME
+Text: 
+				
+Start tag: T_ORIGIN
+Text: 8
+Ending Label: T_ORIGIN
+Text: 
+				
+Start tag: T_DESTINATION
+Text: 13
+Ending Label: T_DESTINATION
+Text: 
+			
+Ending Label: TRANSITION
+Text: 
+			
+Start tag: TRANSITION
+Text: 
+				
+Start tag: T_NAME
+Text: NEXT_LEVEL
+Ending Label: T_NAME
+Text: 
+				
+Start tag: T_ORIGIN
+Text: 9
+Ending Label: T_ORIGIN
+Text: 
+				
+Start tag: T_DESTINATION
+Text: 2
+Ending Label: T_DESTINATION
+Text: 
+			
+Ending Label: TRANSITION
+Text: 
+			
+Start tag: TRANSITION
+Text: 
+				
+Start tag: T_NAME
+Text: LOADING
+Ending Label: T_NAME
+Text: 
+				
+Start tag: T_ORIGIN
+Text: 10
+Ending Label: T_ORIGIN
+Text: 
+				
+Start tag: T_DESTINATION
+Text: 2
+Ending Label: T_DESTINATION
+Text: 
+			
+Ending Label: TRANSITION
+Text: 
+			
+Start tag: TRANSITION
+Text: 
+				
+Start tag: T_NAME
+Text: FADED2WON
+Ending Label: T_NAME
+Text: 
+				
+Start tag: T_ORIGIN
+Text: 11
+Ending Label: T_ORIGIN
+Text: 
+				
+Start tag: T_DESTINATION
+Text: 9
+Ending Label: T_DESTINATION
+Text: 
+			
+Ending Label: TRANSITION
+Text: 
+			
+Start tag: TRANSITION
+Text: 
+				
+Start tag: T_NAME
+Text: FADED2LOST
+Ending Label: T_NAME
+Text: 
+				
+Start tag: T_ORIGIN
+Text: 13
+Ending Label: T_ORIGIN
+Text: 
+				
+Start tag: T_DESTINATION
+Text: 10
+Ending Label: T_DESTINATION
+Text: 
+			
+Ending Label: TRANSITION
+Text: 
+			
+Start tag: TRANSITION
+Text: 
+				
+Start tag: T_NAME
+Text: KEY_PRESSED
+Ending Label: T_NAME
+Text: 
+				
+Start tag: T_ORIGIN
+Text: 15
+Ending Label: T_ORIGIN
+Text: 
+				
+Start tag: T_DESTINATION
+Text: 4
+Ending Label: T_DESTINATION
+Text: 
+			
+Ending Label: TRANSITION
+Text: 
+             
+Start tag: TRANSITION
+Text: 
+				
+Start tag: T_NAME
+Text: 2END
+Ending Label: T_NAME
+Text: 
+				
+Start tag: T_ORIGIN
+Text: 12
+Ending Label: T_ORIGIN
+Text: 
+				
+Start tag: T_DESTINATION
+Text: 16
+Ending Label: T_DESTINATION
+Text: 
+			
+Ending Label: TRANSITION
+Text: 							
+		
+Ending Label: VEC_TRANSITION
+Text: 
+		
+Start tag: VEC_ACTION
+Text: 
+			
+Start tag: ON_EXIT
+Text: 
+				
+Start tag: EXIT_TYPE
+Text: 0
+Ending Label: EXIT_TYPE
+Text: 
+				
+Start tag: EXIT_NAME
+Text: Action: Starting game
+Ending Label: EXIT_NAME
+Text: 
+				
+Start tag: EXIT_FUNC
+Text: NULL
+Ending Label: EXIT_FUNC
+Text: 
+				
+Start tag: EXIT_ORIGIN
+Text: 0
+Ending Label: EXIT_ORIGIN
+Text: 
+			
+Ending Label: ON_EXIT
+Text: 
+			
+Start tag: ON_EXIT
+Text: 
+				
+Start tag: EXIT_TYPE
+Text: 0
+Ending Label: EXIT_TYPE
+Text: 
+				
+Start tag: EXIT_NAME
+Text: Action: Configuring game
+Ending Label: EXIT_NAME
+Text: 
+				
+Start tag: EXIT_FUNC
+Text: NULL
+Ending Label: EXIT_FUNC
+Text: 
+				
+Start tag: EXIT_ORIGIN
+Text: 1
+Ending Label: EXIT_ORIGIN
+Text: 
+			
+Ending Label: ON_EXIT
+Text: 
+			
+Start tag: ON_EXIT
+Text: 
+				
+Start tag: EXIT_TYPE
+Text: 0
+Ending Label: EXIT_TYPE
+Text: 
+				
+Start tag: EXIT_NAME
+Text: Action: Loading game
+Ending Label: EXIT_NAME
+Text: 
+				
+Start tag: EXIT_FUNC
+Text: NULL
+Ending Label: EXIT_FUNC
+Text: 
+				
+Start tag: EXIT_ORIGIN
+Text: 2
+Ending Label: EXIT_ORIGIN
+Text: 
+			
+Ending Label: ON_EXIT
+Text: 
+			
+Start tag: ON_EXIT
+Text: 
+				
+Start tag: EXIT_TYPE
+Text: 0
+Ending Label: EXIT_TYPE
+Text: 
+				
+Start tag: EXIT_NAME
+Text: LOADED
+Ending Label: EXIT_NAME
+Text: 
+				
+Start tag: EXIT_FUNC
+Text: NULL
+Ending Label: EXIT_FUNC
+Text: 
+				
+Start tag: EXIT_ORIGIN
+Text: 3
+Ending Label: EXIT_ORIGIN
+Text: 
+			
+Ending Label: ON_EXIT
+Text: 
+			
+Start tag: ON_EXIT
+Text: 
+				
+Start tag: EXIT_TYPE
+Text: 0
+Ending Label: EXIT_TYPE
+Text: 
+				
+Start tag: EXIT_NAME
+Text: Action: Playing game
+Ending Label: EXIT_NAME
+Text: 
+				
+Start tag: EXIT_FUNC
+Text: NULL
+Ending Label: EXIT_FUNC
+Text: 
+				
+Start tag: EXIT_ORIGIN
+Text: 4
+Ending Label: EXIT_ORIGIN
+Text: 
+			
+Ending Label: ON_EXIT
+Text: 
+			
+Start tag: ON_EXIT
+Text: 
+				
+Start tag: EXIT_TYPE
+Text: 0
+Ending Label: EXIT_TYPE
+Text: 
+				
+Start tag: EXIT_NAME
+Text: Action: Saving game
+Ending Label: EXIT_NAME
+Text: 
+				
+Start tag: EXIT_FUNC
+Text: NULL
+Ending Label: EXIT_FUNC
+Text: 
+				
+Start tag: EXIT_ORIGIN
+Text: 5
+Ending Label: EXIT_ORIGIN
+Text: 
+			
+Ending Label: ON_EXIT
+Text: 
+			
+Start tag: ON_EXIT
+Text: 
+				
+Start tag: EXIT_TYPE
+Text: 0
+Ending Label: EXIT_TYPE
+Text: 
+				
+Start tag: EXIT_NAME
+Text: Action: 2D to 3D
+Ending Label: EXIT_NAME
+Text: 
+				
+Start tag: EXIT_FUNC
+Text: NULL
+Ending Label: EXIT_FUNC
+Text: 
+				
+Start tag: EXIT_ORIGIN
+Text: 6
+Ending Label: EXIT_ORIGIN
+Text: 
+			
+Ending Label: ON_EXIT
+Text: 
+			
+Start tag: ON_EXIT
+Text: 
+				
+Start tag: EXIT_TYPE
+Text: 0
+Ending Label: EXIT_TYPE
+Text: 
+				
+Start tag: EXIT_NAME
+Text: Action: Returning to normal viewing
+Ending Label: EXIT_NAME
+Text: 
+				
+Start tag: EXIT_FUNC
+Text: NULL
+Ending Label: EXIT_FUNC
+Text: 
+				
+Start tag: EXIT_ORIGIN
+Text: 7
+Ending Label: EXIT_ORIGIN
+Text: 
+			
+Ending Label: ON_EXIT
+Text: 
+			
+Start tag: ON_EXIT
+Text: 
+				
+Start tag: EXIT_TYPE
+Text: 0
+Ending Label: EXIT_TYPE
+Text: 
+				
+Start tag: EXIT_NAME
+Text: Action: One life lost
+Ending Label: EXIT_NAME
+Text: 
+				
+Start tag: EXIT_FUNC
+Text: NULL
+Ending Label: EXIT_FUNC
+Text: 
+				
+Start tag: EXIT_ORIGIN
+Text: 8
+Ending Label: EXIT_ORIGIN
+Text: 
+			
+Ending Label: ON_EXIT
+Text: 
+			
+Start tag: ON_EXIT
+Text: 
+				
+Start tag: EXIT_TYPE
+Text: 0
+Ending Label: EXIT_TYPE
+Text: 
+				
+Start tag: EXIT_NAME
+Text: Action: Loading a new level
+Ending Label: EXIT_NAME
+Text: 
+				
+Start tag: EXIT_FUNC
+Text: NULL
+Ending Label: EXIT_FUNC
+Text: 
+				
+Start tag: EXIT_ORIGIN
+Text: 9
+Ending Label: EXIT_ORIGIN
+Text: 
+			
+Ending Label: ON_EXIT
+Text: 
+			
+Start tag: ON_EXIT
+Text: 
+				
+Start tag: EXIT_TYPE
+Text: 0
+Ending Label: EXIT_TYPE
+Text: 
+				
+Start tag: EXIT_NAME
+Text: Action: Loading the same level
+Ending Label: EXIT_NAME
+Text: 
+				
+Start tag: EXIT_FUNC
+Text: NULL
+Ending Label: EXIT_FUNC
+Text: 
+				
+Start tag: EXIT_ORIGIN
+Text: 10
+Ending Label: EXIT_ORIGIN
+Text: 
+			
+Ending Label: ON_EXIT
+Text: 
+			
+Start tag: ON_EXIT
+Text: 
+				
+Start tag: EXIT_TYPE
+Text: 0
+Ending Label: EXIT_TYPE
+Text: 
+				
+Start tag: EXIT_NAME
+Text: Action: Releasing the whole game
+Ending Label: EXIT_NAME
+Text: 
+				
+Start tag: EXIT_FUNC
+Text: NULL
+Ending Label: EXIT_FUNC
+Text: 
+				
+Start tag: EXIT_ORIGIN
+Text: 14
+Ending Label: EXIT_ORIGIN
+Text: 
+			
+Ending Label: ON_EXIT
+Text: 
+			
+Start tag: ON_EXIT
+Text: 
+				
+Start tag: EXIT_TYPE
+Text: 0
+Ending Label: EXIT_TYPE
+Text: 
+				
+Start tag: EXIT_NAME
+Text: Action: Fading to level won
+Ending Label: EXIT_NAME
+Text: 
+				
+Start tag: EXIT_FUNC
+Text: NULL
+Ending Label: EXIT_FUNC
+Text: 
+				
+Start tag: EXIT_ORIGIN
+Text: 11
+Ending Label: EXIT_ORIGIN
+Text: 
+			
+Ending Label: ON_EXIT
+Text: 
+			
+Start tag: ON_EXIT
+Text: 
+				
+Start tag: EXIT_TYPE
+Text: 0
+Ending Label: EXIT_TYPE
+Text: 
+				
+Start tag: EXIT_NAME
+Text: Action: Fading to game ended
+Ending Label: EXIT_NAME
+Text: 
+				
+Start tag: EXIT_FUNC
+Text: NULL
+Ending Label: EXIT_FUNC
+Text: 
+				
+Start tag: EXIT_ORIGIN
+Text: 12
+Ending Label: EXIT_ORIGIN
+Text: 
+			
+Ending Label: ON_EXIT
+Text: 
+			
+Start tag: ON_EXIT
+Text: 
+				
+Start tag: EXIT_TYPE
+Text: 0
+Ending Label: EXIT_TYPE
+Text: 
+				
+Start tag: EXIT_NAME
+Text: Action: Fading to level lost
+Ending Label: EXIT_NAME
+Text: 
+				
+Start tag: EXIT_FUNC
+Text: NULL
+Ending Label: EXIT_FUNC
+Text: 
+				
+Start tag: EXIT_ORIGIN
+Text: 13
+Ending Label: EXIT_ORIGIN
+Text: 
+			
+Ending Label: ON_EXIT
+Text: 
+			
+Start tag: ON_EXIT
+Text: 
+				
+Start tag: EXIT_TYPE
+Text: 0
+Ending Label: EXIT_TYPE
+Text: 
+				
+Start tag: EXIT_NAME
+Text: Action: Key pressed
+Ending Label: EXIT_NAME
+Text: 
+				
+Start tag: EXIT_FUNC
+Text: CSIG_Go2Play
+Ending Label: EXIT_FUNC
+Text: 
+				
+Start tag: EXIT_ORIGIN
+Text: 15
+Ending Label: EXIT_ORIGIN
+Text: 
+			
+Ending Label: ON_EXIT
+FSM parser error: CSIG_Go2Play error function does not exist
+FSM parser error: ON_EXIT clossing tag without correspondent opening tag in a DO_TYPE clossing tag without correspondent opening tag in a 
+Text: 
+		
+Ending Label: VEC_ACTION
+FSM parser error: VEC_ACTION clossing tag without correspondent opening tag in a DO_TYPE clossing tag without correspondent opening tag in a 
+Text: 		
+    
+Ending Label: BODY
+FSM parser error: BODY clossing tag without correspondent opening tag in a DO_TYPE clossing tag without correspondent opening tag in a 
+Text: 
+
+Ending Label: HTML
+FSM parser error: HTML clossing tag without correspondent opening tag in a DO_TYPE clossing tag without correspondent opening tag in a 

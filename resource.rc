@@ -1,0 +1,443 @@
+// Microsoft Visual C++ generated resource script.
+//
+#include "resource.h"
+
+#define APSTUDIO_READONLY_SYMBOLS
+/////////////////////////////////////////////////////////////////////////////
+//
+// Generated from the TEXTINCLUDE 2 resource.
+//
+#include "afxres.h"
+
+/////////////////////////////////////////////////////////////////////////////
+#undef APSTUDIO_READONLY_SYMBOLS
+
+/////////////////////////////////////////////////////////////////////////////
+// Neutral resources
+
+#if !defined(AFX_RESOURCE_DLL) || defined(AFX_TARG_NEU)
+#ifdef _WIN32
+LANGUAGE LANG_NEUTRAL, SUBLANG_NEUTRAL
+#pragma code_page(1252)
+#endif //_WIN32
+
+/////////////////////////////////////////////////////////////////////////////
+//
+// Icon
+//
+
+// Icon with lowest ID value placed first to ensure application icon
+// remains consistent on all systems.
+IDI_ICON_APP            ICON                    "images\\icon_app.ico"
+
+/////////////////////////////////////////////////////////////////////////////
+//
+// Version
+//
+
+VS_VERSION_INFO VERSIONINFO
+ FILEVERSION 0,6,1,0
+ PRODUCTVERSION 0,6,1,0
+ FILEFLAGSMASK 0x37L
+#ifdef _DEBUG
+ FILEFLAGS 0x21L
+#else
+ FILEFLAGS 0x20L
+#endif
+ FILEOS 0x4L
+ FILETYPE 0x1L
+ FILESUBTYPE 0x0L
+BEGIN
+    BLOCK "StringFileInfo"
+    BEGIN
+        BLOCK "040904b0"
+        BEGIN
+            VALUE "Comments", "By Ramón Mollá"
+            VALUE "FileDescription", "Space Invaders"
+            VALUE "FileVersion", "1, 0, 0, 0"
+            VALUE "InternalName", "Space Invaders"
+            VALUE "LegalCopyright", ""
+            VALUE "OriginalFilename", "Space Invaders.exe"
+            VALUE "ProductName", "Space Invaders"
+            VALUE "ProductVersion", "1, 0, 0, 0"
+            VALUE "SpecialBuild", "MSVC++ 2010"
+        END
+    END
+    BLOCK "VarFileInfo"
+    BEGIN
+        VALUE "Translation", 0x409, 1200
+    END
+END
+
+
+/////////////////////////////////////////////////////////////////////////////
+//
+// TEXT
+//
+
+IDR_README_TXT          TEXT                    "Readme.txt"
+#endif    // Neutral resources
+/////////////////////////////////////////////////////////////////////////////
+
+
+/////////////////////////////////////////////////////////////////////////////
+// Inglés (Estados Unidos) resources
+
+#if !defined(AFX_RESOURCE_DLL) || defined(AFX_TARG_ENU)
+#ifdef _WIN32
+LANGUAGE LANG_ENGLISH, SUBLANG_ENGLISH_US
+#pragma code_page(1252)
+#endif //_WIN32
+
+/////////////////////////////////////////////////////////////////////////////
+//
+// Icon
+//
+
+// Icon with lowest ID value placed first to ensure application icon
+// remains consistent on all systems.
+IDI_ICON_MUSIC          ICON                    "images\\icon_music.ico"
+
+/////////////////////////////////////////////////////////////////////////////
+//
+// TEXT
+//
+
+IDR_README_ES_TXT       TEXT                    "Readme_es.txt"
+IDR_README_FR_TXT       TEXT                    "Readme_fr.txt"
+
+/////////////////////////////////////////////////////////////////////////////
+//
+// Dialog
+//
+
+IDD_STARTUP DIALOGEX 0, 0, 256, 186
+STYLE DS_SETFONT | DS_MODALFRAME | DS_3DLOOK | DS_CENTER | WS_MINIMIZEBOX | WS_POPUP | WS_VISIBLE | WS_CAPTION | WS_SYSMENU
+CAPTION "Space Invaders"
+FONT 7, "MS Sans Serif", 0, 0, 0x0
+BEGIN
+    DEFPUSHBUTTON   "Start Game",IDOK,166,158,86,19,WS_GROUP
+    CONTROL         "Quick FullScreen (current mode)",IDC_QUICK_FULLSCREEN,
+                    "Button",BS_AUTORADIOBUTTON | BS_FLAT | WS_GROUP | WS_TABSTOP,26,65,129,10
+    CONTROL         "FullScreen",IDC_FULLSCREEN,"Button",BS_AUTORADIOBUTTON | BS_FLAT,26,80,50,10
+    CONTROL         "Window",IDC_WINDOW,"Button",BS_AUTORADIOBUTTON | BS_FLAT,26,96,45,10
+    CONTROL         "640x480",IDC_640_480,"Button",BS_AUTORADIOBUTTON | WS_DISABLED | WS_GROUP | WS_TABSTOP,76,80,44,10
+    CONTROL         "800x600",IDC_800_600,"Button",BS_AUTORADIOBUTTON | WS_DISABLED,76,96,44,10
+    CONTROL         "1024x768",IDC_1024_768,"Button",BS_AUTORADIOBUTTON | WS_DISABLED,76,112,48,10
+    CONTROL         "16bpp",IDC_16BPP,"Button",BS_AUTORADIOBUTTON | WS_DISABLED | WS_GROUP | WS_TABSTOP,122,80,36,10
+    CONTROL         "32bpp",IDC_32BPP,"Button",BS_AUTORADIOBUTTON | WS_DISABLED,122,96,36,10
+    CONTROL         "VSync",IDC_VSYNC,"Button",BS_AUTOCHECKBOX | BS_FLAT | WS_GROUP | WS_TABSTOP,26,143,36,10
+    CONTROL         "Streaming",IDC_STREAM,"Button",BS_AUTOCHECKBOX | BS_FLAT | WS_GROUP | WS_TABSTOP,63,143,47,10
+    COMBOBOX        IDC_BITRATE,111,142,45,128,CBS_DROPDOWNLIST | CBS_AUTOHSCROLL | WS_DISABLED | WS_VSCROLL | WS_TABSTOP
+    CONTROL         "Antialiasing",IDC_ANTI_ALIASING,"Button",BS_AUTOCHECKBOX | BS_FLAT | WS_GROUP | WS_TABSTOP,173,65,48,10
+    CONTROL         "Billboarding",IDC_BILLBOARDING,"Button",BS_AUTOCHECKBOX | BS_FLAT | WS_GROUP | WS_TABSTOP,173,80,52,10
+    CONTROL         "MipMap Textures",IDC_MIPMAP,"Button",BS_AUTOCHECKBOX | BS_FLAT | WS_GROUP | WS_TABSTOP,173,96,70,10
+    PUSHBUTTON      "?",IDC_BUTTON_ABOUT,234,141,18,14,WS_GROUP
+    PUSHBUTTON      "Exit",IDCANCEL,166,158,86,19,NOT WS_VISIBLE | WS_GROUP
+    CONTROL         107,IDB_STARTUP,"Static",SS_BITMAP | SS_REALSIZEIMAGE | SS_SUNKEN,0,1,255,50
+    CONTROL         235,IDB_STARTUP_INTERNET,"Static",SS_BITMAP | SS_REALSIZEIMAGE,3,56,14,126
+    CONTROL         242,IDB_STARTUP_INTERNET_OVER,"Static",SS_BITMAP | SS_REALSIZEIMAGE | NOT WS_VISIBLE,3,56,14,126
+    GROUPBOX        "Display",IDC_STATIC_DISPLAY,21,52,140,77
+    GROUPBOX        "Miscellaneous",IDC_STATIC_MISC,21,132,140,50
+    GROUPBOX        "Quality",IDC_STATIC_QUALITY,165,52,86,77
+    CONTROL         "version 0.6.1c",IDC_STATIC_VERSION,"Static",SS_LEFTNOWORDWRAP | WS_GROUP,166,144,46,8
+    CONTROL         "",IDC_ANTI_ALIASING_MODE,"Button",BS_OWNERDRAW | BS_CENTER | WS_TABSTOP,222,65,25,10
+    COMBOBOX        IDC_COMBO1,63,165,93,12,CBS_DROPDOWN | CBS_SORT | WS_VSCROLL | WS_TABSTOP
+    LTEXT           "Language",IDC_STATIC,25,166,37,11
+END
+
+IDD_ABOUT DIALOG  0, 0, 382, 281
+STYLE DS_SETFONT | DS_MODALFRAME | DS_CENTER | WS_POPUP | WS_CAPTION | WS_SYSMENU
+CAPTION "Space Invaders - About -"
+FONT 7, "MS Sans Serif"
+BEGIN
+    DEFPUSHBUTTON   "Close Window",IDC_BUTTON_CLOSE,145,262,88,16
+    CONTROL         "Wivik on-screen virtual keyboard",IDC_CHECK_WIVIK,
+                    "Button",BS_AUTOCHECKBOX | WS_TABSTOP,8,248,128,10
+    CONTROL         "Slider1",IDC_SLIDER_WIVIK,"msctls_trackbar32",TBS_BOTH | TBS_NOTICKS | WS_TABSTOP,135,245,92,16
+    PUSHBUTTON      "Mute",IDC_BUTTON_MUTE,345,260,26,17,BS_BITMAP
+    GROUPBOX        "Homepage",IDC_STATIC_HOMEPAGE,41,5,110,21
+    CONTROL         "http://spaceinvadersgl.sf.net",IDC_HOMEPAGE,"Static",SS_LEFTNOWORDWRAP | WS_GROUP,48,13,96,8
+    ICON            IDI_ICON_APP,IDI_ICON_APP,13,6,20,20,SS_REALSIZEIMAGE
+    GROUPBOX        "Forum",IDC_STATIC_FORUM,158,5,140,21
+    PUSHBUTTON      "Cancel",IDCANCEL,257,262,43,14,NOT WS_VISIBLE
+    CONTROL         "GNU GPL",IDC_GNU_GPL,"Static",SS_LEFTNOWORDWRAP | WS_DISABLED | WS_GROUP,334,13,36,8
+    CONTROL         "https://sf.net/forum/?group_id=74529",IDC_MAIL,"Static",SS_LEFTNOWORDWRAP | WS_GROUP,165,13,126,8
+    LTEXT           "1 click = 100ms hold down key",IDC_TEXT_WIVIK,228,248,143,8
+END
+
+IDD_STREAMING DIALOGEX 0, 0, 286, 65
+STYLE DS_SETFONT | DS_FIXEDSYS | DS_CENTER | WS_CAPTION | WS_SYSMENU | WS_THICKFRAME
+EXSTYLE WS_EX_TOPMOST
+CAPTION "Custom streaming URL"
+FONT 8, "MS Shell Dlg", 0, 0, 0x1
+BEGIN
+    EDITTEXT        IDC_STREAMING_URL,4,31,276,12,ES_AUTOHSCROLL,WS_EX_TRANSPARENT
+    DEFPUSHBUTTON   "OK",IDOK,114,48,56,14
+    LTEXT           "www.shoutcast.com",IDC_STREAMING_SITE,116,17,65,8
+    LTEXT           "Please enter an URL for a Shoutcast playlist (*.pls), a Shoutcast stream,",IDC_STATIC_CUSTOM1,37,8,248,8
+    ICON            IDI_ICON_MUSIC,IDC_STATIC,8,7,21,20,SS_REALSIZEIMAGE
+    LTEXT           "or a MP3 stream. Check",IDC_STATIC_CUSTOM2,37,17,77,8
+END
+
+
+/////////////////////////////////////////////////////////////////////////////
+//
+// DESIGNINFO
+//
+
+#ifdef APSTUDIO_INVOKED
+GUIDELINES DESIGNINFO 
+BEGIN
+    IDD_STARTUP, DIALOG
+    BEGIN
+        RIGHTMARGIN, 255
+        BOTTOMMARGIN, 182
+    END
+
+    IDD_ABOUT, DIALOG
+    BEGIN
+        LEFTMARGIN, 7
+        RIGHTMARGIN, 378
+        TOPMARGIN, 7
+        BOTTOMMARGIN, 279
+    END
+
+    IDD_STREAMING, DIALOG
+    BEGIN
+        RIGHTMARGIN, 285
+        BOTTOMMARGIN, 62
+    END
+END
+#endif    // APSTUDIO_INVOKED
+
+
+/////////////////////////////////////////////////////////////////////////////
+//
+// Bitmap
+//
+
+IDB_STARTUP             BITMAP                  "images\\game_startup.bmp"
+IDB_CTM_BAND            BITMAP                  "images\\barre.bmp"
+IDB_CTM_NUMBER0         BITMAP                  "images\\chiffre0.bmp"
+IDB_CTM_NUMBER1         BITMAP                  "images\\chiffre1.bmp"
+IDB_CTM_NUMBER2         BITMAP                  "images\\chiffre2.bmp"
+IDB_CTM_NUMBER3         BITMAP                  "images\\chiffre3.bmp"
+IDB_CTM_NUMBER4         BITMAP                  "images\\chiffre4.bmp"
+IDB_CTM_NUMBER5         BITMAP                  "images\\chiffre5.bmp"
+IDB_CTM_NUMBER6         BITMAP                  "images\\chiffre6.bmp"
+IDB_CTM_NUMBER7         BITMAP                  "images\\chiffre7.bmp"
+IDB_CTM_NUMBER8         BITMAP                  "images\\chiffre8.bmp"
+IDB_CTM_NUMBER9         BITMAP                  "images\\chiffre9.bmp"
+IDB_CTM_SKYBOX_BCKG     BITMAP                  "images\\fond_skybox2.bmp"
+IDB_CTM_HISCORE         BITMAP                  "images\\hiscore.bmp"
+IDB_CTM_SHIP3_2         BITMAP                  "images\\ship3_b.bmp"
+IDB_CTM_PLAYER_SHOOT    BITMAP                  "images\\tir.bmp"
+IDB_CTM_SHIP_SHOOT      BITMAP                  "images\\tir_ship.bmp"
+IDB_CTM_SHIP1_1         BITMAP                  "images\\ship1.bmp"
+IDB_CTM_SHIP1_2         BITMAP                  "images\\ship1_b.bmp"
+IDB_CTM_SHIP2_1         BITMAP                  "images\\ship2.bmp"
+IDB_CTM_SHIP2_2         BITMAP                  "images\\ship2_b.bmp"
+IDB_CTM_SHIP3_1         BITMAP                  "images\\ship3.bmp"
+IDB_CTM_BRICK           BITMAP                  "images\\pixel_vert.bmp"
+IDB_CTM_SCORE           BITMAP                  "images\\score.bmp"
+IDB_CTM_LIVES           BITMAP                  "images\\lives.bmp"
+IDB_CTM_LOADING         BITMAP                  "images\\game_loading.bmp"
+IDB_CTM_PARTICLE        BITMAP                  "images\\particle.bmp"
+IDB_CTM_3D_BAND         BITMAP                  "images\\barre3d.bmp"
+IDB_CTM_BRICK3D         BITMAP                  "images\\pixel_vert3d.bmp"
+IDB_STARTUP_INTERNET    BITMAP                  "images\\game_startup_internet.bmp"
+IDB_STARTUP_INTERNET_OVER BITMAP                  "images\\game_startup_internet_over.bmp"
+IDB_BUTTON_MUTE         BITMAP                  "images\\game_about_button_mute.bmp"
+IDB_BUTTON_PLAY         BITMAP                  "images\\game_about_button_play.bmp"
+IDB_CTM_PLAYER          BITMAP                  "images\\player.bmp"
+IDB_CTM_PAUSED          BITMAP                  "images\\Paused.bmp"
+IDB_CTM_PRESSKEY        BITMAP                  "images\\PressKey.bmp"
+
+/////////////////////////////////////////////////////////////////////////////
+//
+// WAVE
+//
+
+IDR_SOUND_TIR           WAVE                    "sounds\\shoot.mp3"
+IDR_SOUND_EXPLOSION     WAVE                    "sounds\\explosion.mp3"
+IDR_SOUND_APPLAUSE      WAVE                    "sounds\\applause.mp3"
+IDR_SOUND_DESCENTE      WAVE                    "sounds\\descent.mp3"
+IDR_SOUND_TIR3D         WAVE                    "sounds\\shoot_3d.mp3"
+IDR_SOUND_SHIELD_CHARGE WAVE                    "sounds\\shield_charge.mp3"
+IDR_SOUND_XM_ABOUT      WAVE                    "sounds\\1_music_jt_strng.xm"
+IDR_SOUND_XM            WAVE                    "sounds\\2_music_1mmsan.oxm"
+IDR_SOUND_BONUS         WAVE                    "sounds\\Bonus.mp3"
+IDR_SOUND_KEY           WAVE                    "sounds\\key.mp3"
+IDR_SOUND_CROSS         WAVE                    "sounds\\cross.mp3"
+
+/////////////////////////////////////////////////////////////////////////////
+//
+// BINARY
+//
+
+//IDR_BINARY_FONT_TGA     BINARY                  "images\\font.tga"
+IDR_BINARY_PLAYER_3DS   BINARY                  "models\\player.3ds"
+IDR_BINARY_SHIP_3DS     BINARY                  "models\\ship.3ds"
+IDR_BINARY_SPHERE_OGIVE_3DS BINARY                  "models\\sphere_ogive.3ds"
+IDR_BINARY_SUPPLYSHIP_3DS BINARY                  "models\\supplyship.3ds"
+#if defined(APSTUDIO_INVOKED) || defined(FMODEXTRACT_YES)
+#if defined(APSTUDIO_INVOKED)
+IDR_BINARY_FMOD$(FMODEXTRACT_YES) BINARY                  "fmod.dll"
+#else
+IDR_BINARY_FMOD         BINARY                  "fmod.dll"
+#endif
+#endif
+IDR_BINARY_FIGHTER_LASER_3DS BINARY                  "models\\fighter_laser.3ds"
+
+/////////////////////////////////////////////////////////////////////////////
+//
+// Cursor
+//
+
+IDC_CURSOR_CROSS        CURSOR                  "images\\3dgmove.cur"
+IDC_CURSOR_HAND         CURSOR                  "images\\hand.cur"
+IDC_CURSOR_HAND_CLOSED  CURSOR                  "images\\hand_closed.cur"
+
+/////////////////////////////////////////////////////////////////////////////
+//
+// JPG
+//
+
+//IDJ_CTM_PLANET_BCKG     JPG                     "images\\fond_planete.jpg"
+//IDJ_CTM_EARTH_MOON_BCKG JPG                     "images\\fond_earth_moon.jpg"
+//IDJ_CTM_GALAXY_BCKG     JPG                     "images\\fond_galaxy1.jpg"
+//IDJ_S02_5121            JPG                     "models\\S02_5121.jpg"
+//IDJ_SPHERE_O            JPG                     "models\\sphere_o.jpg"
+//IDJ_F02_512             JPG                     "models\\F02_512.jpg"
+//IDJ_CTM_POWERUP         JPG                     "images\\powerup.jpg"
+//IDJ_CTM_PARTICLE4       JPG                     "images\\particule4.jpg"
+//IDJ_CTM_CADRE_CENTRE    JPG                     "images\\cadre_centre.jpg"
+//IDJ_CTM_CADRE_CENTRE_LONG JPG                     "images\\cadre_centre_long.jpg"
+//IDJ_CTM_SKYBOX_BCKG_JPG JPG                     "images\\fond_skybox.jpg"
+//IDJ_CTM_PARTICLE2       JPG                     "images\\particle2.jpg"
+//IDJ_CTM_PLAYER_SHOOT3D  JPG                     "images\\tir_3d_base.jpg"
+//IDJ_CTM_PLAYER_SHOOT3D_DARK_BCKG JPG                     "images\\tir_3d_base_dark_backgrd.jpg"
+//IDJ_CTM_SHOOT_3D_BASE_DOUBLE JPG                     "images\\tir_3d_base_double.jpg"
+//IDJ_CTM_SPHERE          JPG                     "images\\sphere.jpg"
+
+/////////////////////////////////////////////////////////////////////////////
+//
+// GIF
+//
+
+//IDG_CTM_SPACE_BCKG      GIF                     "images\\fond_espace.gif"
+//IDG_CTM_PARTICLE3       GIF                     "images\\particle3.gif"
+//IDG_CTM_EQUALIZER_BAND  GIF                     "images\\equalizer_barre.gif"
+//IDG_CTM_TEXT_WEAPON     GIF                     "images\\text_weapon.gif"
+//IDG_CTM_TEXT_BONUS      GIF                     "images\\text_bonus.gif"
+//IDG_CTM_PARTICLE3_3D    GIF                     "images\\particle3_3d.gif"
+
+/////////////////////////////////////////////////////////////////////////////
+//
+// TGA
+//
+
+//IDT_CTM_SUPPLYSHIP      TGA                     "images\\supplyship.tga"
+//IDT_CTM_PLAYER3D        TGA                     "images\\player3d.tga"
+
+/////////////////////////////////////////////////////////////////////////////
+//
+// Dialog Info
+//
+
+IDD_STARTUP DLGINIT
+BEGIN
+    IDC_BITRATE, 0x403, 4, 0
+0x5344, 0x004c, 
+    IDC_BITRATE, 0x403, 5, 0
+0x5349, 0x4e44, "\000" 
+    IDC_BITRATE, 0x403, 7, 0
+0x4944, 0x4c41, 0x5055, "\000" 
+    0
+
+END
+
+
+/////////////////////////////////////////////////////////////////////////////
+//
+// PNG
+//
+
+//IDP_CTM_CADRE_ENERGY_CONTOUR PNG                     "images\\cadre_energy_contour.png"
+//IDP_CTM_CADRE_ENERGY    PNG                     "images\\cadre_energy.png"
+//IDP_CTM_EQUALIZER       PNG                     "images\\equalizer.png"
+//IDP_CTM_BONUS1          PNG                     "images\\bonus1.png"
+//IDP_CTM_PARTICLE3_PNG   PNG                     "images\\particle3.png"
+#endif    // Inglés (Estados Unidos) resources
+/////////////////////////////////////////////////////////////////////////////
+
+
+/////////////////////////////////////////////////////////////////////////////
+// Español resources
+
+#if !defined(AFX_RESOURCE_DLL) || defined(AFX_TARG_ESN)
+#ifdef _WIN32
+LANGUAGE LANG_SPANISH, SUBLANG_SPANISH_MODERN
+#pragma code_page(1252)
+#endif //_WIN32
+
+/////////////////////////////////////////////////////////////////////////////
+//
+// Bitmap
+//
+
+IDB_CTM_SUPPLYSHIP_SHOOT BITMAP                  "images\\tir_supplyship.bmp"
+#endif    // Español resources
+/////////////////////////////////////////////////////////////////////////////
+
+
+/////////////////////////////////////////////////////////////////////////////
+// Turco resources
+
+#if !defined(AFX_RESOURCE_DLL) || defined(AFX_TARG_TRK)
+#ifdef _WIN32
+LANGUAGE LANG_TURKISH, SUBLANG_DEFAULT
+#pragma code_page(1254)
+#endif //_WIN32
+
+#ifdef APSTUDIO_INVOKED
+/////////////////////////////////////////////////////////////////////////////
+//
+// TEXTINCLUDE
+//
+
+1 TEXTINCLUDE 
+BEGIN
+    "resource.h\0"
+END
+
+2 TEXTINCLUDE 
+BEGIN
+    "#include ""afxres.h""\r\n"
+    "\0"
+END
+
+3 TEXTINCLUDE 
+BEGIN
+    "CREATEPROCESS_MANIFEST_RESOURCE_ID RT_MANIFEST ""Space Invaders.manifest""\r\n"
+    "\0"
+END
+
+#endif    // APSTUDIO_INVOKED
+
+#endif    // Turco resources
+/////////////////////////////////////////////////////////////////////////////
+
+
+
+#ifndef APSTUDIO_INVOKED
+/////////////////////////////////////////////////////////////////////////////
+//
+// Generated from the TEXTINCLUDE 3 resource.
+//
+CREATEPROCESS_MANIFEST_RESOURCE_ID RT_MANIFEST "Space Invaders.manifest"
+
+/////////////////////////////////////////////////////////////////////////////
+#endif    // not APSTUDIO_INVOKED
+

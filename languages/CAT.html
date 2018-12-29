@@ -1,0 +1,657 @@
+﻿<HTML>
+<HEAD>
+<TITLE>Space Invaders</TITLE>
+<VERSION>1.0.0</VERSION>
+<TYPE>Language</TYPE>
+<LANGUAGE>CA</LANGUAGE>
+</HEAD>
+
+<BODY>
+<RESOURCE>
+<ID>1</ID>
+<CONTENT>Internet Error</CONTENT>
+</RESOURCE>
+<RESOURCE>
+<ID>2</ID>
+<CONTENT>Informació: connexió a Internet no es pot utilitzar</CONTENT>
+</RESOURCE>
+<RESOURCE>
+<ID>3</ID>
+<CONTENT>Notes</CONTENT>
+</RESOURCE>
+
+<RESOURCE>
+<ID>11</ID>
+<CONTENT>clic dret = 1</CONTENT>
+</RESOURCE>
+<RESOURCE>
+<ID>12</ID>
+<CONTENT>Tiempo.ms mantingui tecla</CONTENT>
+</RESOURCE>
+<RESOURCE>
+<ID>13</ID>
+<CONTENT>No s'ha pogut crear el control d'edició!</CONTENT>
+</RESOURCE>
+<RESOURCE>
+<ID>14</ID>
+<CONTENT>Error</CONTENT>
+</RESOURCE>
+
+<RESOURCE>
+<ID>21</ID>
+<CONTENT>Crear diferents mides de textures per a una millor qualitat visual. \ R necessito més megabytes de memòria.</CONTENT>
+</RESOURCE>
+<RESOURCE>
+<ID>22</ID>
+<CONTENT>mipmap TEXTURES</CONTENT>
+</RESOURCE>
+<RESOURCE>
+<ID>23</ID>
+<CONTENT>Estableix la freqüència de quadres de moviments del tipus de marc llis. \ R FPS està limitada per la freqüència. \ R \ r <V>per canviar ON /OFF durant el joc.</CONTENT>
+</RESOURCE>
+<RESOURCE>
+<ID>24</ID>
+<CONTENT>Sincronització vertical</CONTENT>
+</RESOURCE>
+<RESOURCE>
+<ID>25</ID>
+<CONTENT>Permet transmetre música de música d'Internet \ r Escollir entre:. \ R - Cable /DSL (128K) \ r - (dual) ISDN (RDSI) (56 K) \ r - Ajusteu el dial (24 k) \ r - Custom (. Introduir un URL)</CONTENT>
+</RESOURCE>
+<RESOURCE>
+<ID>26</ID>
+<CONTENT>streaming de música</CONTENT>
+</RESOURCE>
+<RESOURCE>
+<ID>27</ID>
+<CONTENT>Estableix l'orientació d'objectes 2D (com partícules) perquè la càmera per a una millor representació (només mode 3D) cara. \ Es necessita R CPU.</CONTENT>
+</RESOURCE>
+<RESOURCE>
+<ID>28</ID>
+<CONTENT>billboarding</CONTENT>
+</RESOURCE>
+<RESOURCE>
+<ID>29</ID>
+<CONTENT>Permet allisar, principalment per objectes 3D per a una millor qualitat visual. \ R Requereix una targeta gràfica compatible i més targetes gràfiques CPU /RAM. \ R \ r <A>clau per intercanviar ON /OFF durant el joc.</CONTENT>
+</RESOURCE>
+<RESOURCE>
+<ID>30</ID>
+<CONTENT>Anti-aliasing</CONTENT>
+</RESOURCE>
+<RESOURCE>
+<ID>31</ID>
+<CONTENT>La qualitat i la velocitat depèn de manera significativa al controlador de la targeta de vídeo. \ R \ r x2 (2 mostres, 2 aixetes) més ràpidament. \ R x2 (Qx) (2,5) ~ velocitat per sobre de la qualitat de la següent. \ R x4 (4,4) per sobre, però poc més lent. \ X4S r (4,9) més que l'anterior però més lent.</CONTENT>
+</RESOURCE>
+<RESOURCE>
+<ID>32</ID>
+<CONTENT>Mode Anti-aliasing</CONTENT>
+</RESOURCE>
+<RESOURCE>
+<ID>33</ID>
+<CONTENT>sio: TrackMouseEvent Error</CONTENT>
+</RESOURCE>
+<RESOURCE>
+<ID>34</ID>
+<CONTENT>un error en crear la finestra OpenGL</CONTENT>
+</RESOURCE>
+<RESOURCE>
+<ID>35</ID>
+<CONTENT>marca</CONTENT>
+</RESOURCE>
+<RESOURCE>
+<ID>36</ID>
+<CONTENT>personalitzat</CONTENT>
+</RESOURCE>
+<RESOURCE>
+<ID>37</ID>
+<CONTENT>So Error d'inicialització</CONTENT>
+</RESOURCE>
+
+<RESOURCE>
+<ID>51</ID>
+<CONTENT>InitCommonControlEx () va fallar.</CONTENT>
+</RESOURCE>
+<RESOURCE>
+<ID>52</ID>
+<CONTENT>No s'ha pogut registrar la classe de finestra.</CONTENT>
+</RESOURCE>
+<RESOURCE>
+<ID>53</ID>
+<CONTENT>Error</CONTENT>
+</RESOURCE>
+<RESOURCE>
+<ID>54</ID>
+<CONTENT>[Inici]</CONTENT>
+</RESOURCE>
+<RESOURCE>
+<ID>55</ID>
+<CONTENT>Error</CONTENT>
+</RESOURCE>
+
+<RESOURCE>
+<ID>101</ID>
+<CONTENT>URL de canal està buida</CONTENT>
+</RESOURCE>
+<RESOURCE>
+<ID>102</ID>
+<CONTENT>Transmissió: NumberOfEntries pls no es troben a l'arxiu</CONTENT>
+</RESOURCE>
+<RESOURCE>
+<ID>103</ID>
+<CONTENT>Transmissió: valor numèric per NumberOfEntries no trobat</CONTENT>
+</RESOURCE>
+<RESOURCE>
+<ID>104</ID>
+<CONTENT>Transmissió: No es pot assignar memòria pel fitxer de els pls (llista de reproducció)</CONTENT>
+</RESOURCE>
+<RESOURCE>
+<ID>105</ID>
+<CONTENT>Transmissió: No es pot assignar memòria per els pls d'arxiu (playlist->nom)</CONTENT>
+</RESOURCE>
+<RESOURCE>
+<ID>106</ID>
+<CONTENT>Transmissió: No es pot assignar memòria per els pls d'arxiu (playlist->idioma)</CONTENT>
+</RESOURCE>
+
+<RESOURCE>
+<ID>111</ID>
+<CONTENT>Mostra</CONTENT>
+</RESOURCE>
+<RESOURCE>
+<ID>112</ID>
+<CONTENT>Pantalla completa ràpidament (mode actiu)</CONTENT>
+</RESOURCE>
+<RESOURCE>
+<ID>113</ID>
+<CONTENT>Pantalla completa</CONTENT>
+</RESOURCE>
+<RESOURCE>
+<ID>114</ID>
+<CONTENT>Finestra</CONTENT>
+</RESOURCE>
+<RESOURCE>
+<ID>115</ID>
+<CONTENT>Misc.</CONTENT>
+</RESOURCE>
+<RESOURCE>
+<ID>116</ID>
+<CONTENT>VSync</CONTENT>
+</RESOURCE>
+<RESOURCE>
+<ID>117</ID>
+<CONTENT>Transmissió Edita</CONTENT>
+</RESOURCE>
+<RESOURCE>
+<ID>118</ID>
+<CONTENT>Qualitat</CONTENT>
+</RESOURCE>
+<RESOURCE>
+<ID>119</ID>
+<CONTENT>Suavitzar</CONTENT>
+</RESOURCE>
+
+<RESOURCE>
+<ID>121</ID>
+<CONTENT>textures mipmap</CONTENT>
+</RESOURCE>
+<RESOURCE>
+<ID>122</ID>
+<CONTENT>Iniciar joc</CONTENT>
+</RESOURCE>
+<RESOURCE>
+<ID>123</ID>
+<CONTENT>Marcat</CONTENT>
+</RESOURCE>
+<RESOURCE>
+<ID>124</ID>
+<CONTENT>personalitzat</CONTENT>
+</RESOURCE>
+
+<RESOURCE>
+<ID>151</ID>
+<CONTENT>Lloc web</CONTENT>
+</RESOURCE>
+<RESOURCE>
+<ID>152</ID>
+<CONTENT>Fòrum</CONTENT>
+</RESOURCE>
+<RESOURCE>
+<ID>153</ID>
+<CONTENT>Wikik pantalla del teclat virtual</CONTENT>
+</RESOURCE>
+<RESOURCE>
+<ID>154</ID>
+<CONTENT>Tancar finestra</CONTENT>
+</RESOURCE>
+<RESOURCE>
+<ID>155</ID>
+<CONTENT>personalitzat amb l'URL</CONTENT>
+</RESOURCE>
+<RESOURCE>
+<ID>156</ID>
+<CONTENT>Insereix URL de la llista de reproducció de Shoutcast (* .pls)</CONTENT>
+</RESOURCE>
+<RESOURCE>
+<ID>157</ID>
+<CONTENT>o MP3. Verificar</CONTENT>
+</RESOURCE>
+
+<RESOURCE>
+<ID>201</ID>
+<CONTENT>Nivell de càrrega:</CONTENT>
+</RESOURCE>
+
+<RESOURCE>
+<ID>211</ID>
+<CONTENT>Nivell salvat Carregant</CONTENT>
+</RESOURCE>
+
+<RESOURCE>
+<ID>221</ID>
+<CONTENT>Data</CONTENT>
+</RESOURCE>
+<RESOURCE>
+<ID>222</ID>
+<CONTENT>Carregant Sounds ...</CONTENT>
+</RESOURCE>
+<RESOURCE>
+<ID>223</ID>
+<CONTENT>Lectura de fitxers d'inicialització ...</CONTENT>
+</RESOURCE>
+<RESOURCE>
+<ID>224</ID>
+<CONTENT>Un joc salvat s'ha detectat. Vols pujar aquest?</CONTENT>
+</RESOURCE>
+<RESOURCE>
+<ID>225</ID>
+<CONTENT>S'està carregant el joc</CONTENT>
+</RESOURCE>
+<RESOURCE>
+<ID>226</ID>
+<CONTENT>Lectura partida guardada ...</CONTENT>
+</RESOURCE>
+<RESOURCE>
+<ID>227</ID>
+<CONTENT>Lectura primer nivell del joc ...</CONTENT>
+</RESOURCE>
+<RESOURCE>
+<ID>228</ID>
+<CONTENT>Generació de la nau per defecte ...</CONTENT>
+</RESOURCE>
+<RESOURCE>
+<ID>229</ID>
+<CONTENT>Tirs ...</CONTENT>
+</RESOURCE>
+<RESOURCE>
+<ID>230</ID>
+<CONTENT>Variables d'entorn ...</CONTENT>
+</RESOURCE>
+<RESOURCE>
+<ID>231</ID>
+<CONTENT>Error so inicialitzar</CONTENT>
+</RESOURCE>
+
+<RESOURCE>
+<ID>241</ID>
+<CONTENT>Carregant textures ...</CONTENT>
+</RESOURCE>
+<RESOURCE>
+<ID>242</ID>
+<CONTENT>Carregant Malles ...</CONTENT>
+</RESOURCE>
+<RESOURCE>
+<ID>243</ID>
+<CONTENT>Excepció: S'ha produït un problema durant la càrrega d'objectes 3D</CONTENT>
+</RESOURCE>
+<RESOURCE>
+<ID>244</ID>
+<CONTENT>Space Invaders OpenGL [Fi de càrrega]</CONTENT>
+</RESOURCE>
+
+<RESOURCE>
+<ID>301</ID>
+<CONTENT>Nivell de càrrega:</CONTENT>
+</RESOURCE>
+<RESOURCE>
+<ID>302</ID>
+<CONTENT>Error</CONTENT>
+</RESOURCE>
+<RESOURCE>
+<ID>303</ID>
+<CONTENT>Mode immortal Introducció.</CONTENT>
+</RESOURCE>
+<RESOURCE>
+<ID>304</ID>
+<CONTENT>Introducció de manera mortal.</CONTENT>
+</RESOURCE>
+<RESOURCE>
+<ID>305</ID>
+<CONTENT>Vaig posar alguns arxius mp3 en el directori del joc.</CONTENT>
+</RESOURCE>
+<RESOURCE>
+<ID>306</ID>
+<CONTENT>Seleccioneu l'opció d'iniciar estovament.</CONTENT>
+</RESOURCE>
+<RESOURCE>
+<ID>307</ID>
+<CONTENT>La línia suavitzada no s'utilitza en la manera 3D.</CONTENT>
+</RESOURCE>
+<RESOURCE>
+<ID>308</ID>
+<CONTENT>Smoothing: ON</CONTENT>
+</RESOURCE>
+<RESOURCE>
+<ID>309</ID>
+<CONTENT>Smoothing: OFF</CONTENT>
+</RESOURCE>
+<RESOURCE>
+<ID>310</ID>
+<CONTENT>Ho sentim, SwapIntervalExt () no està disponible.</CONTENT>
+</RESOURCE>
+<RESOURCE>
+<ID>311</ID>
+<CONTENT>Vertical Sync: ON</CONTENT>
+</RESOURCE>
+<RESOURCE>
+<ID>312</ID>
+<CONTENT>Sincronització vertical: OFF</CONTENT>
+</RESOURCE>
+
+<RESOURCE>
+<ID>321</ID>
+<CONTENT>so</CONTENT>
+</RESOURCE>
+<RESOURCE>
+<ID>322</ID>
+<CONTENT>àudio</CONTENT>
+</RESOURCE>
+<RESOURCE>
+<ID>323</ID>
+<CONTENT>Temps</CONTENT>
+</RESOURCE>
+<RESOURCE>
+<ID>324</ID>
+<CONTENT>angle</CONTENT>
+</RESOURCE>
+<RESOURCE>
+<ID>325</ID>
+<CONTENT>Camara.zoom</CONTENT>
+</RESOURCE>
+<RESOURCE>
+<ID>326</ID>
+<CONTENT>Sortir ESC</CONTENT>
+</RESOURCE>
+<RESOURCE>
+<ID>327</ID>
+<CONTENT>rotació RATOLÍ</CONTENT>
+</RESOURCE>
+<RESOURCE>
+<ID>328</ID>
+<CONTENT>M \ r música (en)</CONTENT>
+</RESOURCE>
+<RESOURCE>
+<ID>329</ID>
+<CONTENT>M \ r música (apagat)</CONTENT>
+</RESOURCE>
+<RESOURCE>
+<ID>330</ID>
+<CONTENT>B \ r Fons</CONTENT>
+</RESOURCE>
+<RESOURCE>
+<ID>331</ID>
+<CONTENT>R \ r lleva Substituïu</CONTENT>
+</RESOURCE>
+<RESOURCE>
+<ID>332</ID>
+<CONTENT>T \ r Amaga el text</CONTENT>
+</RESOURCE>
+<RESOURCE>
+<ID>333</ID>
+<CONTENT>Zoom +/-</CONTENT>
+</RESOURCE>
+<RESOURCE>
+<ID>334</ID>
+<CONTENT>Alçada</CONTENT>
+</RESOURCE>
+<RESOURCE>
+<ID>335</ID>
+<CONTENT>Ample</CONTENT>
+</RESOURCE>
+<RESOURCE>
+<ID>336</ID>
+<CONTENT>Prem espai per canviar la música</CONTENT>
+</RESOURCE>
+
+<RESOURCE>
+<ID>351</ID>
+<CONTENT>NIVELL D'ENTRADA</CONTENT>
+</RESOURCE>
+<RESOURCE>
+<ID>352</ID>
+<CONTENT>VOSTÈ GUANYA!</CONTENT>
+</RESOURCE>
+<RESOURCE>
+<ID>353</ID>
+<CONTENT>CAP DE JOC!</CONTENT>
+</RESOURCE>
+<RESOURCE>
+<ID>354</ID>
+<CONTENT>perds!</CONTENT>
+</RESOURCE>
+
+<RESOURCE>
+<ID>361</ID>
+<CONTENT>error CHGT zik ??</CONTENT>
+</RESOURCE>
+
+<RESOURCE>
+<ID>401</ID>
+<CONTENT>tipus de caràcters (</CONTENT>
+</RESOURCE>
+<RESOURCE>
+<ID>402</ID>
+<CONTENT>) no és compatible.</CONTENT>
+</RESOURCE>
+
+<RESOURCE>
+<ID>411</ID>
+<CONTENT>file Inici inicialització interpretació.</CONTENT>
+</RESOURCE>
+
+<RESOURCE>
+<ID>461 /ID>
+<CONTENT>text</CONTENT>
+</RESOURCE>
+<RESOURCE>
+<ID>462</ID>
+<CONTENT>Nombre màxim de vida indicat (</CONTENT>
+</RESOURCE>
+<RESOURCE>
+<ID>463</ID>
+<CONTENT>és inferior al mínim permès pel programa (1). Valor truncat al mínim.</CONTENT>
+</RESOURCE>
+<RESOURCE>
+<ID>464</ID>
+<CONTENT>Nombre màxim de vida indicat (</CONTENT>
+</RESOURCE>
+<RESOURCE>
+<ID>465</ID>
+<CONTENT>) és més gran que la quantitat màxima permesa pel programa (1). Màxima truncada.</CONTENT>
+</RESOURCE>
+<RESOURCE>
+<ID>466</ID>
+<CONTENT>La hi ha expedient que correspon a aquest joc.</CONTENT>
+</RESOURCE>
+<RESOURCE>
+<ID>467</ID>
+<CONTENT>L'arxiu és de tipus \ "</CONTENT>
+</RESOURCE>
+<RESOURCE>
+<ID>468</ID>
+<CONTENT>\ boot \ ". Es necessita un tipus de fitxer \". "</CONTENT>
+</RESOURCE>
+<RESOURCE>
+<ID>469</ID>
+<CONTENT>Versió del fitxer és v</CONTENT>
+</RESOURCE>
+<RESOURCE>
+<ID>470</ID>
+<CONTENT>, que no es correspon amb aquesta versió v</CONTENT>
+</RESOURCE>
+
+<RESOURCE>
+<ID>481</ID>
+<CONTENT>Comentaris:</CONTENT>
+</RESOURCE>
+
+<RESOURCE>
+<ID>491</ID>
+<CONTENT>arxiu completat Interpretació.</CONTENT>
+</RESOURCE>
+
+<RESOURCE>
+<ID>601</ID>
+<CONTENT>Carregant textures ...</CONTENT>
+</RESOURCE>
+<RESOURCE>
+<ID>602</ID>
+<CONTENT>Carregant textures ... (100%) \ n</CONTENT>
+</RESOURCE>
+
+<RESOURCE>
+<ID>651</ID>
+<CONTENT>Error en carregar PNG</CONTENT>
+</RESOURCE>
+
+<- Menú principal ->
+<RESOURCE>
+<ID>800</ID>
+<CONTENT>Joc</CONTENT>
+</RESOURCE>
+<RESOURCE>
+<ID>810</ID>
+<CONTENT>Nivell</CONTENT>
+</RESOURCE>
+<RESOURCE>
+<ID>820</ID>
+<CONTENT>Configuració</CONTENT>
+</RESOURCE>
+<RESOURCE>
+<ID>830</ID>
+<CONTENT>Ajuda</CONTENT>
+</RESOURCE>
+<RESOURCE>
+<ID>840</ID>
+<CONTENT>Quant a</CONTENT>
+</RESOURCE>
+
+<- Menú principal opcions de primer nivell ->
+<RESOURCE>
+<ID>811</ID>
+<CONTENT>Inici</CONTENT>
+</RESOURCE>
+<RESOURCE>
+<ID>812</ID>
+<CONTENT>Sortir</CONTENT>
+</RESOURCE>
+
+<! - Nou contingut per diàleg d '->
+<RESOURCE>
+<ID>900</ID>
+<CONTENT>Mostra</CONTENT>
+</RESOURCE>
+<RESOURCE>
+<ID>901</ID>
+<CONTENT>Pantalla completa (mode de corrent)</CONTENT>
+</RESOURCE>
+<RESOURCE>
+<ID>902</ID>
+<CONTENT>Pantalla completa</CONTENT>
+</RESOURCE>
+<RESOURCE>
+<ID>903</ID>
+<CONTENT>Finestra</CONTENT>
+</RESOURCE>
+<RESOURCE>
+<ID>904</ID>
+<CONTENT>Misc.</CONTENT>
+</RESOURCE>
+<RESOURCE>
+<ID>905</ID>
+<CONTENT>VSync</CONTENT>
+</RESOURCE>
+<RESOURCE>
+<ID>906</ID>
+<CONTENT>Ample de banda</CONTENT>
+</RESOURCE>
+<RESOURCE>
+<ID>907</ID>
+<CONTENT>Qualitat</CONTENT>
+</RESOURCE>
+<RESOURCE>
+<ID>908</ID>
+<CONTENT>Antialiasing</CONTENT>
+</RESOURCE>
+<RESOURCE>
+<ID>910</ID>
+<CONTENT>Textures mipmap</CONTENT>
+</RESOURCE>
+<RESOURCE>
+<ID>911</ID>
+<CONTENT>Iniciar joc</CONTENT>
+</RESOURCE>
+<RESOURCE>
+<ID>912</ID>
+<CONTENT>Marcat</CONTENT>
+</RESOURCE>
+<RESOURCE>
+<ID>913</ID>
+<CONTENT>personalitzat</CONTENT>
+</RESOURCE>
+<RESOURCE>
+<ID>914</ID>
+<CONTENT>Lloc web</CONTENT>
+</RESOURCE>
+<RESOURCE>
+<ID>915</ID>
+<CONTENT>Fòrum</CONTENT>
+</RESOURCE>
+<RESOURCE>
+<ID>916</ID>
+<CONTENT>Wikik pantalla del teclat virtual</CONTENT>
+</RESOURCE>
+<RESOURCE>
+<ID>917</ID>
+<CONTENT>Tancar finestra</CONTENT>
+</RESOURCE>
+<RESOURCE>
+<ID>918</ID>
+<CONTENT>Introduïu un URL a una llista de reproducció (* .pls) d'una estació,</CONTENT>
+</RESOURCE>
+<RESOURCE>
+<ID>919</ID>
+<CONTENT>ràdio, o un MP3. Verificar</CONTENT>
+</RESOURCE>
+
+<! - Codificació dels noms d'idioma ISO i missatges ->
+<RESOURCE>
+<ID>1001</ID>
+<CONTENT>Idioma</CONTENT>
+</RESOURCE>
+<RESOURCE>
+<ID>1002</ID>
+<CONTENT>Canviar l'idioma correctament. Reiniciar Joc</CONTENT>
+</RESOURCE>
+<RESOURCE>
+<ID>1003</ID>
+<CONTENT>Missatge del sistema</CONTENT>
+</RESOURCE>
+<RESOURCE>
+<ID>1004</ID>
+<CONTENT>D'acord</CONTENT>
+</RESOURCE>
+<RESOURCE>
+<ID>1005</ID>
+Finestra <CONTENT>Configuració de la llengua</CONTENT>
+</RESOURCE>
+</BODY>
+</HTML>

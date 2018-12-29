@@ -1,0 +1,657 @@
+<HTML>
+<HEAD>
+<TITLE>Space Invaders</TITLE>
+<VERSION>1.0.0</VERSION>
+<TYPE>Language</TYPE>
+<LANGUAGE>FR</LANGUAGE>
+</HEAD>
+
+<BODY>
+<RESOURCE>
+<ID>1</ID>
+<CONTENT>Erreur Internet</CONTENT>
+</RESOURCE>
+<RESOURCE>
+<ID>2</ID>
+<CONTENT>Information: connexion Internet ne peut pas étre utilisé</CONTENT>.
+</RESOURCE>
+<RESOURCE>
+<ID>3</ID>
+<CONTENT>Attention</CONTENT>
+</RESOURCE>
+
+<RESOURCE>
+<ID>11</ID>
+<CONTENT>clic droit = ??1</CONTENT>
+</RESOURCE>
+<RESOURCE>
+<ID>12</ID>
+<CONTENT>Tiempo.ms maintenez la touche</CONTENT>
+</RESOURCE>
+<RESOURCE>
+<ID>13</ID>
+<CONTENT>Impossible de créer le contréle d'édition!</CONTENT>
+</RESOURCE>
+<RESOURCE>
+<ID>14</ID>
+<CONTENT>Erreur</CONTENT>
+</RESOURCE>
+
+<RESOURCE>
+<ID>21</ID>
+<CONTENT>Créer différentes tailles de textures pour une meilleure qualité visuelle. \ R besoin de plus de mégaoctets de mémoire.</CONTENT>
+</RESOURCE>
+<RESOURCE>
+<ID>22</ID>
+<CONTENT>Mipmap TEXTURES</CONTENT>
+</RESOURCE>
+<RESOURCE>
+<ID>23</ID>
+<CONTENT>Régle le taux de trame pour lisses mouvements des taux de trame. \ R FPS est limitée par la fréquence. \ R \ r<V>pour échanger ON / OFF pendant la lecture.</CONTENT>
+</RESOURCE>
+<RESOURCE>
+<ID>24</ID>
+<CONTENT>Vertical Sync</CONTENT>
+</RESOURCE>
+<RESOURCE>
+<ID>25</ID>
+<CONTENT>Permet musique sur Internet de la musique de flux \ r Choisissez parmi :. \ R - Cable / DSL (128K) \ r - (double) ISDN (RNIS) (56 K) \ r - Réglez la molette (24 k) \ r - mesure (entrer une URL.)</CONTENT>
+</RESOURCE>
+<RESOURCE>
+<ID>26</ID>
+<CONTENT>musique en streaming</CONTENT>
+</RESOURCE>
+<RESOURCE>
+<ID>27</ID>
+<CONTENT>Définit l'orientation des objets 2D (telles que des particules), de sorte que la caméra pour une meilleure représentation (mode 3D uniquement) visage. \ R CPU est nécessaire.</CONTENT>
+</RESOURCE>
+<RESOURCE>
+<ID>28</ID>
+<CONTENT>billboarding</CONTENT>
+</RESOURCE>
+<RESOURCE>
+<ID>29</ID>
+<CONTENT>Permet de lissage, principalement pour des objets 3D pour une meilleure qualité visuelle. \ R nécessite une carte graphique compatible et plus de cartes graphiques CPU / RAM. \ R \ r<A>touche pour commuter ON / OFF pendant la lecture.</CONTENT>
+</RESOURCE>
+<RESOURCE>
+<ID>30</ID>
+<CONTENT>Anti-Aliasing</CONTENT>
+</RESOURCE>
+<RESOURCE>
+<ID>31</ID>
+<CONTENT>La qualité et la vitesse dépend de maniére significative sur le pilote de la carte vidéo. \ R \ r X2 (2 échantillons, 2 robinets) plus rapidement. \ R x2 (Qx) (2,5) ~ vitesse supérieure La qualité de la suivante. \ r x4 (4.4) ci-dessus, mais un peu plus lent. \ r X4 (4,9) plutét qu'au-dessus, mais plus lentement.</CONTENT>
+</RESOURCE>
+<RESOURCE>
+<ID>32</ID>
+<CONTENT>Mode Anti-Aliasing</CONTENT>
+</RESOURCE>
+<RESOURCE>
+<ID>33</ID>
+<CONTENT>sio: TrackMouseEvent Erreur</CONTENT>
+</RESOURCE>
+<RESOURCE>
+<ID>34</ID>
+<CONTENT>Erreur de création de fenétre OpenGL</CONTENT>
+</RESOURCE>
+<RESOURCE>
+<ID>35</ID>
+<CONTENT>marque</CONTENT>
+</RESOURCE>
+<RESOURCE>
+<ID>36</ID>
+<CONTENT>Custom</CONTENT>
+</RESOURCE>
+<RESOURCE>
+<ID>37</ID>
+<CONTENT>Son erreur d'initialisation</CONTENT>
+</RESOURCE>
+
+<RESOURCE>
+<ID>51</ID>
+<CONTENT>InitCommonControlEx () a échoué.</CONTENT>
+</RESOURCE>
+<RESOURCE>
+<ID>52</ID>
+<CONTENT>échec d'enregistrement de la classe Window.</CONTENT>
+</RESOURCE>
+<RESOURCE>
+<ID>53</ID>
+<CONTENT>Erreur</CONTENT>
+</RESOURCE>
+<RESOURCE>
+<ID>54</ID>
+<CONTENT>[Home]</CONTENT>
+</RESOURCE>
+<RESOURCE>
+<ID>55</ID>
+<CONTENT>Erreur</CONTENT>
+</RESOURCE>
+
+<RESOURCE>
+<ID>101</ID>
+<CONTENT>Transmission URL est vide</CONTENT>
+</RESOURCE>
+<RESOURCE>
+<ID>102</ID>
+<CONTENT>Transmission: NumberOfEntries pls introuvables dans le fichier</CONTENT>
+</RESOURCE>
+<RESOURCE>
+<ID>103</ID>
+<CONTENT>Transmission: valeur numérique pour NumberOfEntries introuvable</CONTENT>
+</RESOURCE>
+<RESOURCE>
+<ID>104</ID>
+<CONTENT>streaming: Vous ne pouvez pas allouer de la mémoire pour le fichier pls (liste de lecture)</CONTENT>
+</RESOURCE>
+<RESOURCE>
+<ID>105</ID>
+<CONTENT>streaming: Vous ne pouvez pas allouer de la mémoire pour les pls de fichiers (playlist->nom)</CONTENT>
+</RESOURCE>
+<RESOURCE>
+<ID>106</ID>
+<CONTENT>streaming: Vous ne pouvez pas allouer de la mémoire pour les pls de fichiers (playlist->displayname)</CONTENT>
+</RESOURCE>
+
+<RESOURCE>
+<ID>111</ID>
+<CONTENT>Afficher</CONTENT>
+</RESOURCE>
+<RESOURCE>
+<ID>112</ID>
+<CONTENT>Plein écran rapidement (mode actif)</CONTENT>
+</RESOURCE>
+<RESOURCE>
+<ID>113</ID>
+<CONTENT>Plein écran</CONTENT>
+</RESOURCE>
+<RESOURCE>
+<ID>114</ID>
+<CONTENT>Fenétre</CONTENT>
+</RESOURCE>
+<RESOURCE>
+<ID>115</ID>
+<CONTENT>Divers.</CONTENT>
+</RESOURCE>
+<RESOURCE>
+<ID>116</ID>
+<CONTENT>VSync</CONTENT>
+</RESOURCE>
+<RESOURCE>
+<ID>117</ID>
+<CONTENT>Modifier Transmission /CONTENT>
+</RESOURCE>
+<RESOURCE>
+<ID>118</ID>
+<CONTENT>Qualité</CONTENT>
+</RESOURCE>
+<RESOURCE>
+<ID>119</ID>
+<CONTENT>Antialias</CONTENT>
+</RESOURCE>
+
+<RESOURCE>
+<ID>121</ID>
+<CONTENT>textures Mipmap</CONTENT>
+</RESOURCE>
+<RESOURCE>
+<ID>122</ID>
+<CONTENT>Démarrer le jeu</CONTENT>
+</RESOURCE>
+<RESOURCE>
+<ID>123</ID>
+<CONTENT>Marquage</CONTENT>
+</RESOURCE>
+<RESOURCE>
+<ID>124</ID>
+<CONTENT>Custom</CONTENT>
+</RESOURCE>
+
+<RESOURCE>
+<ID>151</ID>
+<CONTENT>Site</CONTENT>
+</RESOURCE>
+<RESOURCE>
+<ID>152</ID>
+<CONTENT>Forum</CONTENT>
+</RESOURCE>
+<RESOURCE>
+<ID>153</ID>
+<CONTENT>écran Wikik clavier virtuel</CONTENT>
+</RESOURCE>
+<RESOURCE>
+<ID>154</ID>
+<CONTENT>Fermer la fenétre</CONTENT>
+</RESOURCE>
+<RESOURCE>
+<ID>155</ID>
+<CONTENT>personnalisé avec l'URL</CONTENT>
+</RESOURCE>
+<RESOURCE>
+<ID>156</ID>
+<CONTENT>Insérer URL de la playlist Shoutcast (* .pls)</CONTENT>
+</RESOURCE>
+<RESOURCE>
+<ID>157</ID>
+<CONTENT>ou MP3. Vérifier</CONTENT>
+</RESOURCE>
+
+<RESOURCE>
+<ID>201</ID>
+<CONTENT>niveau de chargement:</CONTENT>
+</RESOURCE>
+
+<RESOURCE>
+<ID>211</ID>
+<CONTENT>Chargement niveau sauvé</CONTENT>
+</RESOURCE>
+
+<RESOURCE>
+<ID>221</ID>
+<CONTENT>Date</CONTENT>
+</RESOURCE>
+<RESOURCE>
+<ID>222</ID>
+<CONTENT>Chargement en cours ... Sons</CONTENT>
+</RESOURCE>
+<RESOURCE>
+<ID>223</ID>
+<CONTENT>Lecture du fichier d'initialisation ...</CONTENT>
+</RESOURCE>
+<RESOURCE>
+<ID>224</ID>
+<CONTENT>Un jeu enregistré a été détecté. Vous souhaitez transférer ce?</CONTENT>
+</RESOURCE>
+<RESOURCE>
+<ID>225</ID>
+<CONTENT>Load game</CONTENT>
+</RESOURCE>
+<RESOURCE>
+<ID>226</ID>
+<CONTENT>Lecture jeu enregistré ...</CONTENT>
+</RESOURCE>
+<RESOURCE>
+<ID>227</ID>
+<CONTENT>Lecture premier niveau du jeu ...</CONTENT>
+</RESOURCE>
+<RESOURCE>
+<ID>228</ID>
+<CONTENT>Génération navire de défaut ...</CONTENT>
+</RESOURCE>
+<RESOURCE>
+<ID>229</ID>
+<CONTENT>tournage ...</CONTENT>
+</RESOURCE>
+<RESOURCE>
+<ID>230</ID>
+<CONTENT>Variables d'environnement ...</CONTENT>
+</RESOURCE>
+<RESOURCE>
+<ID>231</ID>
+<CONTENT>son initialisation d'erreur</CONTENT>
+</RESOURCE>
+
+<RESOURCE>
+<ID>241</ID>
+<CONTENT>textures Chargement ...</CONTENT>
+</RESOURCE>
+<RESOURCE>
+<ID>242</ID>
+<CONTENT>Chargement Mallas ...</CONTENT>
+</RESOURCE>
+<RESOURCE>
+<ID>243</ID>
+<CONTENT>Exception: Un probléme est survenu lors du chargement des objets 3D</CONTENT>.
+</RESOURCE>
+<RESOURCE>
+<ID>244</ID>
+<CONTENT>Space Invaders OpenGL [Charger Fin]</CONTENT>
+</RESOURCE>
+
+<RESOURCE>
+<ID>301</ID>
+<CONTENT>niveau de chargement:</CONTENT>
+</RESOURCE>
+<RESOURCE>
+<ID>302</ID>
+<CONTENT>Erreur</CONTENT>
+</RESOURCE>
+<RESOURCE>
+<ID>303</ID>
+<CONTENT>Entrer en mode immortel.</CONTENT>
+</RESOURCE>
+<RESOURCE>
+<ID>304</ID>
+<CONTENT>Saisie de faéon mortelle.</CONTENT>
+</RESOURCE>
+<RESOURCE>
+<ID>305</ID>
+<CONTENT>Je mis quelques fichiers MP3 dans le répertoire du jeu.</CONTENT>
+</RESOURCE>
+<RESOURCE>
+<ID>306</ID>
+<CONTENT>Choisissez l'option pour démarrer ramollissement.</CONTENT>
+</RESOURCE>
+<RESOURCE>
+<ID>307</ID>
+<CONTENT>La ligne lissée est pas utilisé en mode 3D.</CONTENT>
+</RESOURCE>
+<RESOURCE>
+<ID>308</ID>
+<CONTENT>Lissage: ON</CONTENT>
+</RESOURCE>
+<RESOURCE>
+<ID>309</ID>
+<CONTENT>Lissage: OFF</CONTENT>
+</RESOURCE>
+<RESOURCE>
+<ID>310</ID>
+<CONTENT>Désolé, SwapIntervalExt () ne sont pas disponibles.</CONTENT>
+</RESOURCE>
+<RESOURCE>
+<ID>311</ID>
+<CONTENT>Synchronisation verticale: ON</CONTENT>
+</RESOURCE>
+<RESOURCE>
+<ID>312</ID>
+<CONTENT>Synchronisation verticale: OFF</CONTENT>
+</RESOURCE>
+
+<RESOURCE>
+<ID>321</ID>
+<CONTENT>son</CONTENT>
+</RESOURCE>
+<RESOURCE>
+<ID>322</ID>
+<CONTENT>audio</CONTENT>
+</RESOURCE>
+<RESOURCE>
+<ID>323</ID>
+<CONTENT>Temps</CONTENT>
+</RESOURCE>
+<RESOURCE>
+<ID>324</ID>
+<CONTENT>angle</CONTENT>
+</RESOURCE>
+<RESOURCE>
+<ID>325</ID>
+<CONTENT>Camara.zoom</CONTENT>
+</RESOURCE>
+<RESOURCE>
+<ID>326</ID>
+<CONTENT>Quitter ESC</CONTENT>
+</RESOURCE>
+<RESOURCE>
+<ID>327</ID>
+<CONTENT>rotation MOUSE</CONTENT>
+</RESOURCE>
+<RESOURCE>
+<ID>328</ID>
+<CONTENT>M \ r musique (en)</CONTENT>
+</RESOURCE>
+<RESOURCE>
+<ID>329</ID>
+<CONTENT>M \ r musique (off)</CONTENT>
+</RESOURCE>
+<RESOURCE>
+<ID>330</ID>
+<CONTENT>B Fonds \ r</CONTENT>
+</RESOURCE>
+<RESOURCE>
+<ID>331</ID>
+<CONTENT>R \ r cam Remplacez</CONTENT>
+</RESOURCE>
+<RESOURCE>
+<ID>332</ID>
+<CONTENT>T \ r Masquer le texte</CONTENT>
+</RESOURCE>
+<RESOURCE>
+<ID>333</ID>
+<CONTENT>Zoom +/-</CONTENT>
+</RESOURCE>
+<RESOURCE>
+<ID>334</ID>
+<CONTENT>Hauteur</CONTENT>
+</RESOURCE>
+<RESOURCE>
+<ID>335</ID>
+<CONTENT>Largeur</CONTENT>
+</RESOURCE>
+<RESOURCE>
+<ID>336</ID>
+<CONTENT>Espace presse pour changer la musique</CONTENT>
+</RESOURCE>
+
+<RESOURCE>
+<ID>351</ID>
+<CONTENT>INPUT LEVEL</CONTENT>
+</RESOURCE>
+<RESOURCE>
+<ID>352</ID>
+<CONTENT>vous gagnez!</CONTENT>
+</RESOURCE>
+<RESOURCE>
+<ID>353</ID>
+<CONTENT>FIN DE JEU!</CONTENT>
+</RESOURCE>
+<RESOURCE>
+<ID>354</ID>
+<CONTENT>vous perdez!</CONTENT>
+</RESOURCE>
+
+<RESOURCE>
+<ID>361</ID>
+<CONTENT>erreur de chgt zik</CONTENT>
+</RESOURCE>
+
+<RESOURCE>
+<ID>401</ID>
+<CONTENT>type de caractére (</CONTENT>
+</RESOURCE>
+<RESOURCE>
+<ID>402</ID>
+<CONTENT>) non pris en charge.</CONTENT>
+</RESOURCE>
+
+<RESOURCE>
+<ID>411</ID>
+<CONTENT>Accueil interprétation fichier d'initialisation.</CONTENT>
+</RESOURCE>
+
+<RESOURCE>
+<ID>461 /ID>
+<CONTENT>Texte:</CONTENT>
+</RESOURCE>
+<RESOURCE>
+<ID>462</ID>
+<CONTENT>Nombre maximum de vie indiquée (</CONTENT>
+</RESOURCE>
+<RESOURCE>
+<ID>463</ID>
+<CONTENT>est inférieure au minimum autorisé par le programme (1). Valeur tronquée é un minimum.</CONTENT>
+</RESOURCE>
+<RESOURCE>
+<ID>464</ID>
+<CONTENT>Nombre maximum de vie indiquée (</CONTENT>
+</RESOURCE>
+<RESOURCE>
+<ID>465</ID>
+<CONTENT>) est supérieure é la quantité maximale autorisée par le programme (1). Maximale tronquée.</CONTENT>
+</RESOURCE>
+<RESOURCE>
+<ID>466</ID>
+<CONTENT>Le fichier correspondant pas é ce jeu.</CONTENT>
+</RESOURCE>
+<RESOURCE>
+<ID>467</ID>
+<CONTENT>Le fichier est de type \ "</CONTENT>
+</RESOURCE>
+<RESOURCE>
+<ID>468</ID>
+<CONTENT>\ boot \ ". Un fichier de type \ est nécessaire". "</CONTENT>
+</RESOURCE>
+<RESOURCE>
+<ID>469</ID>
+<CONTENT>version du fichier est v</CONTENT>
+</RESOURCE>
+<RESOURCE>
+<ID>470</ID>
+<CONTENT>, qui ne correspond pas avec cette version v</CONTENT>
+</RESOURCE>
+
+<RESOURCE>
+<ID>481</ID>
+<CONTENT>Commentaires:</CONTENT>
+</RESOURCE>
+
+<RESOURCE>
+<ID>491</ID>
+<CONTENT>Interprétation dossier complet.</CONTENT>
+</RESOURCE>
+
+<RESOURCE>
+<ID>501</ID>
+<CONTENT>textures Chargement ...</CONTENT>
+</RESOURCE>
+<RESOURCE>
+<ID>502</ID>
+<CONTENT>Chargement de textures ... (100%) \ n</CONTENT>
+</RESOURCE>
+
+<RESOURCE>
+<ID>551</ID>
+<CONTENT>Erreur lors du chargement PNG</CONTENT>
+</RESOURCE>
+
+<- Menu principal ->
+<RESOURCE>
+<ID>600</ID>
+<CONTENT>Jeu</CONTENT>
+</RESOURCE>
+<RESOURCE>
+<ID>610</ID>
+<CONTENT>Niveau</CONTENT>
+</RESOURCE>
+<RESOURCE>
+<ID>620</ID>
+<CONTENT>Une configuration</CONTENT>
+</RESOURCE>
+<RESOURCE>
+<ID>630</ID>
+<CONTENT>Aide</CONTENT>
+</RESOURCE>
+<RESOURCE>
+<ID>640</ID>
+<CONTENT>A propos</CONTENT>
+</RESOURCE>
+
+<- Menu principal premiéres options de niveau ->
+<RESOURCE>
+<ID>611</ID>
+<CONTENT>Démarrer</CONTENT>
+</RESOURCE>
+<RESOURCE>
+<ID>612</ID>
+<CONTENT>Quitter</CONTENT>
+</RESOURCE>
+
+<! - Nouveau contenu pour dialogue de démarrage ->
+<RESOURCE>
+<ID>700</ID>
+<CONTENT>Afficher</CONTENT>
+</RESOURCE>
+<RESOURCE>
+<ID>701</ID>
+<CONTENT>Plein écran (mode courant)</CONTENT>
+</RESOURCE>
+<RESOURCE>
+<ID>702</ID>
+<CONTENT>Plein écran</CONTENT>
+</RESOURCE>
+<RESOURCE>
+<ID>703</ID>
+<CONTENT>Fenétre</CONTENT>
+</RESOURCE>
+<RESOURCE>
+<ID>704</ID>
+<CONTENT>Divers.</CONTENT>
+</RESOURCE>
+<RESOURCE>
+<ID>705</ID>
+<CONTENT>VSync</CONTENT>
+</RESOURCE>
+<RESOURCE>
+<ID>706</ID>
+<CONTENT>Bande passante</CONTENT>
+</RESOURCE>
+<RESOURCE>
+<ID>707</ID>
+<CONTENT>Qualité</CONTENT>
+</RESOURCE>
+<RESOURCE>
+<ID>708</ID>
+<CONTENT>Antialiasing</CONTENT>
+</RESOURCE>
+<RESOURCE>
+<ID>710</ID>
+<CONTENT>Textures Mipmap</CONTENT>
+</RESOURCE>
+<RESOURCE>
+<ID>711</ID>
+<CONTENT>Start Game</CONTENT>
+</RESOURCE>
+<RESOURCE>
+<ID>712</ID>
+<CONTENT>Marquage</CONTENT>
+</RESOURCE>
+<RESOURCE>
+<ID>713</ID>
+<CONTENT>Custom</CONTENT>
+</RESOURCE>
+<RESOURCE>
+<ID>714</ID>
+<CONTENT>Site</CONTENT>
+</RESOURCE>
+<RESOURCE>
+<ID>715</ID>
+<CONTENT>Forum</CONTENT>
+</RESOURCE>
+<RESOURCE>
+<ID>716</ID>
+<CONTENT>écran Wikik clavier virtuel</CONTENT>
+</RESOURCE>
+<RESOURCE>
+<ID>717</ID>
+<CONTENT>Fermer la fenétre</CONTENT>
+</RESOURCE>
+<RESOURCE>
+<ID>718</ID>
+<CONTENT>Entrez une URL é une playlist (.pls *) d'une station,</CONTENT>
+</RESOURCE>
+<RESOURCE>
+<ID>719</ID>
+<CONTENT>une radio ou un lecteur MP3. Vérifier</CONTENT>
+</RESOURCE>
+
+<!-- Codification ISO of the language names and Mensajes-->
+<RESOURCE>
+ <ID>751</ID>
+ <CONTENT>Langue</CONTENT>
+</RESOURCE>
+<RESOURCE>
+ <ID>752</ID>
+ <CONTENT>Modification de la langue avec succès . jeu redémarrage</CONTENT>
+</RESOURCE>
+<RESOURCE>
+ <ID>753</ID>
+ <CONTENT>Système d'alarme</CONTENT>
+</RESOURCE>
+<RESOURCE>
+ <ID>754</ID>
+ <CONTENT>Acceptz</CONTENT>
+</RESOURCE>
+<RESOURCE>
+ <ID>755</ID>
+ <CONTENT>Fenêtre Paramètres de langue</CONTENT>
+</RESOURCE>
+</BODY>
+</HTML>

@@ -1,0 +1,111 @@
+<HTML>
+    <HEAD>
+	    <TITLE>AI</TITLE>
+	    <VERSION>1.0.0</VERSION>
+	    <TYPE>FSM</TYPE>
+    </HEAD>
+    <BODY>
+		<STATE_CONT>5</STATE_CONT>
+		<STATE_INIT>UNBORN</STATE_INIT>
+        <PROBABILISTIC>0/1</PROBABILISTIC>
+		
+		<STATE>
+            <NAME>UNBORN</NAME>
+            <ON_EXIT>
+				<TYPE>0</TYPE>
+				<NAME>Action: Unborn ships</NAME>
+				<FUNC>NULL</FUNC>
+				<ORIGIN>UNBORN</ORIGIN>
+			</ON_EXIT>
+        </STATE>
+		<STATE>
+            <NAME>BORN</NAME>
+            <ON_ENTRY>
+				<TYPE>0</TYPE>
+				<NAME>Action: Initializing ships</NAME>
+				<FUNC>iniship</FUNC>
+				<ORIGIN>BORN</ORIGIN>
+			</ON_ENTRY>
+        </STATE>
+		<STATE>
+            <NAME>LIVING</NAME>
+            <ON_EVENT>
+				<TYPE>0</TYPE>
+				<NAME>"Action: Moving-Shooting ships"</NAME>
+				<FUNC>CS_Move</FUNC>
+				<ORIGIN>LIVING</ORIGIN>
+				<TRANSITION>MOVING</TRANSITION>
+			</ON_EVENT>
+            <ON_EVENT>
+				<TYPE>0</TYPE>
+				<NAME>Action: Displaying ships</NAME>
+				<FUNC>CS_Display</FUNC>
+				<ORIGIN>LIVING</ORIGIN>
+				<TRANSITION>DISPLAYING</TRANSITION>
+			</ON_EVENT>
+        </STATE>
+		<STATE>
+            <NAME>BURSTING</NAME>
+            <ON_ENTRY>
+				<TYPE>0</TYPE>
+				<NAME>Action: Dying ships</NAME>
+				<FUNC>CS_Bursting</FUNC>
+				<ORIGIN>BURSTING</ORIGIN>
+			</ON_ENTRY>
+        </STATE>
+		<STATE>
+            <NAME>DEAD</NAME>
+            <ON_ENTRY>
+				<TYPE>0</TYPE>
+				<NAME>Action: ship is just out of game</NAME>
+				<FUNC>CS_Kill</FUNC>
+				<ORIGIN>DEAD</ORIGIN>
+			</ON_ENTRY>	
+        </STATE>
+		
+		<TRANSITION>
+			<NAME>BORNING</NAME>
+			<ORIGIN>UNBORN</ORIGIN>
+			<DESTINATION>BORN</DESTINATION>
+            <PROBABILITY>//de 0 a 1</PROBABILITY>
+		</TRANSITION>
+		<TRANSITION>
+			<NAME>GROWING</NAME>
+			<ORIGIN>BORN</ORIGIN>
+			<DESTINATION>LIVING</DESTINATION>
+            <PROBABILITY>//de 0 a 1</PROBABILITY>
+		</TRANSITION>
+		<TRANSITION>
+			<NAME>MOVING</NAME>
+			<ORIGIN>LIVING</ORIGIN>
+			<DESTINATION>LIVING</DESTINATION>
+            <PROBABILITY>//de 0 a 1</PROBABILITY>
+		</TRANSITION>
+		<TRANSITION>
+			<NAME>DISPLAYING</NAME>
+			<ORIGIN>LIVING</ORIGIN>
+			<DESTINATION>LIVING</DESTINATION>
+            <PROBABILITY>//de 0 a 1</PROBABILITY>
+		</TRANSITION>
+		<TRANSITION>
+			<NAME>BURST</NAME>
+			<ORIGIN>LIVING</ORIGIN>
+			<DESTINATION>BURSTING</DESTINATION>
+            <PROBABILITY>//de 0 a 1</PROBABILITY>
+		</TRANSITION>
+        <TRANSITION>
+			<NAME>REBORN</NAME>
+			<ORIGIN>BURSTING</ORIGIN>
+			<DESTINATION>BORN</DESTINATION>
+            <PROBABILITY>//de 0 a 1</PROBABILITY>
+		</TRANSITION>
+		<TRANSITION>
+			<NAME>DYING</NAME>
+			<ORIGIN>BURSTING</ORIGIN>
+			<DESTINATION>DEAD</DESTINATION>
+            <PROBABILITY>//de 0 a 1</PROBABILITY>
+		</TRANSITION>		
+			
+    </BODY>
+</HTML>
+

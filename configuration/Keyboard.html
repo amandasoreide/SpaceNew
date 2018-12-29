@@ -1,0 +1,182 @@
+<HTML>
+<HEAD>
+	<TITLE>Space Invaders</TITLE>
+	<VERSION>1.0.0</VERSION>
+	<TYPE>Keyboard</TYPE>
+</HEAD>
+<!-- In future versions is possible to add the use of more KEYs working at the same time, i.e. to use combination of KEYs -->
+<!-- Label KEY represents the ascii code of the KEY or the proper character of the KEY, if the KEY is a number is obligatory to represent it 
+    with ascii code. Label ACTION represents the associated ACTION in the program -->
+<!-- When the KEY has not ascii simbols, it represents with \number  -->
+<!-- Label PERIOD implements amount of time in ms a pressed KEY lasts to send a new command to the game -->
+<BODY>
+   <NEXUS>
+        <!-- VK_ESCAPE -->
+	 <KEY>\1</KEY>
+	 <ACTION>GAME_END</ACTION>
+     <PERIOD>500</PERIOD> 
+	</NEXUS>
+	<NEXUS>
+        <!--VK_F1-->
+	 <KEY>\2</KEY>
+	 <ACTION>GAME_2D_3D</ACTION>
+	 <PERIOD>200</PERIOD>
+	</NEXUS>
+    <NEXUS>
+        <!-- b -->
+        <KEY>98</KEY>
+        <ACTION>GAME_BACKGROUND</ACTION>
+        <PERIOD>0</PERIOD>
+    </NEXUS>
+    <NEXUS>
+        <!-- l -->
+        <KEY>108</KEY>
+        <ACTION>GAME_LEVEL</ACTION>
+        <PERIOD>200</PERIOD>
+    </NEXUS>
+    <NEXUS>
+        <!-- a -->
+        <KEY>97</KEY>
+        <ACTION>GAME_ANTIALIASING</ACTION>
+        <PERIOD>200</PERIOD>
+    </NEXUS>
+    <NEXUS>
+        <!-- v -->
+        <KEY>118</KEY>
+        <ACTION>GAME_VSYNC</ACTION>
+        <PERIOD>200</PERIOD>
+    </NEXUS>
+    <NEXUS>
+        <!--VK_F12-->
+        <KEY>\7</KEY>
+        <ACTION>GAME_FULL_SCREEN</ACTION>
+        <PERIOD>0</PERIOD>
+    </NEXUS>
+    <NEXUS>
+        <!-- c -->
+        <KEY>099</KEY>
+        <ACTION>MODE_GAME</ACTION>
+        <PERIOD>1000</PERIOD>
+    </NEXUS>
+    <NEXUS>
+        <!-- s -->
+        <KEY>115</KEY>
+        <ACTION>SAVE_GAME</ACTION>
+        <PERIOD>0</PERIOD>
+    </NEXUS>
+    <NEXUS>
+        <!--VK_F5-->
+        <KEY>\6</KEY>
+        <ACTION>PLAYER_INMORTAL</ACTION>
+        <PERIOD>200</PERIOD>
+    </NEXUS>
+    <NEXUS>
+        <!--VK_RIGHT-->
+        <KEY>\9</KEY>
+        <ACTION>PLAYER_MOVE_RIGHT</ACTION>
+        <PERIOD>0</PERIOD>
+    </NEXUS>
+    <NEXUS>
+        <!--VK_LEFT-->
+        <KEY>\10</KEY>
+        <ACTION>PLAYER_MOVE_LEFT</ACTION>
+        <PERIOD>0</PERIOD>
+    </NEXUS>
+    <NEXUS>
+        <!--VK_UP-->
+        <KEY>\11</KEY>
+        <ACTION>PLAYER_SHOOT</ACTION>
+        <PERIOD>200</PERIOD>
+    </NEXUS>
+    <NEXUS>
+        <!--VK_F3-->
+        <KEY>\4</KEY>
+        <ACTION>PLAYER_LASERS</ACTION>
+        <PERIOD>100</PERIOD>
+    </NEXUS>
+    <NEXUS>
+        <!-- w -->
+        <KEY>119</KEY>
+        <ACTION>CAMERA_INC_FOV</ACTION>
+        <PERIOD>0</PERIOD>
+    </NEXUS>
+    <NEXUS>
+        <!-- x -->
+        <KEY>120</KEY>
+        <ACTION>CAMERA_DEC_FOV</ACTION>
+        <PERIOD>0</PERIOD>
+    </NEXUS>
+    <NEXUS>
+        <!-- r -->
+        <KEY>114</KEY>
+        <ACTION>CAMERA_RESHAPE</ACTION>
+        <PERIOD>0</PERIOD>
+    </NEXUS>
+    <NEXUS>
+        <!--VK_ADD-->
+        <KEY>\13</KEY>
+        <ACTION>CAMERA_ZOOM_IN</ACTION>
+        <PERIOD>500</PERIOD>
+    </NEXUS>
+    <NEXUS>
+        <!--VK_SUBTRACT-->
+        <KEY>\14</KEY>
+        <ACTION>CAMERA_ZOOM_OUT</ACTION>
+        <PERIOD>500</PERIOD>
+    </NEXUS>
+    <NEXUS>
+        <!--VK_F4-->
+        <KEY>\5</KEY>
+        <ACTION>TIMER</ACTION>
+        <PERIOD>200</PERIOD>
+    </NEXUS>
+    <NEXUS>
+        <!--VK_OEM_7-->
+        <KEY>\8</KEY>
+        <ACTION>CONSOLE</ACTION>
+        <PERIOD>300</PERIOD>
+    </NEXUS>
+    <NEXUS>
+        <!-- 0 -->
+        <KEY>48</KEY>
+        <ACTION>CONSOLE_TEXT</ACTION>
+        <PERIOD>300</PERIOD>
+    </NEXUS>
+    <NEXUS>
+        <!-- m -->
+        <KEY>109</KEY>
+        <ACTION>MUSIC_MUTE</ACTION>
+        <PERIOD>200</PERIOD>
+    </NEXUS>
+    <NEXUS>
+        <!--VK_SPACE-->
+        <KEY>\12</KEY>
+        <ACTION>NEXT_MUSIC</ACTION>
+        <PERIOD>200</PERIOD>
+    </NEXUS>
+	<NEXUS>
+        <!--VK_F2-->
+	 <KEY>\3</KEY>
+	 <ACTION>SPECTRUM</ACTION>
+	 <PERIOD>200</PERIOD>
+	</NEXUS>
+    <NEXUS>
+        <!-- t -->
+        <KEY>116</KEY>
+        <ACTION>TEXT2D</ACTION>
+        <PERIOD>200</PERIOD>
+    </NEXUS>
+    <NEXUS>
+        <!-- p -->
+        <KEY>112</KEY>
+        <ACTION>PLAYER_PAUSE</ACTION>
+        <PERIOD>1000</PERIOD>
+    </NEXUS>
+    <NEXUS>
+        <!-- h -->
+     <KEY>104</KEY>
+     <ACTION>HELP</ACTION>
+	 <PERIOD>200</PERIOD>
+   	</NEXUS>
+</BODY>
+</HTML>

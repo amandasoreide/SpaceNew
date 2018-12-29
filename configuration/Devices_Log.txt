@@ -1,0 +1,162 @@
+Begining the file parsing.
+Start tag: HTML
+ Top : HTML
+ SubTop : 
+Start tag: HEAD
+ Top : HEAD
+ SubTop : HTML
+Start tag: TITLE
+Text: Space Invaders
+ Top : TITLE
+ SubTop : HEAD
+End tag: TITLE
+ Top : HEAD
+ SubTop : HTML
+Start tag: VERSION
+Text: 1.0.0
+ Top : VERSION
+ SubTop : HEAD
+End tag: VERSION
+ Top : HEAD
+ SubTop : HTML
+Start tag: TYPE
+Text: Devices
+ Top : TYPE
+ SubTop : HEAD
+End tag: TYPE
+ Top : HEAD
+ SubTop : HTML
+End tag: HEAD
+ Top : HTML
+ SubTop : 
+Start tag: BODY
+ Top : BODY
+ SubTop : HTML
+Start tag: DEVICE
+ Top : DEVICE
+ SubTop : BODY
+Start tag: NAME
+Text: Joystick
+ Top : NAME
+ SubTop : DEVICE
+Label Joystick
+ does not belong to any hardware type.
+End tag: NAME
+ Top : DEVICE
+ SubTop : BODY
+Start tag: BUTTONS
+Text: 5
+ Top : BUTTONS
+ SubTop : DEVICE
+End tag: BUTTONS
+ Top : DEVICE
+ SubTop : BODY
+Start tag: VIBRATION
+Text: YES
+ Top : VIBRATION
+ SubTop : DEVICE
+End tag: VIBRATION
+ Top : DEVICE
+ SubTop : BODY
+End tag: DEVICE
+ Top : BODY
+ SubTop : HTML
+Start tag: DEVICE
+ Top : DEVICE
+ SubTop : BODY
+Start tag: NAME
+Text: Wiimote
+ Top : NAME
+ SubTop : DEVICE
+Label Wiimote
+ does not belong to any hardware type.
+End tag: NAME
+ Top : DEVICE
+ SubTop : BODY
+End tag: DEVICE
+ Top : BODY
+ SubTop : HTML
+Start tag: DEVICE
+ Top : DEVICE
+ SubTop : BODY
+Start tag: NAME
+Text: Kinect
+ Top : NAME
+ SubTop : DEVICE
+Label Kinect
+ does not belong to any hardware type.
+End tag: NAME
+ Top : DEVICE
+ SubTop : BODY
+End tag: DEVICE
+ Top : BODY
+ SubTop : HTML
+Start tag: DEVICE
+ Top : DEVICE
+ SubTop : BODY
+Start tag: NAME
+Text: Webcam
+ Top : NAME
+ SubTop : DEVICE
+Label Webcam
+ does not belong to any hardware type.
+End tag: NAME
+ Top : DEVICE
+ SubTop : BODY
+Start tag: RESOLUTION
+ Top : RESOLUTION
+ SubTop : DEVICE
+Start tag: X
+Text: 640
+ Top : X
+ SubTop : RESOLUTION
+End tag: X
+ Top : RESOLUTION
+ SubTop : DEVICE
+Start tag: Y
+Text: 480
+ Top : Y
+ SubTop : RESOLUTION
+End tag: Y
+ Top : RESOLUTION
+ SubTop : DEVICE
+End tag: RESOLUTION
+ Top : DEVICE
+ SubTop : BODY
+End tag: DEVICE
+ Top : BODY
+ SubTop : HTML
+Start tag: DEVICE
+ Top : DEVICE
+ SubTop : BODY
+Start tag: NAME
+Text: Guante
+ Top : NAME
+ SubTop : DEVICE
+Label Guante
+ does not belong to any hardware type.
+End tag: NAME
+ Top : DEVICE
+ SubTop : BODY
+End tag: DEVICE
+ Top : BODY
+ SubTop : HTML
+Start tag: DEVICE
+ Top : DEVICE
+ SubTop : BODY
+Start tag: NAME
+Text: Generic
+ Top : NAME
+ SubTop : DEVICE
+Label Generic
+ does not belong to any hardware type.
+End tag: NAME
+ Top : DEVICE
+ SubTop : BODY
+End tag: DEVICE
+ Top : BODY
+ SubTop : HTML
+End tag: BODY
+ Top : HTML
+ SubTop : 
+End tag: HTML
