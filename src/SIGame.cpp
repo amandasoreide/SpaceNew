@@ -125,6 +125,7 @@ UGKS_String CSIG_PredefinedFiles[CSIG_MAX_PREDEF_FILES] =
 	"FSM_game",
 	"FSM_circleship",
 	"FSM_supplyship",
+	"FSM_amanda",
 	"FSM_ship"
 };
 
@@ -598,6 +599,22 @@ void CSIGame::AI_Init(SIAI_AI_TYPE Type)
 			NewAI->addStates(reader.getFSMStatesVector(), reader.getFSMNumStates()); ///<Sets the 'SupplyShip' FSM states
 			NewAI->SetState(reader.getFSMInitState());
 			AIManager.SetAI(NewAI, SIAI_SUPPLYSHIP_DEFAULT);  ///<Informs the AIManager about the FSM that the 'SupplyShip' must have
+			break;
+		case SIAI_AMANDA_DEFAULT:
+			//ADD FUNCTIONS TO BE USED BY THE FSM
+			reader.addPublicFunction(AIFunctionName[CSIG_FN_NULL], NULL);
+			reader.addPublicFunction(AIFunctionName[CSIG_FN_CSS_MOVE], (mFuncPtr)AMA_FSM_Move);
+			reader.addPublicFunction(AIFunctionName[CSIG_FN_CSS_DISPLAY], (mFuncPtr)AMA_display);
+			reader.addPublicFunction(AIFunctionName[CSIG_FN_CSS_HEALTH], (mFuncPtr)AMA_FSM_Healthing);
+			reader.addPublicFunction(AIFunctionName[CSIG_FN_CSS_DIE], (mFuncPtr)AMA_FSM_Dye);
+			reader.addPublicFunction(AIFunctionName[CSIG_FN_CSS_DEATH], (mFuncPtr)AMA_FSM_Death);
+
+			HTMLReader.ParseFile(CSIG_PredefinedFiles[CSIG_SUPPLYSHIP_AI_FILE], Directories[CG_AI_DIR], Title, Version, &reader);
+
+			NewAI = new FSM();
+			NewAI->addStates(reader.getFSMStatesVector(), reader.getFSMNumStates()); ///<Sets the 'SupplyShip' FSM states
+			NewAI->SetState(reader.getFSMInitState());
+			AIManager.SetAI(NewAI, SIAI_AMANDA_DEFAULT);  ///<Informs the AIManager about the FSM that the 'SupplyShip' must have
 			break;
 		case SIAI_SHIP_DEFAULT:
 			//ADD FUNCTIONS TO BE USED BY THE FSM
@@ -1073,6 +1090,9 @@ void CSIGame::AssignAI2defaultObjects()
 		case CHARS_SUPPLYSHIP:
 			C->AI = AIManager.GetAI(SIAI_SUPPLYSHIP_DEFAULT);
 			break;
+		case CHARS_AMANDA:
+			C->AI = AIManager.GetAI(SIAI_AMANDA_DEFAULT);
+			break;
 		case CHARS_CIRCLESHIP:
 			C->AI = AIManager.GetAI(SIAI_CIRCLESHIP_DEFAULT);
 			break;
@@ -1202,6 +1222,7 @@ bool CSIGame::Initialize (void)
 	//FSM initialization for Ships, SupplyShips and CircleShips.
 	AI_Init(SIAI_SHIP_DEFAULT);			//AI Ship initialization by default
 	AI_Init(SIAI_SUPPLYSHIP_DEFAULT);	//<AI Supply Ship by default
+	AI_Init(SIAI_AMANDA_DEFAULT);	//<AI Supply Ship by default
 	AI_Init(SIAI_CIRCLESHIP_DEFAULT);	//<AI Circle Ship initialization by default
 
 	// Loading characters (fonts) images

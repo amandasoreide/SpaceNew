@@ -17,22 +17,7 @@
         <CONFIG>Configuration</CONFIG>
     </DIR>
 
-    <CHARACTER>
-        <NAME>AMANDA</NAME>
-        <EXPLOSION>500</EXPLOSION>
-        <HEALTH>20</HEALTH>
-        <MESH>supplyship.3ds</MESH>
-        <TEXTURE3D>f02_512.bmp</TEXTURE3D>
-        <SHIELD>0</SHIELD>
-        <SPECIALATTACK>0</SPECIALATTACK>
-        <SPEED>
-            <X>0.002</X>	<!--in units per milisecond-->
-            <Y>0.0</Y>
-            <Z>0.0</Z>
-        </SPEED>
-        <TELEPORT>3</TELEPORT>
-        <THREEATTACKS>0</THREEATTACKS>
-    </CHARACTER>
+
 
     <CHARACTER>
         <!-- Now is used the same character to all players -->
@@ -78,8 +63,22 @@
     </CHARACTER>
 
     <CHARACTER>
+        <NAME>AMANDA</NAME>
+        <EXPLOSION>500</EXPLOSION>	    <!-- Miliseconds this explosion lasts -->
+        <HEALTH>500</HEALTH>
+        <MESH>cross.3ds</MESH>
+        <TEXTURE3D>f02_512.bmp</TEXTURE3D>
+        <TEXTURE2D>supplyship.bmp</TEXTURE2D>
+        <SPEED>
+            <X>0.002</X>	<!--in units per milisecond-->
+            <Y>0.0</Y>
+            <Z>0.0</Z>
+        </SPEED>
+    </CHARACTER>
+
+    <CHARACTER>
         <NAME>CIRCLESHIP</NAME>
-        <MESH>supplyship.3ds</MESH>
+        <MESH>circleship.3ds</MESH>
         <TEXTURE3D>circleship.bmp</TEXTURE3D>
         <TEXTURE2D>circleship.bmp</TEXTURE2D>
         <VELOCITY>0.001</VELOCITY>

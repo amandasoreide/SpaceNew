@@ -1,311 +1,224 @@
-#include <AI\FSMParser.h>
-
-#include <Navy.h>
-#include <Ship.h>
-#include <Amanda.h>
-#include "atlstr.h"
-
-#include <SIGame.h>
-#include <TextureAnimationManager.h>
-#include <ShootsManager.h>	/// Header File class Manager for the shoots
-#include <glext.h>
-#include <iostream>
-
-#define CA_XSIZE 1.0f
-#define CA_YSIZE 1.0f
-#define CA_ZSIZE 0.0f
-
-#define CA_XSIZE3D 0.4f
-#define CA_YSIZE3D 0.5f
-#define CA_ZSIZE3D 0.0f
-
-extern CNavy					*Navy;			///<Singleton to save the general configuration of the enemy Navy
-extern CTextureAnimationManager	AnimationsManager;
-extern CShootsManager			*ShootsManager;
-
-//////////////////////////////////////////////////////////////////////////////////////
+/** /////////////////////////////////////////////////////////////////////////////////////
 //
-// Ship initialization
+// Amanda initialization
 //
 // These values are by default. They have to be overwritten in the initialization phase
 // when reading the default values from the "initialization.html" file
 
-UGKS_String CA_StateName[CA_MAXSTATE] =
+	@author Ramon Molla
+	@version 2011-10-11
+*/
+
+#include <Navy.h>
+
+#include <ShootsManager.h>	/// Header File class Manager for the shoots
+
+#include <Ship.h>
+#include <Amanda.h>
+#include <Shoot.h>
+#include <GameCharacters.h>
+#include <ExecutionMode.h>
+#include <GlobalDefs.h>
+#include <glext.h>
+
+#define AMA_WIDTH	1.0F
+#define AMA_HEIGHT	0.6F
+
+extern CNavy			*Navy;			///<Singleton to save the general configuration of the enemy Navy
+extern CShootsManager	*ShootsManager;
+
+///Different name states for the FSMs that control the SS behaviour
+UGKS_String AMA_NameState[AMA_MAXSTATE] =
 {
-	"UNBORN",
+	"DEFAULT",
 	"BORN",
 	"LIVING",
-	"BURSTING",
+	"DYING",
 	"DEAD"
 };
 
 ///Sensitive transition names
-UGKS_String CA_NameTransition[CA_MAXTRANSITION] =
+UGKS_String AMA_NameTransition[AMA_MAXTRANSITION] =
 {
 	"DEFAULT",
 	"BORNING",
-	"GROWING",
+	"GETTING_ALIVE",
 	"MOVING",
 	"DISPLAYING",
+	"HEALTHING",
 	"BURST",
-	"REBORN",
-	"DYING"
+	"DIE",
+	"FINISHED",
+	"RESURRECTING"
 };
 
+void CAmanda::InitTransforms()
+{
+	Scale.v[XDIM] = 0.25;
+	Scale.v[YDIM] = 0.25;
+	Scale.v[ZDIM] = 0.25;
+
+	Rotation.v[XDIM] = 90.0;
+	Rotation.v[YDIM] = 0.0;
+	Rotation.v[ZDIM] = 0.0;
+}
+
+//Class initialization
 void CAmanda::Init()
 {
-	Health = MaxHealth = CA_MAX_HEALTH;
-	Hit_duration = CA_MAX_MAX_HIT_DUR;
+	Health = MaxHealth = AMA_MAX_HEALTH;
+	Hit_duration = AMA_MAX_HIT_DURATION;
+	SubType = AMA_SUPPLY_SHIP;
 	Type = CHARS_AMANDA;
-	SubType = CA_HIGH1;
 
-	shield = CA_SHIELD;
-	specialattack = CA_SPECIALATTACK;
-	teleport = CA_TELEPORT;
-	threeattacks = CA_THREEATTACKS;
+	Speed.v[XDIM] = 0.002f;	//Units/ms
 
-	Speed.v[XDIM] = 0.015f;	//Units/ms
+	Explosion.Init(SIGLBD_MAX_UPDATETIME);
+	Explosion.Health = CS_MAX_EXPLOSION_LIFE;
 
 #ifdef CHAR_USE_AABB
-	UpdateAABB(CA_XSIZE, CA_YSIZE, CA_ZSIZE);
+	UpdateAABB(AMA_WIDTH, AMA_HEIGHT, 0.0f);
 #endif
-
-	zi = 0.0f;
-	zi_speed = (float)(rand() % 8 + 3) * 0.001f;
-	Explosion.Health = CA_MAX_EXPLOSION_LIFE;
-
-	Bounce = false;
-
-	InitTransforms2D();
-
-	UpdateSF(TimerManager.GetSF());
-
-	Position.Set(0.0, 3, 0.0);
+	ResetTransformations();
 }
 
-void CAmanda::UpdateRadius()
+CAmanda::CAmanda()
 {
-	float	AuxRadiusX,
-		AuxRadiusY;
+	Init();
 
-	AuxRadiusX = Scale.v[XDIM] * CharAABB.AABB[CHAR_BBSIZE][XDIM].Value;
-	AuxRadiusY = Scale.v[YDIM] * CharAABB.AABB[CHAR_BBSIZE][YDIM].Value;
-
-	Radius = sqrt(AuxRadiusX * AuxRadiusX + AuxRadiusY * AuxRadiusY);
-	Radius *= 0.5f;
-}
-
-void CAmanda::InitTransforms2D()
-{
-	Rotation.v.x = 0.0;
-	Rotation.v.y = 0.0;
-	Rotation.v.z = 180.0;
-
-	Scale.v[XDIM] = 0.8;
-	Scale.v[YDIM] = 0.8;
-	Scale.v[ZDIM] = 0.8;
-
-	std::cout << "Running InitTransforms2D";
-
-	UpdateRadius();
-}
-
-void CAmanda::InitTransforms3D()
-{
-	Rotation.v.x = 90.0;
-	Rotation.v.y = 0.0;
-	Rotation.v.z = 0.0;
-
-	Scale.v[XDIM] = 1.5;
-	Scale.v[YDIM] = 1.5;
-	Scale.v[ZDIM] = 1.5;
-
-	std::cout << "Running InitTransforms3D";
-
-	UpdateRadius();
-}
-
-/**
-* Destroys the 'Ship' object.
-* The actions for destroying the Ship are performed through to the base class 'CCharacter'.
-*/
-CAmanda::~CAmanda()
-{
-
+	/*msgUpd = new cMsgNavy;
+	msgUpd->Type = UMSG_MSG_NAVY;
+	msgUpd->SubType = UMSG_UPDSSHIPS;
+	msgUpd->Propietary = true;*/
 };
 
-/*void CAmanda::AI_Move(void)
+
+//void CAmanda::AI_Init(SIAI_AI_TYPE AIType) 
+//{
+//	switch(AIType)
+//	{
+//		case SIAI_Amanda_DEFAULT:
+//			AI = AIManager.GetAI(SIAI_Amanda_DEFAULT);  ///<Asks the AIManager for the 'FSM' corresponding to the Amanda appropiately initialized.
+//		break;
+//		default:;
+//	}//Behaviour switch
+//}
+
+///Argument means the amount of miliseconds spent during the last 10 frames/game iterations
+void CAmanda::AI_Healthing()
 {
-	float DeltaTime;
-	Vector DeltaPos;
+	if (Health < MaxHealth)
+		Health += Timer[AMA_RND_PERIOD].GetAlarmPeriodms()*0.0002f;
+	else Health = MaxHealth;
+}
 
-	if (Bounce) {
-		Speed.v[XDIM] *= -1;
-		if (Navy->ShipsMoveDown)
-			MoveRelTo(0.0f, CN_DOWN_STEP, 0.0f);	// Descending a bit down to the player
-
-		Collisionable(UGKPHY_NON_COLLISIONABLE);
-		Bounce = false;
-	}
-
+//////////////////////////////////////////////////////////////////////////////////////
+//
+// Amanda movement
+// @args[0] : Amanda moving
+//
+//
+void CAmanda::AI_Move()
+{
 	PositionPrev = Position;
-
-	if (((CSIGame*)Directory[CHARS_GAME_REF])->BouncingMode) {
-		DeltaTime = Timer[CA_UPD_PERIOD].GetAlarmPeriodms();
-		DeltaPos = Speed * DeltaTime;
-		MoveRelTo(DeltaPos);	///Move the ship in X and Y dimension
-		if (Position.v[XDIM] > SIGLBD_PG_RIGHT) {
-			Speed.v[XDIM] = -Speed.v[XDIM];
-			Position.v[XDIM] = SIGLBD_PG_RIGHT;
-		}
-		if (Position.v[XDIM] < SIGLBD_PG_LEFT) {
-			Speed.v[XDIM] = -Speed.v[XDIM];
-			Position.v[XDIM] = SIGLBD_PG_LEFT;
-		}
-		if (Position.v[YDIM] > SIGLBD_PG_SHIPS_CEILING) {
-			Speed.v[YDIM] = -Speed.v[YDIM];
-			Position.v[YDIM] = SIGLBD_PG_SHIPS_CEILING;
-		}
-		if (Position.v[YDIM] < SIGLBD_PG_SHIPS_BOTTOM) {
-			Speed.v[YDIM] = -Speed.v[YDIM];
-			Position.v[YDIM] = SIGLBD_PG_SHIPS_BOTTOM;
-		}
+	//Argument means the amount of miliseconds spent during the last 10 frames/game iterations
+	//UGKPHY_EULER integrator. No acceleration taken into account
+	MoveRelTo(Speed.v[XDIM] * Timer[AMA_UPD_PERIOD].GetAlarmPeriodms(), 0.0f, 0.0f);
+	if (Position.v[XDIM] < -AMA_MAX_X_SHIFT)			// Change movement direction
+	{
+		//Infinite acceleration
+		if (0 > Speed.v[XDIM]) Speed.v[XDIM] = -Speed.v[XDIM];
 	}
-	else {
-		MoveRelTo(Speed.v[XDIM] * Timer[CA_UPD_PERIOD].GetAlarmPeriodms(), 0.0f, 0.0f);	///Move the ship in X and Y dimension
-		if ((Position.v[XDIM] > SIGLBD_PG_RIGHT) || (Position.v[XDIM] < SIGLBD_PG_LEFT)) {
-			Navy->Bounce = true;
-			Sound[CN_DESCEND_SND]->Play(UGKSND_VOLUME_80);
-		}
-	}
+	else if (Position.v[XDIM] > AMA_MAX_X_SHIFT)
+		//Infinite acceleration
+		if (0 < Speed.v[XDIM]) Speed.v[XDIM] = -Speed.v[XDIM];
 
 	UpdateCollisionDetection();
-}*/
+}
 
+///The supply ship is going to burst before being dead
 void CAmanda::AI_Die(void)
 {
+	///Changing internal attributes
 	SetDefault();
-
+	Explosion.Health = float((rand() % 100) + AMA_MAX_HEALTH);
 	Collisionable(UGKPHY_NON_COLLISIONABLE);
 	EntombMe();
-
 }
 
-bool CAmanda::OutEvent(CA_AMANDA_TRANSITION EventName) {
-	if (NULL != AI)
-		return AI->outEvent(CA_NameTransition[EventName], NULL, this);
-	else return false;
+///Nothinf at all has to be done. The supply ship is dead
+void CAmanda::AI_Death()
+{
 }
 
-///PhysiCA methods
+bool CAmanda::OutEvent(AMA_SUPPLYSHIP_TRANSITIONS_AMA EventName) { 
+	std::string eventname = AMA_NameTransition[EventName];
+	bool result = AI->outEvent(eventname, NULL, this);
+	return result;
+}
+
+//Physics
 void CAmanda::Collided(CCharacter *CollidedChar)
 {
-	RTDESK_CMsg *Msg;
-	HRT_Timems RenderPeriod = Timer[CA_RND_PERIOD].GetAlarmPeriodms();
+	int typeAux;
 
-	if (CHARS_COLLISION_TABLE[CHARS_SHIP][CollidedChar->Type])
+	if (CHARS_COLLISION_TABLE[CHARS_AMANDA][CollidedChar->Type])
 		switch (CollidedChar->Type)
 		{
 		case CHARS_SHOOT:
-			switch (((CShoot*)CollidedChar)->SubType)
+			typeAux = ((CShoot*)CollidedChar)->SubType;
+
+			if (CSH_PLAYER2D == typeAux || CSH_PLAYER3D == typeAux || CSH_PLAYER3D_CHEVRON == typeAux || CSH_AUX_LASER == typeAux)
 			{
-			case CSH_PLAYER2D:
-			case CSH_PLAYER3D:
-			case CSH_AUX_LASER:
-			case CSH_PLAYER3D_CHEVRON:
 				Health -= CollidedChar->Health;
-
-				Hit_duration--;
-
 				if (Health <= 0)
 				{
-					Sound[CN_EXPLOSION_SND]->Play(UGKSND_VOLUME_80);
-					Explosion.Init(this, RenderPeriod);
+					if (Sound.size() > CN_EXPLOSION_SND) {
+						Sound[CN_EXPLOSION_SND]->Play(UGKSND_VOLUME_80);
+					}
+					AI_Die();
+					Explosion.Init(this, Timer[AMA_UPD_PERIOD].GetAlarmPeriodms());
 					Explosion.Activate();
-					//OutEvent(CA_BURST); //v 2->3
 
 					RTDESK_CMsg *Msg = GetMsgToFill(UMSG_MSG_BASIC_TYPE);
 					SendMsg(Msg, Directory[CHARS_GAME_REF], RTDESKT_INMEDIATELY);
-
-					//OutEvent(CA_DIE); //v 3->4
-					AI_Die();
-					//OutEvent(CA_REBORN); //v 3->1
 				}
-			default:;
-			}
-			break;
-		case CHARS_PLAYER:
-			AI_Die();
-			Explosion.Init(this, RenderPeriod);
 
-			Msg = GetMsgToFill(UMSG_MSG_BASIC_TYPE);
-			SendMsg(Msg, Directory[CHARS_GAME_REF], RTDESKT_INMEDIATELY);
-			break;
+			}
 		case CHARS_SHIP:
-			// change to A here?
-			if (((CSIGame*)Directory[CHARS_GAME_REF])->BouncingMode)
-			{
-				CAmanda *other = (CAmanda*)CollidedChar;
-
-				GLfloat dx = Position.v[XDIM] - other->Position.v[XDIM];
-				GLfloat dy = Position.v[YDIM] - other->Position.v[YDIM];
-				//GLfloat dz = Position.v[ZDIM] - other->Position.v[ZDIM];
-
-				GLfloat distToBall = dx * dx + dy * dy;// + dz*dz;
-
-				if (distToBall <= (Radius + other->Radius)*(Radius + other->Radius))
-				{
-					GLfloat normal[3];
-					normal[XDIM] = other->Position.v[XDIM] - Position.v[XDIM];
-					normal[YDIM] = other->Position.v[YDIM] - Position.v[YDIM];
-					//normal[2] = other->Position.v[ZDIM] - Position.v[ZDIM];
-
-					GLfloat aux[3];
-					aux[XDIM] = Speed.v[XDIM] - other->Speed.v[XDIM];
-					aux[YDIM] = Speed.v[YDIM] - other->Speed.v[YDIM];
-					//aux[2] = Speed.v[ZDIM] - other->Speed.v[ZDIM];
-
-					GLfloat paralelo[3];
-					GLfloat dotProd = aux[XDIM] * normal[XDIM] + aux[YDIM] * normal[1];// + aux[2]*normal[2];
-					GLfloat length = normal[XDIM] * normal[XDIM] + normal[YDIM] * normal[YDIM];// + normal[2]*normal[2];
-					GLfloat dot = dotProd / length;
-					paralelo[XDIM] = normal[XDIM] * dot;
-					paralelo[YDIM] = normal[YDIM] * dot;
-					//paralelo[ZDIM]=normal[ZDIM]*dot;
-
-					GLfloat perpen[3];
-					perpen[XDIM] = aux[XDIM] - paralelo[XDIM];
-					perpen[YDIM] = aux[YDIM] - paralelo[YDIM];
-					//perpen[ZDIM] = aux[ZDIM] - paralelo[ZDIM];
-
-					Speed.v[XDIM] = perpen[XDIM] + other->Speed.v[XDIM];
-					Speed.v[YDIM] = perpen[YDIM] + other->Speed.v[YDIM];
-					//Speed.v[ZDIM] = perpen[2] + other->Speed.v[ZDIM];
-					other->Speed.v[XDIM] = paralelo[XDIM] + other->Speed.v[XDIM];
-					other->Speed.v[YDIM] = paralelo[YDIM] + other->Speed.v[YDIM];
-					//other->Speed.v[ZDIM] = paralelo[ZDIM] + other->Speed.v[ZDIM];
-				}
-			}
 			break;
-		default:;
 		}
 }
 
-//Displays the ship while hit
-void CAmanda::DisplayHit()
+//Rendering procedures
+
+void CAmanda::ChangeRenderMode(CHAR_RENDER_MODE Mode)
 {
-	TimerManager.GetTimer(SIGLBT_APP_TIMING)->EndCounting();
-	Hit_duration -= 10 * TimerManager.GetTimer(SIGLBT_APP_TIMING)->GetLastPeriodms();
-	if (Hit_duration <= 0)
-		Hit_duration = CA_MAX_MAX_HIT_DUR;
+	RenderMode = Mode;
+	Explosion.ChangeRenderMode(Mode);
 
-	Mesh->modelo.Draw();	// ship not textured, white
-}
+	switch (Mode)
+	{
+	case CHAR_NO_RENDER:			//No render for this character: camera, collision objects,...
+		break;
+	case CHAR_2D:
+		CharAABB.AABB[CHAR_BBSIZE][XDIM].Value = 0.9f;
+		CharAABB.AABB[CHAR_BBSIZE][YDIM].Value = 0.5f;
+		CharAABB.AABB[CHAR_BBSIZE][ZDIM].Value = 0.0f;
+		break;
+	case CHAR_LINES3D:
+		break;
+	case CHAR_3D:
+		CharAABB.AABB[CHAR_BBSIZE][XDIM].Value = 0.9f;
+		CharAABB.AABB[CHAR_BBSIZE][YDIM].Value = 0.5f;
+		CharAABB.AABB[CHAR_BBSIZE][ZDIM].Value = 0.0f;
 
-//Renders a ships in 3D or 2D way
-
-void CAmanda::Render2() {
-
+#ifdef CHAR_USE_QUADTREE
+		FitMeshIntoBoundingBox();
+#endif
+		break;
+	default: return;
+	}
 }
 
 void CAmanda::Render()
@@ -313,18 +226,16 @@ void CAmanda::Render()
 #ifdef XM_RND_TIME_DISC
 	TimerManager.GetTimer(SIGLBT_RENDER_TIMING)->InitCounting();
 #endif
+
 	GLboolean Blending = glIsEnabled(GL_BLEND);
 
 	if (!Alive())	//Although it is not active
 		return;
 	//Enable the navy ships lighting
-	// not
 	glEnable(GL_LIGHTING);			// activate lights on
-
-									//not									//Disable the players lighting
+									//Disable the players lighting
 	glDisable(SIGLB_PLAYER_LIGHT);
 	//Enable the navy ships lighting
-	//not
 	glEnable(SIGLB_SHIP_LIGHT);
 	glEnable(SIGLB_SHIP2_LIGHT);
 
@@ -337,12 +248,20 @@ void CAmanda::Render()
 			glEnable(GL_BLEND);
 		glBlendFunc(GL_SRC_ALPHA, GL_ONE_MINUS_SRC_ALPHA);
 
-		AnimationsManager.Animations[IndAnimation2D]->UpdateAnimation();
-		AnimationsManager.Animations[IndAnimation2D]->SetCurrentPhotogram();
+		glColor4f(1.0f, 1.0f, 1.0f, 1.0f);
 
-		Render2D();
+		((CTexturesManager *)Directory[CHARS_TEXTURES_MNGR_REF])->Textures[IndTexture2D]->SetTexture();
 
-		if (!Blending)	glDisable(GL_BLEND);
+		// ALPHA TEST + BLEND
+		glAlphaFunc(GL_GREATER, 0.4f);								// for TGA alpha test
+		glEnable(GL_ALPHA_TEST);									// for TGA alpha test
+		glBlendFunc(GL_SRC_ALPHA, GL_ONE_MINUS_SRC_ALPHA);			// for anti-aliasing
+
+		//Render2D();
+
+		// BACK TO NON ALPHA TEST + PREVIOUS BLEND
+		glDisable(GL_ALPHA_TEST);
+		glBlendFunc(GL_SRC_ALPHA, GL_ONE);
 		break;
 	case CHAR_LINES3D:
 	case CHAR_3D:
@@ -350,35 +269,19 @@ void CAmanda::Render()
 		glFrontFace(GL_CCW);		// The faces are defined counter clock wise
 		glEnable(GL_DEPTH_TEST);	// Occlusion culling set on
 
-									// The ship 'floats'
-		zi += zi_speed * Timer[CA_UPD_PERIOD].GetAlarmPeriodms() / 15;
+		glColor4f(1.0f, 1.0f, 1.0f, 1.0f);
+		Mesh->modelo.pos.v = Position.v;
+		Mesh->modelo.rot.v = Rotation.v;
+		Mesh->modelo.scale.v = Scale.v;
 
-
-		switch (SubType)
+		// Amanda touché
+		if (Hit_duration < AMA_MAX_HIT_DURATION)
 		{
-		case CA_HIGH1:
-			Color3D.r = Color3D.g = Color3D.b = .5f;
-			break;
-		case CA_HIGH2:
-			Color3D.r = Color3D.g = Color3D.b = .6f;
-			break;
-		case CA_HIGH3:
-			Color3D.r = Color3D.g = Color3D.b = .7f;
-			break;
-		case CA_MIDDLE:
-			Color3D.r = Color3D.g = Color3D.b = .85f;
-			break;
-		case CA_LOW:
-		default:
-			Color3D.r = Color3D.g = Color3D.b = 1.0f;
+			Hit_duration -= 10.0 * Timer[AMA_UPD_PERIOD].GetAlarmPeriodms();
+			if (Hit_duration <= 0) Hit_duration = AMA_MAX_HIT_DURATION;
 		}
-
-		Color3D.a = 1.0f;
-		// if ship is being touched...
-		if (Hit_duration >= CA_MAX_MAX_HIT_DUR)
-			glColor4f(Color3D.r, Color3D.g, Color3D.b, Color3D.a);
-
-		Render3D();
+		// Amanda normal
+		Mesh->modelo.Draw();
 
 		break;
 	default: return;
@@ -390,161 +293,106 @@ void CAmanda::Render()
 #ifdef XM_RND_TIME_DISC
 	TimerManager.EndAccCounting(SIGLBT_RENDER_TIMING);
 #endif
-}
 
-//////////////////////////////////////////////////////////////////////////////////////
-//
-// Displays a ship 3DS
-//
-//
-void CAmanda::Render3D()
-{
-	Mesh->modelo.rot.v = Rotation.v;
-
-	Mesh->modelo.pos.x = Position.v[XDIM];
-	Mesh->modelo.pos.y = Position.v[YDIM];
-	Mesh->modelo.pos.z = cosf(zi * 4) / 15;
-
-	Mesh->modelo.scale.v = Scale.v;
-
-	// affiche le ship touché
-	if (Hit_duration < CA_MAX_MAX_HIT_DUR)
-		DisplayHit();
-	else
-		Mesh->modelo.Draw();
-
-}
-
-void CAmanda::ChangeRenderMode(CHAR_RENDER_MODE Mode)
-{
-	RenderMode = Mode;
-	Explosion.ChangeRenderMode(Mode);
-
-	switch (RenderMode)
-	{
-	case CHAR_NO_RENDER:			//No render for this character
-		break;
-	case CHAR_2D:
-		InitTransforms2D();
-		break;
-	case CHAR_LINES3D:
-		InitTransforms3D();
-		break;
-	case CHAR_3D:
-		InitTransforms3D();
-		FitMeshIntoBoundingBox();
-		break;
-	default: return;
-	}
 }
 
 void CAmanda::Update(void)
 {
-	/*std::stringstream ss;
-	ss << "Shield Amanda: " << shield;
-	CString msg = UGKS_string2CString(ss.str());
-	MessageBox(NULL, msg, L"Frank rendered the first frame", MB_OK);*/
+	double msUpdSShip;
 
-	double msUpdShip;
-
-	if (Alive())					///If the Ship is alive
+#ifdef XM_UPD_TIME_CONT
+	TimerManager.GetTimer(SIGLBT_UPDATE_TIMING)->InitCounting();
+#endif
+	if (Alive())
 	{
-		if (Timer[CA_UPD_PERIOD].IsSounding())
+		Vector P, S;
+
+		if (Timer[AMA_UPD_PERIOD].IsSounding())
 		{
-			if (Explosion.Active())
-				Explosion.Update();
 
 #ifndef XM_CONTINUOUS_WITH_SIMULATE_TIME
-			LastUpdTime = nowTime;
+			Timer[AMA_UPD_PERIOD]->ResetAlarm();
 
-			//Next execution time calculation.
+			//Next execution time calculation. (TicksToUpdateAmanda)
 			double auxX = abs(CharAABB.AABB[CHAR_BBSIZE][XDIM].Value / Speed.v[XDIM]);
 			double auxY = abs(CharAABB.AABB[CHAR_BBSIZE][YDIM].Value / Speed.v[YDIM]);
-			double auxZ = abs(CharAABB.AABB[CHAR_BBSIZE][ZDIM].Value / Speed.v[ZDIM]);
-			msUpdShip = sqrt((auxX*auxX) + (auxY*auxY));//+(auxZ*auxZ));
-			if (msUpdShip > SIGLBD_MAX_UPDATETIME) msUpdShip = SIGLBD_MAX_UPDATETIME;
-			Timer[CA_UPD_PERIOD].SetAlarm(Timer[CA_UPD_PERIOD].ms2Ticks(msUpdCAhip));
+			//double auxZ= abs(CharAABB.AABB[CHAR_BBSIZE][ZDIM].Value/Speed.v[ZDIM]);	
+			msUpdSShip = UGKALG_Min(auxX, auxY);
+			if (msUpdSShip > SIGLBD_MAX_UPDATETIME) msUpdSShip = SIGLBD_MAX_UPDATETIME;
+			Timer[AMA_UPD_PERIOD].SetAlarm(Timer[AMA_UPD_PERIOD].ms2Ticks(msUpdSShip));
 
 			//Shooting calculation
-			if ((floor((rand() % 100000 / (1 + Navy->ShootsFrequency)) / msUpdShip)) == 1) ///Has the Supply ship to fire?
+			if ((floor((rand() % 100000 / (1 + Navy->ShootsFrequency)) / msUpdSShip)) == 1) ///Has the Supply ship to fire?
 			{
-				Vector P, S;
-
 				P.Set(Position.v[XDIM],
 					Position.v[YDIM] - .3f,
 					.05f);
 				S.Set(0.0f,
-					-CA_SHOOT_SPEED,
+					-AMA_SHOOT_SPEED,
 					0.0f);
 
 				if (Navy->WithShoots)
-					ShootsManager->NewShoot(CSH_SHIP, P, S);
+					ShootsManager->NewShoot(CSH_SUPPLY_SHIP, P, S);
+
 			}
 
-			OutEvent(CA_MOVING); //v 2->2
-
-								 /*if(((CAIGame*)Directory[CHARS_GAME_REF])->BouncingMode){
-								 for(unsigned int i=numId+1;i<Navy->Ship.size();i++)
-								 if(Navy->Ship[i]->Alive()) Collided(Navy->Ship[i]);*/
-		}
+			//Move the supply ship
+			OutEvent(AMA_MOVING);	//v 2->2
 #else
+			bool SynWithRealTime = false;
+			if (Timer[AMA_UPD_PERIOD].IsSounding()) Timer[AMA_UPD_PERIOD].AdvanceOneAlarmPeriod();
 
-			//Next execution time calculation.
+			//Next execution time calculation. (TicksToUpdateAmanda)
 			double auxX = abs(CharAABB.AABB[CHAR_BBSIZE][XDIM].Value / Speed.v[XDIM]);
 			double auxY = abs(CharAABB.AABB[CHAR_BBSIZE][YDIM].Value / Speed.v[YDIM]);
-			msUpdShip = sqrt((auxX*auxX) + (auxY*auxY));
-			if (msUpdShip > SIGLBD_MAX_UPDATETIME) msUpdShip = SIGLBD_MAX_UPDATETIME;
-			Timer[CA_UPD_PERIOD].ResetAlarm();
+			//double auxZ= abs(CharAABB.AABB[CHAR_BBSIZE][ZDIM].Value/Speed.v[ZDIM]);	
+
+			msUpdSShip = UGKALG_Min(auxX, auxY);
+
+			if (msUpdSShip > SIGLBD_MAX_UPDATETIME) msUpdSShip = SIGLBD_MAX_UPDATETIME;
+			Timer[AMA_UPD_PERIOD].SetAlarm(Timer[AMA_UPD_PERIOD].ms2Ticks(msUpdSShip));
 
 			//Shooting calculation
-			if ((floor((rand() % 100000 / (1 + Navy->ShootsFrequency)) / msUpdShip)) == 1) ///Has the Supply ship to fire?
+			if ((floor((rand() % 100000 / (1 + Navy->ShootsFrequency)) / msUpdSShip)) == 1) ///Has the Supply ship to fire?
 			{
-				Vector P, S;
-
 				P.Set(Position.v[XDIM],
 					Position.v[YDIM] - .3f,
 					.05f);
 				S.Set(0.0f,
-					-CA_SHOOT_SPEED,
+					-AMA_SHOOT_SPEED,
 					0.0f);
 
 				if (Navy->WithShoots)
-					ShootsManager->NewShoot(CSH_SHIP, P, S);
+					ShootsManager->NewShoot(CSH_SUPPLY_SHIP, P, S);
+
 			}
 
-			//OutEvent(CA_MOVING); //v 2->2
-			//AI_Move();
-
-			//if (((CAIGame*)Directory[CHARS_GAME_REF])->BouncingMode){
-			//	for(unsigned int i=numId+1;i<Navy->Ship.size();i++)
-			//		if(Navy->Ship[i]->Alive()) Collided(Navy->Ship[i]);
+			//Move the supply ship
+			OutEvent(AMA_MOVING);	//v 2->2
+			AI_Move();
 #endif
+			if (Explosion.Active())
+				Explosion.Update();
+		}
 	}
-}
+
+#ifdef XM_UPD_TIME_CONT
+	TimerManager.EndAccCounting(SIGLBT_UPDATE_TIMING);
+#endif
 }
 
 void CAmanda::DiscreteUpdate(void)
 {
-	double msUpdShip;
+	double msUpdSShip;
 
-	if (Alive() && !EndByTime && !EndByFrame)					///If the Ship is alive
+	if (Alive() && !EndByTime && !EndByFrame)
 	{
 #ifdef XM_UPD_TIME_DISC
 		TimerManager.GetTimer(SIGLBT_UPDATE_TIMING)->InitCounting();
-#endif	
-		if (Bounce) {
-			Speed.v[XDIM] *= -1;
-			if (Navy->ShipsMoveDown)
-				MoveRelTo(0.0f, CN_DOWN_STEP, 0.0f);	// Descending a bit down to the player
-
-			Collisionable(UGKPHY_NON_COLLISIONABLE);
-			Bounce = false;
-		}
-
-		msUpdShip = Timer[CA_UPD_PERIOD].GetAlarmPeriodms();
+#endif
 
 		//Shooting calculation
-		if ((floor((rand() % 100000 / (1 + Navy->ShootsFrequency)) / msUpdShip)) == 1) ///Has the Supply ship to fire?
+		if ((floor((rand() % 100000 / (1 + Navy->ShootsFrequency)) / Timer[AMA_UPD_PERIOD].GetAlarmPeriodms())) == 1) ///Has the Supply ship to fire?
 		{
 			Vector P, S;
 
@@ -552,70 +400,23 @@ void CAmanda::DiscreteUpdate(void)
 				Position.v[YDIM] - .3f,
 				.05f);
 			S.Set(0.0f,
-				-CA_SHOOT_SPEED,
+				-AMA_SHOOT_SPEED,
 				0.0f);
 
 			if (Navy->WithShoots)
-				ShootsManager->NewShoot(CSH_SHIP, P, S);
-
+				ShootsManager->NewShoot(CSH_SUPPLY_SHIP, P, S);
 		}
 
-		PositionPrev = Position;
-
-		if (((CSIGame*)Directory[CHARS_GAME_REF])->BouncingMode)
-		{
-			//for(unsigned int i=numId+1;i<Navy->Ship.size();i++)
-			//	if(Navy->Ship[i]->Alive()) 
-			//		Collided(Navy->Ship[i]);
-			MoveRelTo(Speed.v[XDIM] * msUpdShip, Speed.v[YDIM] * msUpdShip, 0.0f);	///Move the ship in X dimension
-
-			if (Position.v[XDIM] > SIGLBD_PG_RIGHT) {
-				Speed.v[XDIM] *= -1;
-				Position.v[XDIM] = SIGLBD_PG_RIGHT - Radius;
-			}
-			if (Position.v[XDIM] < SIGLBD_PG_LEFT) {
-				Speed.v[XDIM] *= -1;
-				Position.v[XDIM] = SIGLBD_PG_LEFT + Radius;
-			}
-			if (Position.v[YDIM] > SIGLBD_PG_SHIPS_CEILING) {
-				Speed.v[YDIM] *= -1;
-				Position.v[YDIM] = SIGLBD_PG_SHIPS_CEILING - Radius;
-			}
-			if (Position.v[YDIM] < SIGLBD_PG_SHIPS_BOTTOM) {
-				Speed.v[YDIM] *= -1;
-				Position.v[YDIM] = SIGLBD_PG_SHIPS_BOTTOM + Radius;
-			}
-		}
-		else {
-			MoveRelTo(Speed.v[XDIM] * msUpdShip, 0.0f, 0.0f);	///Move the ship in X dimension		
-			if (Position.v[XDIM] > SIGLBD_PG_RIGHT || Position.v[XDIM] < SIGLBD_PG_LEFT) {
-#ifdef XM_UPD_TIME_DISC
-				TimerManager.EndAccCounting(SIGLBT_UPDATE_TIMING);
-#endif
-#ifdef DEF_RTD_TIME
-				TimerManager.GetTimer(SIGLBT_RTDSKMM_TIMING].InitCounting();
-#endif
-
-				cMsgNavy *msg2Navy = (cMsgNavy*)GetMsgToFill(UMSG_MSG_NAVY);
-				msg2Navy->SubType = UMSG_TURNALL;
-				SendMsg(msg2Navy, Navy, Timer[CA_UPD_PERIOD].GetAlarmPeriod() / 4);
-
-#ifdef DEF_RTD_TIME
-				TimerManager.EndAccCounting(SIGLBT_RTDSKMM_TIMING);
-#endif
-			}
-		}
-
-		UpdateCollisionDetection();
+		//Move the supply ship
+		OutEvent(AMA_MOVING);	//v 2->2
 
 		double auxX = abs(CharAABB.AABB[CHAR_BBSIZE][XDIM].Value / Speed.v[XDIM]);
 		double auxY = abs(CharAABB.AABB[CHAR_BBSIZE][YDIM].Value / Speed.v[YDIM]);
 		//double auxZ= abs(CharAABB.AABB[CHAR_BBSIZE][ZDIM].Value/Speed.v[ZDIM]);
 
-		msUpdShip = UGKALG_Min(auxX, auxY);
+		msUpdSShip = UGKALG_Min(auxX, auxY);
 
-		if (msUpdShip > SIGLBD_MAX_UPDATETIME) msUpdShip = SIGLBD_MAX_UPDATETIME;
-		Timer[CA_UPD_PERIOD].SetAlarm(Timer[CA_UPD_PERIOD].ms2Ticks(msUpdShip));
+		if (msUpdSShip > SIGLBD_MAX_UPDATETIME) msUpdSShip = SIGLBD_MAX_UPDATETIME;
 
 #ifdef XM_UPD_TIME_DISC
 		TimerManager.EndAccCounting(SIGLBT_UPDATE_TIMING);
@@ -626,8 +427,8 @@ void CAmanda::DiscreteUpdate(void)
 
 		msgUpd = (cMsgNavy*)GetMsgToFill(UMSG_MSG_NAVY);
 		msgUpd->Type = UMSG_MSG_NAVY;
-		msgUpd->SubType = UMSG_UPDSHIPS;
-		SendSelfMsg(msgUpd, Timer[CA_UPD_PERIOD].GetAlarmPeriod());
+		msgUpd->SubType = UMSG_UPDSSHIPS;
+		SendSelfMsg(msgUpd, Timer[AMA_UPD_PERIOD].ms2Ticks(msUpdSShip));
 
 #ifdef DEF_RTD_TIME
 		TimerManager.EndAccCounting(SIGLBT_RTDSKMM_TIMING);
@@ -640,17 +441,14 @@ void CAmanda::ReceiveMessage(RTDESK_CMsg *pMsg) {
 	switch (pMsg->Type)
 	{
 	case UMSG_MSG_NAVY:
-		cMsgNavy * auxMsg;
+		cMsgNavy *auxMsg;
 		auxMsg = (cMsgNavy*)pMsg;
 		switch (auxMsg->SubType)
 		{
-		case UMSG_UPDSHIPS:
+		case UMSG_UPDSSHIPS:
 
 			DiscreteUpdate();
 
-			break;
-		case UMSG_TURNALL:
-			Bounce = true;
 			break;
 		}
 		break;
@@ -662,32 +460,51 @@ void CAmanda::ReceiveMessage(RTDESK_CMsg *pMsg) {
 	}
 }
 
-void *init_amanda(LPSTR *args, CAmanda *Amanda)
+///Called everytime a time slot happens and its health has to be increased
+void *AMA_FSM_Healthing(LPSTR *args, CAmanda *Amanda)
 {
-	///This is the room for may be whatever additional actions to perform this current ship initialization
+	Amanda->AI_Healthing();
 	return NULL;
 }
 
-void *CA_Move(LPSTR *args, CAmanda *Amanda)
+///Called everytime a time slot happens and a moving has to be done
+void *AMA_FSM_Move(LPSTR *args, CAmanda *Amanda)
 {
-	//Amanda->AI_Move();
+
+	Amanda->AI_Move();
+
+	return NULL;
+
+}
+
+///Called when the supply ship is going to burst before dying
+void *AMA_FSM_Dye(LPSTR *args, CAmanda *Amanda)
+{
+	// Amanda dead
+	Amanda->Explosion.Init(Amanda, Amanda->Timer[AMA_UPD_PERIOD].GetAlarmPeriodms());
+	Amanda->AI_Die();
+
+	RTDESK_CMsg *Msg = Amanda->GetMsgToFill(UMSG_MSG_BASIC_TYPE);
+	Amanda->SendMsg(Msg, Amanda->Directory[CHARS_GAME_REF], RTDESKT_INMEDIATELY);
+
+	return NULL;
+};
+
+void *AMA_FSM_Death(LPSTR *args, CAmanda *Amanda)
+{
+	Amanda->AI_Die();
 	return NULL;
 }
 
-void *CA_Display(LPSTR *args, CAmanda *Amanda)
+///Called when the supply ship passed from death to unborn states
+void *AMA_FSM_Unborning(LPSTR *args, CAmanda *Amanda)
+{
+	Amanda->AI_Init();
+	return NULL;
+}
+
+void *AMA_display(LPSTR *args, CAmanda *Amanda)
 {
 	Amanda->Render();
-	return NULL;
-}
-
-void *CA_Bursting(LPSTR *args, CAmanda *Amanda)
-{
-	Amanda->Explosion.Render();
-	return NULL;
-}
-
-void *CA_Kill(LPSTR *args, CAmanda *Amanda)
-{
-	Amanda->EntombMe();
 	return NULL;
 }

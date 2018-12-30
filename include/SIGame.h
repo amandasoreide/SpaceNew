@@ -39,6 +39,7 @@ typedef enum {
 	CSIG_GAME_AI_FILE,			//Artifical Intelligence file description for the singleton Game
 	CSIG_CIRCLESHIP_AI_FILE,	//Artifical Intelligence file description for the circle ships
 	CSIG_SUPPLYSHIP_AI_FILE,	//Artifical Intelligence file description for the supply ships
+	CSIG_AMANDA_AI_FILE,	//Artifical Intelligence file description for the supply ships
 	CSIG_SHIP_AI_FILE,			//Artifical Intelligence file description for the common ships
 
 	CSIG_MAX_PREDEF_FILES
@@ -57,6 +58,7 @@ typedef enum {
 	SIAI_GAME_DEFAULT,
 	SIAI_SHIP_DEFAULT,
 	SIAI_SUPPLYSHIP_DEFAULT,
+	SIAI_AMANDA_DEFAULT,
 	SIAI_CIRCLESHIP_DEFAULT,
 	SIAI_BONUS_DEFAULT,
 	SIAI_MAX_AI

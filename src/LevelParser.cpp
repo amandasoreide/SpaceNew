@@ -343,6 +343,7 @@ void CLevelReader::BeginParse(DWORD dwAppData, bool &bAbort)
 	//Initialize default AI
 	defaultShip->AI = AIManager.GetAI(SIAI_SHIP_DEFAULT);
 	defaultSShip->AI = AIManager.GetAI(SIAI_SUPPLYSHIP_DEFAULT);
+	defaultAmanda->AI = AIManager.GetAI(SIAI_AMANDA_DEFAULT);
 	defaultCShip->AI = AIManager.GetAI(SIAI_CIRCLESHIP_DEFAULT);
 }
 
@@ -1096,18 +1097,30 @@ void CLevelReader::Characters(const UGKS_String &rText, DWORD dwAppData, bool &b
 			switch (CLeP_CharType)
 			{
 			case CHARS_AMANDA:
-				CString st = "Amanda ble brukt i clep_chartype";
-				skrivTekst(st);
-
-				Amanda = (CAmanda*)CharacterPool->get(CHARS_AMANDA, CA_NO_AMANDA);
+				//Create a new node to set inside the scene graph
+				Amanda = (CAmanda*)CharacterPool->get(CHARS_AMANDA, UGKOBJM_NO_SUBTYPE);
 				*Amanda = *defaultAmanda;
 				Amanda->AI_Init();
-				Amanda->OutEvent(CA_BORNING);	//v 0->1
+				Amanda->OutEvent(AMA_BORNING);	//v 0->1
+
+				Amanda->InitTransforms();
+
+				SceneGraph.AddCharacter(Amanda);
+				break;
+				
+				
+//				CString st = "Amanda ble brukt i clep_chartype";
+//				skrivTekst(st);
+/* Previous: 
+				Amanda = (CAmanda*)CharacterPool->get(CHARS_AMANDA, UGKOBJM_NO_SUBTYPE);
+				*Amanda = *defaultAmanda;
+				Amanda->AI_Init();
+				Amanda->OutEvent(AMA_BORNING);	//v 0->1
 
 				Amanda->InitTransforms2D();
 
 				SceneGraph.AddCharacter(Amanda);
-				break;
+				break; */
 			case CHARS_BONUS:
 				///They are predefined by the program. No allowed yet in this version.
 				break;

@@ -79,88 +79,7 @@ Text:
 End tag: DIR
 Text: 
 
-    
-Start tag: CHARACTER
-Text: 
-        
-Start tag: NAME
-Text: AMANDA
-End tag: NAME
-Text: 
-        
-Start tag: EXPLOSION
-Text: 500
-End tag: EXPLOSION
-Text: 
-        
-Start tag: HEALTH
-Text: 20
-End tag: HEALTH
-Text: 
-        
-Start tag: MESH
-Text: supplyship.3ds
-End tag: MESH
-Text: 
-        
-Start tag: TEXTURE3D
-Text: f02_512.bmp
-End tag: TEXTURE3D
-Text: 
-        
-Start tag: SHIELD
-Initialization parser error: Token SHIELD not allowed in a CHARACTER group.
-Text: 0
-End tag: SHIELD
-Initialization parser error: SHIELD clossing tag without correspondent opening tag in a CHARACTER
-Text: 
-        
-Start tag: SPECIALATTACK
-Initialization parser error: Token SPECIALATTACK not allowed in a CHARACTER group.
-Text: 0
-End tag: SPECIALATTACK
-Initialization parser error: SPECIALATTACK clossing tag without correspondent opening tag in a CHARACTER
-Text: 
-        
-Start tag: SPEED
-Text: 
-            
-Start tag: X
-Text: 0.002
-End tag: X
-Text: 	
-Comments: 
-Text: d-->
-            
-Start tag: Y
-Text: 0.0
-End tag: Y
-Text: 
-            
-Start tag: Z
-Text: 0.0
-End tag: Z
-Text: 
-        
-End tag: SPEED
-Text: 
-        
-Start tag: TELEPORT
-Initialization parser error: Token TELEPORT not allowed in a CHARACTER group.
-Text: 3
-End tag: TELEPORT
-Initialization parser error: TELEPORT clossing tag without correspondent opening tag in a CHARACTER
-Text: 
-        
-Start tag: THREEATTACKS
-Initialization parser error: Token THREEATTACKS not allowed in a CHARACTER group.
-Text: 0
-End tag: THREEATTACKS
-Initialization parser error: THREEATTACKS clossing tag without correspondent opening tag in a CHARACTER
-Text: 
-    
-End tag: CHARACTER
-Text: 
+
 
     
 Start tag: CHARACTER
@@ -354,12 +273,74 @@ Start tag: CHARACTER
 Text: 
         
 Start tag: NAME
+Text: AMANDA
+End tag: NAME
+Text: 
+        
+Start tag: EXPLOSION
+Text: 500
+End tag: EXPLOSION
+Text: 	    
+Comments: 
+Text:  -->
+        
+Start tag: HEALTH
+Text: 500
+End tag: HEALTH
+Text: 
+        
+Start tag: MESH
+Text: cross.3ds
+End tag: MESH
+Text: 
+        
+Start tag: TEXTURE3D
+Text: f02_512.bmp
+End tag: TEXTURE3D
+Text: 
+        
+Start tag: TEXTURE2D
+Text: supplyship.bmp
+End tag: TEXTURE2D
+Text: 
+        
+Start tag: SPEED
+Text: 
+            
+Start tag: X
+Text: 0.002
+End tag: X
+Text: 	
+Comments: 
+Text: d-->
+            
+Start tag: Y
+Text: 0.0
+End tag: Y
+Text: 
+            
+Start tag: Z
+Text: 0.0
+End tag: Z
+Text: 
+        
+End tag: SPEED
+Text: 
+    
+End tag: CHARACTER
+Text: 
+
+    
+Start tag: CHARACTER
+Text: 
+        
+Start tag: NAME
 Text: CIRCLESHIP
 End tag: NAME
 Text: 
         
 Start tag: MESH
-Text: supplyship.3ds
+Text: circleship.3ds
 End tag: MESH
 Text: 
         

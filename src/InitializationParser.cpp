@@ -210,6 +210,11 @@ void CInitializationParser::InitializeSounds2DefaultChar()
 	defaultSShip->SetSound(SoundsManager.GetSound(CGS_DESCEND_SND), CN_DESCEND_SND);		//Every time the whole navy drops down a little bit
 	defaultSShip->SetSound(SoundsManager.GetSound(CGS_EXPLOSION_SND), CN_EXPLOSION_SND);	//Every time any ship, supplyship, circleship,... burst out
 
+	//Default Amanda ship sounds initialization 
+	defaultAmanda->SetSoundsAmount(CN_MAX_SND);
+	defaultAmanda->SetSound(SoundsManager.GetSound(CGS_DESCEND_SND), CN_DESCEND_SND);		//Every time the whole navy drops down a little bit
+	defaultAmanda->SetSound(SoundsManager.GetSound(CGS_EXPLOSION_SND), CN_EXPLOSION_SND);	//Every time any ship, supplyship, circleship,... burst out
+
 	//Default Circle Ship sounds initialization 
 	defaultCShip->SetSoundsAmount(CN_MAX_SND);
 	defaultCShip->SetSound(SoundsManager.GetSound(CGS_DESCEND_SND), CN_DESCEND_SND);		//Every time the whole navy drops down a little bit
@@ -232,7 +237,7 @@ void CInitializationParser::InitializeDefaults()
 	int i;
 	
 	defaultChar		=				CharacterPool->get(UGK_CHARACTER_UNKNOWN, UGKOBJM_NO_SUBTYPE);
-	defaultAmanda	= (CAmanda*)	CharacterPool->get(CHARS_AMANDA, CA_NO_AMANDA);
+	defaultAmanda	= (CAmanda*)	CharacterPool->get(CHARS_AMANDA, UGKOBJM_NO_SUBTYPE);
 	defaultBonus	= (CBonus*)		CharacterPool->get(CHARS_BONUS, UGKOBJM_NO_SUBTYPE);
 	defaultBunker	= (CBunker*)	CharacterPool->get(CHARS_BUNKER, UGKOBJM_NO_SUBTYPE);
 	defaultBrick	= (CBrick*)		CharacterPool->get(CHARS_BRICK, UGKOBJM_NO_SUBTYPE);
@@ -290,9 +295,9 @@ void CInitializationParser::InitializeDefaults()
 		defaultBonus->Timer[t].SetAlarm(BonusManager->Timer[t].GetAlarmPeriod());
 	
 	//AMANDA
-	defaultAmanda->SetLocalTimers(CA_MAX_TIMERS);
-	defaultAmanda->Timer[CA_RND_PERIOD].SetAlarm(Navy->Timer[CN_RND_PERIOD].GetAlarmPeriod());
-	defaultAmanda->Timer[CA_UPD_PERIOD].SetAlarm(Navy->Timer[CN_UPD_PERIOD].GetAlarmPeriod());
+	defaultAmanda->SetLocalTimers(AMA_MAX_TIMERS);
+	defaultAmanda->Timer[CS_RND_PERIOD].SetAlarm(Navy->Timer[CN_RND_PERIOD].GetAlarmPeriod());
+	defaultAmanda->Timer[CS_UPD_PERIOD].SetAlarm(Navy->Timer[CN_UPD_PERIOD].GetAlarmPeriod());
 	
 	//SHIP
 	defaultShip->SetLocalTimers(CS_MAX_TIMERS);
@@ -1213,7 +1218,7 @@ void CInitializationParser::ChangeDimValue(SpaceCoords Dim, double Value)
 	switch (CharType)
 	{
 	case CHARS_AMANDA:
-		GenericCharacter = defaultPlayer;
+		GenericCharacter = defaultAmanda;
 		break;
 	case CHARS_BONUS:
 		GenericCharacter = defaultBonus;
