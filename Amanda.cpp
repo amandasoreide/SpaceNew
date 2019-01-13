@@ -133,12 +133,12 @@ void CAmanda::AI_Move()
 	PositionPrev = Position;
 
 	// I make a random variable sum
-	std::srand(std::time(nullptr)); // use current time as seed for random generator
+	//std::srand(std::time(nullptr)); // use current time as seed for random generator
 	int random_variable = std::rand();
 	
 	int x = 1 + std::rand() / ((RAND_MAX + 1u) / 40);
 	int a = x;
-
+	/*
 	if (x == 8 && teleport > 0) {
 
 		teleport--;
@@ -146,7 +146,7 @@ void CAmanda::AI_Move()
 		int teley = (1 + std::rand() / ((RAND_MAX + 1u) / 5));
 		Position.v[XDIM] = telex;
 		Position.v[YDIM] = teley;
-	}
+	}*/
 	//Argument means the amount of miliseconds spent during the last 10 frames/game iterations
 	//UGKPHY_EULER integrator. No acceleration taken into account
 	MoveRelTo(Speed.v[XDIM] * Timer[AMA_UPD_PERIOD].GetAlarmPeriodms(), 0.0f, 0.0f);
@@ -358,7 +358,7 @@ void CAmanda::Update(void)
 					0.0f);
 
 				if (Navy->WithShoots)
-					ShootsManager->NewShoot(CSH_SUPPLY_SHIP, P, S);
+					ShootsManager->NewShoot(CSH_AMANDA, P, S);
 
 			}
 
@@ -380,18 +380,29 @@ void CAmanda::Update(void)
 
 		
 				//Shooting calculation
-			if ((floor((rand() % 100000 / (1 + Navy->ShootsFrequency)) / msUpdSShip)) == 1) ///Has the Supply ship to fire?
-			{
+			//if ((floor((rand() % 100000 / (1 + Navy->ShootsFrequency)) / msUpdSShip)) == 1) ///Has the Supply ship to fire?
+			//{
+				std::stringstream ss;
+				ss << "amanda shooting: \n";
+				CString msg = UGKS_string2CString(ss.str());
+				MessageBox(NULL, msg, L"Rendering", MB_OK);
+
 				P.Set(Position.v[XDIM],
 					Position.v[YDIM] - .3f,
 					.05f);
 				S.Set(0.0f, -AMA_SHOOT_SPEED, 0.0f);
 				// not sure about what this is
 				if (Navy->WithShoots) {
+					std::stringstream ss;
+					ss << "navy is withshoots \n";
+					CString msg = UGKS_string2CString(ss.str());
+					MessageBox(NULL, msg, L"Rendering", MB_OK);
+
 					ShootsManager->NewShoot(CSH_AMANDA, P, S);
 					// 3 attacks:
-					int x = 1 + std::rand() / ((RAND_MAX + 1u) / 10);
-					if (x == 1) {
+					//int x = 1 + std::rand() / ((RAND_MAX + 1u) / 10);
+					int x = 1;
+					/*if (x == 1) {
 						P.Set(Position.v[XDIM],
 							Position.v[YDIM] - .3f,
 							.05f);
@@ -403,8 +414,8 @@ void CAmanda::Update(void)
 							.05f);
 						S.Set(0.25f, -AMA_SHOOT_SPEED, 0.0f);
 						ShootsManager->NewShoot(CSH_AMANDA, P, S);
-					}
-				}
+					}*/
+				//}
 			}
 			//Move the supply ship
 			OutEvent(AMA_MOVING);	//v 2->2

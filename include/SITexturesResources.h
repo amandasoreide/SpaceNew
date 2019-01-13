@@ -72,6 +72,7 @@ typedef enum
 	CTM_SUPPLYSHIP_SHOOT,
 	CTM_TEXT_WEAPON,
 	CTM_TEXT_BONUS,
+	AMANDA_SHOT,
 	CTM_MAX_TEXTURE			//For accounting purpouses only	
 } CTM_Textures;
 

@@ -1347,12 +1347,7 @@ bool CSIGame::Initialize (void)
 
 	//Key map load from file. TO DO: verify it works, test and debug
 	//LoadKeyboard(); Not implemented yet
-	
-	std::stringstream ss;
-	ss << "LOADED CHARACTER XXX: \n";
-	ss << "\tHealth=" << defaultAmanda->Health << "\n";
-	CString msg = UGKS_string2CString(ss.str());
-	MessageBox(NULL, msg, L"Resultado parser", MB_OK);
+
 
 	return TRUE;
 }

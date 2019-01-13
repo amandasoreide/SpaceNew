@@ -188,6 +188,7 @@ void CShoot::Render()
 			{
 			case CHAR_2D:
 				top = 0.3;
+				// AMANDA_SHOT
 				TextMngr->Textures[CTM_SHIP_SHOOT]->SetTexture();
 				break;
 			case CHAR_LINES3D:

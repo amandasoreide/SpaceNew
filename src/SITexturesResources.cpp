@@ -66,4 +66,5 @@ UGKS_String CTM_TexturesFiles[CTM_MAX_TEXTURE] =
 	"SupplyShipShoot.bmp",		//CTM_SUPPLYSHIP_SHOOT
 	"text_weapon.bmp",			//CTM_TEXT_WEAPON
 	"text_bonus.bmp",			//CTM_TEXT_BONUS
+	"amanda_shot.bmp",
 };

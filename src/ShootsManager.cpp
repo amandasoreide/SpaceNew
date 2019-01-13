@@ -45,10 +45,11 @@ void CShootsManager::NewShoot(CSH_SHOOT_TYPE SType, Vector &Pos, Vector &Spd)
 	std::stringstream ss;
 	ss << "Info for new shoot:: \n";
 	ss << "pos x: " << Pos.v[XDIM] << ", y: " << Pos.v[YDIM];
+	ss << "\n sType: " << SType;
 	CString msg1 = UGKS_string2CString(ss.str());
-	//MessageBox(NULL, msg1, L"Resultado parser", MB_OK);
+	MessageBox(NULL, msg1, L"Resultado parser", MB_OK);
 
-
+	// her er feilen
 	shootTmp = (CShoot *)Cemetery->get(CHARS_SHOOT, SType);
 
 	//Assing sounds references to the new shoot created from scratch
