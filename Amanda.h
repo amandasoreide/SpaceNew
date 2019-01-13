@@ -7,8 +7,8 @@
 */
 
 
-#ifndef CSS_AMANDA
-#define CSS_AMANDA
+#ifndef CA_AMANDA
+#define CA_AMANDA
 
 #include <ExplosiveChar.h>
 #include <SIMessage.h>
@@ -18,9 +18,14 @@
 #define AMA_MAX_HEALTH			500 //Maximun amount of health of a given Supply Ship by default
 #define AMA_MAX_HIT_DURATION	500
 
-#define AMA_MAX_X_SHIFT			  4
+#define AMA_MAX_X_SHIFT			  7
 
 #define AMA_SHOOT_SPEED		  0.017f
+
+#define CA_SPECIALATTACK		0
+#define CA_SHIELD				0
+#define CA_TELEPORT				3
+#define CA_THREEATTACKS			0
 
 /** \typedef AMA_EXTRA_TIMERS
 
@@ -37,7 +42,7 @@ typedef enum {
 	AMA_SUPPLY_SHIP,
 	AMA_BIG_SUPPLY_SHIP,	//Super powerful supply ship. More health, bigger and can launch ships from inside. Only in 3D mode
 	AMA_MAXTYPE
-} CSS_TYPE_AMA;
+} CA_TYPE_AMA;
 
 ///Artificial Intelligence
 ///Different states for the FSMs that control the SS behaviour
@@ -48,7 +53,7 @@ typedef enum {
 	AMA_DYING,		///The character has been touched so many times that its life has gone negative. So it has to burst before being died. Starts an explosion and dies
 	AMA_DEAD,		///The character is no operative. Reached after dying
 	AMA_MAXSTATE	///For management purpouses only
-} CSS_SUPPLYSHIP_STATE_AMA;	///Generic character possible states that can be any character by default
+} CA_AMDANDA_STATE;	///Generic character possible states that can be any character by default
 
 ///Different transitions for the FSMs that control the SS behaviour
 typedef enum {
@@ -63,7 +68,7 @@ typedef enum {
 	AMA_FINISHED,				///The character is no operative. Reached after the game has finished: player has lost or win the level or game is exited
 	AMA_RESURRECTING,			///Passing to Unborn state
 	AMA_MAXTRANSITION			///For management purpouses only
-} AMA_SUPPLYSHIP_TRANSITIONS_AMA;	///Generic character possible states that can be any character by default
+} CA_AMANDA_TRANSITIONS;	///Generic character possible states that can be any character by default
 
 ///The ships that contains the captain of the enemy navy. They are moving over the whole navy. It has a different geometry
 class CAmanda : public CExplosiveChar
@@ -79,6 +84,11 @@ public:
 	void Init();
 	void CAmanda::InitTransforms();
 
+	int specialattack;
+	int shield;
+	int teleport;
+	int threeattacks;
+
 	//AI Methods
 	///Increasing health while time passes by
 	void AI_Healthing();
@@ -88,7 +98,7 @@ public:
 	void AI_Die();
 	///What to do when the supply ship is dead
 	void AI_Death();
-	bool OutEvent(AMA_SUPPLYSHIP_TRANSITIONS_AMA EventName);
+	bool OutEvent(CA_AMANDA_TRANSITIONS EventName);
 
 	//Physics
 	void Collided(CCharacter *CollidedChar);

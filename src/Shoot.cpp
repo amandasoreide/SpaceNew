@@ -122,6 +122,11 @@ void CShoot::SubtypeChange(CSH_SHOOT_TYPE	ShootType)
 				Health = 3;	//Amount of power an enemy shoot may substract from the player
 				SetAABBInGlobalCoord(.033f, 0.3f, 0.0f);				
 			break;
+			case CSH_AMANDA:
+				Health = 3;	//Amount of power an enemy shoot may substract from the player
+				// MAKE THIS BIGGER TO MAKE SPECIAL SHOTS
+				SetAABBInGlobalCoord(.033f, 0.3f, 0.0f);
+				break;
 			case CSH_CIRCLE_SHIP:
 				Health = 10;	//Amount of power an enemy shoot may substract from the player
 				SetAABBInGlobalCoord(.035f, 0.3f, 0.0f);				
@@ -165,6 +170,20 @@ void CShoot::Render()
 				TextMngr->Textures[CTM_PLAYER_SHOOT]->SetTexture();
 			break;
 		case CSH_SHIP:		/// Ship shoot
+			switch (RenderMode)
+			{
+			case CHAR_2D:
+				top = 0.3;
+				TextMngr->Textures[CTM_SHIP_SHOOT]->SetTexture();
+				break;
+			case CHAR_LINES3D:
+			case CHAR_3D:
+				top = 0.6;
+				TextMngr->Textures[CTM_SHIP_SHOOT]->SetTexture();
+				break;
+			}
+			break;
+		case CSH_AMANDA:		/// Amanda shoot, make your own texture
 			switch (RenderMode)
 			{
 			case CHAR_2D:
@@ -289,6 +308,7 @@ void CShoot::Collided (CCharacter *CollidedChar)
 		switch (CollidedChar->Type)
 		{
 		case CHARS_SHIP:
+		case CHARS_AMANDA:
 		case CHARS_SUPPLYSHIP:
 		case CHARS_CIRCLESHIP:
 			switch (SubType)
@@ -309,6 +329,7 @@ void CShoot::Collided (CCharacter *CollidedChar)
 			switch (SubType)
 			{
 			case CSH_SHIP:
+			case CSH_AMANDA:
 			case CSH_SUPPLY_SHIP:
 			case CSH_CIRCLE_SHIP:
 				Burnup = true;
@@ -419,6 +440,7 @@ void CShoot::Update ()	///What the character has to do on every time tick
 				if (Position.v[YDIM] > SIGLBD_PG_CEILING){		// Frustrum collection. Player's shoot is too much far away from the camera
 					AI_Die();}
 				break;
+			case CSH_AMANDA:
 			case CSH_SHIP:
 			case CSH_SUPPLY_SHIP:
 			case CSH_CIRCLE_SHIP:
@@ -472,6 +494,7 @@ void CShoot::DiscreteUpdate ()	///What the character has to do on every time tic
 				AI_Die();}
 			break;
 		case CSH_SHIP:
+		case CSH_AMANDA:
 		case CSH_SUPPLY_SHIP:
 		case CSH_CIRCLE_SHIP:
 			if (Position.v[YDIM] < SIGLBD_PG_BOTTOM)	// If the Shoot exits from the playground downwards ...

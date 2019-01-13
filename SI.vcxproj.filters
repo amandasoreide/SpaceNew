@@ -16,9 +16,6 @@
     <Filter Include="Source Files\API">
       <UniqueIdentifier>{6ce4d50c-fa84-42a9-ba6d-123c7040ec3a}</UniqueIdentifier>
     </Filter>
-    <Filter Include="Source Files\Space Invaders">
-      <UniqueIdentifier>{e6030fe4-1df3-413d-a8bc-100dd62e3882}</UniqueIdentifier>
-    </Filter>
     <Filter Include="Header Files\API">
       <UniqueIdentifier>{926b35b9-b0ec-4d51-aeb0-f3466d29e0b5}</UniqueIdentifier>
     </Filter>
@@ -70,22 +67,25 @@
     <Filter Include="Header Files\Space Invaders\Managers">
       <UniqueIdentifier>{6bed630a-01be-4fd7-bb52-a80e7d4964cc}</UniqueIdentifier>
     </Filter>
-    <Filter Include="Source Files\Space Invaders\Characters">
-      <UniqueIdentifier>{f1b3761f-097b-45d3-ae3b-a858d11d6885}</UniqueIdentifier>
-    </Filter>
-    <Filter Include="Source Files\Space Invaders\Managers">
-      <UniqueIdentifier>{753cb448-3a9e-4eee-8abd-2afc3fd7ace5}</UniqueIdentifier>
-    </Filter>
-    <Filter Include="Source Files\Space Invaders\Global">
-      <UniqueIdentifier>{61f2669d-f0d6-4cca-81b1-181d41d58e3f}</UniqueIdentifier>
-    </Filter>
     <Filter Include="Resource Files\Configuration">
       <UniqueIdentifier>{a46b2c16-9dc0-442c-8a56-f5aaa5f3c065}</UniqueIdentifier>
     </Filter>
     <Filter Include="Resource Files\Levels">
       <UniqueIdentifier>{0d3e4ea3-6a95-4e28-b0d5-2a5a17a5d60d}</UniqueIdentifier>
     </Filter>
-    <Filter Include="Source Files\Space Invaders\Parsers">
+    <Filter Include="Source Files\API\Space Invaders">
+      <UniqueIdentifier>{e6030fe4-1df3-413d-a8bc-100dd62e3882}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Source Files\API\Space Invaders\Characters">
+      <UniqueIdentifier>{f1b3761f-097b-45d3-ae3b-a858d11d6885}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Source Files\API\Space Invaders\Managers">
+      <UniqueIdentifier>{753cb448-3a9e-4eee-8abd-2afc3fd7ace5}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Source Files\API\Space Invaders\Global">
+      <UniqueIdentifier>{61f2669d-f0d6-4cca-81b1-181d41d58e3f}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Source Files\API\Space Invaders\Parsers">
       <UniqueIdentifier>{b0e30bcb-7974-49aa-9ac1-510fcb40e534}</UniqueIdentifier>
     </Filter>
   </ItemGroup>
@@ -174,9 +174,6 @@
     <ClInclude Include="include\GlobalTiming.h">
       <Filter>Header Files\Space Invaders\Global</Filter>
     </ClInclude>
-    <ClInclude Include="include\InitializationParser.h">
-      <Filter>Header Files\Space Invaders\Parsers</Filter>
-    </ClInclude>
     <ClInclude Include="include\LevelParser.h">
       <Filter>Header Files\Space Invaders\Parsers</Filter>
     </ClInclude>
@@ -258,6 +255,9 @@
     <ClInclude Include="Amanda.h">
       <Filter>Header Files\Space Invaders\Characters</Filter>
     </ClInclude>
+    <ClInclude Include="include\InitializationParser.h">
+      <Filter>Header Files\Space Invaders\Parsers</Filter>
+    </ClInclude>
   </ItemGroup>
   <ItemGroup>
     <ClCompile Include="API\Particles\Explosion.cpp">
@@ -297,22 +297,22 @@
       <Filter>Source Files\API</Filter>
     </ClCompile>
     <ClCompile Include="src\GameCharacters.cpp">
-      <Filter>Source Files\Space Invaders</Filter>
+      <Filter>Source Files\API\Space Invaders</Filter>
     </ClCompile>
     <ClCompile Include="src\GameSounds.cpp">
-      <Filter>Source Files\Space Invaders</Filter>
+      <Filter>Source Files\API\Space Invaders</Filter>
     </ClCompile>
     <ClCompile Include="src\GUI.cpp">
-      <Filter>Source Files\Space Invaders</Filter>
+      <Filter>Source Files\API\Space Invaders</Filter>
     </ClCompile>
     <ClCompile Include="src\Scene.cpp">
-      <Filter>Source Files\Space Invaders</Filter>
+      <Filter>Source Files\API\Space Invaders</Filter>
     </ClCompile>
     <ClCompile Include="src\SIKeyboard.cpp">
-      <Filter>Source Files\Space Invaders</Filter>
+      <Filter>Source Files\API\Space Invaders</Filter>
     </ClCompile>
     <ClCompile Include="src\SITexturesResources.cpp">
-      <Filter>Source Files\Space Invaders</Filter>
+      <Filter>Source Files\API\Space Invaders</Filter>
     </ClCompile>
     <ClCompile Include="lib\LiteHTML\LiteHTMLAttributes.cpp">
       <Filter>Source Files\External</Filter>
@@ -327,46 +327,46 @@
       <Filter>Source Files\API\gl</Filter>
     </ClCompile>
     <ClCompile Include="src\InitializationParser.cpp">
-      <Filter>Source Files\Space Invaders\Parsers</Filter>
+      <Filter>Source Files\API\Space Invaders\Parsers</Filter>
     </ClCompile>
     <ClCompile Include="src\Bonus.cpp">
-      <Filter>Source Files\Space Invaders\Characters</Filter>
+      <Filter>Source Files\API\Space Invaders\Characters</Filter>
     </ClCompile>
     <ClCompile Include="src\Brick.cpp">
-      <Filter>Source Files\Space Invaders\Characters</Filter>
+      <Filter>Source Files\API\Space Invaders\Characters</Filter>
     </ClCompile>
     <ClCompile Include="src\Bunker.cpp">
-      <Filter>Source Files\Space Invaders\Characters</Filter>
+      <Filter>Source Files\API\Space Invaders\Characters</Filter>
     </ClCompile>
     <ClCompile Include="src\CircleShip.cpp">
-      <Filter>Source Files\Space Invaders\Characters</Filter>
+      <Filter>Source Files\API\Space Invaders\Characters</Filter>
     </ClCompile>
     <ClCompile Include="src\Laser.cpp">
-      <Filter>Source Files\Space Invaders\Characters</Filter>
+      <Filter>Source Files\API\Space Invaders\Characters</Filter>
     </ClCompile>
     <ClCompile Include="src\Player.cpp">
-      <Filter>Source Files\Space Invaders\Characters</Filter>
+      <Filter>Source Files\API\Space Invaders\Characters</Filter>
     </ClCompile>
     <ClCompile Include="src\Reactor.cpp">
-      <Filter>Source Files\Space Invaders\Characters</Filter>
+      <Filter>Source Files\API\Space Invaders\Characters</Filter>
     </ClCompile>
     <ClCompile Include="src\Ship.cpp">
-      <Filter>Source Files\Space Invaders\Characters</Filter>
+      <Filter>Source Files\API\Space Invaders\Characters</Filter>
     </ClCompile>
     <ClCompile Include="src\Shoot.cpp">
-      <Filter>Source Files\Space Invaders\Characters</Filter>
+      <Filter>Source Files\API\Space Invaders\Characters</Filter>
     </ClCompile>
     <ClCompile Include="src\SupplyShip.cpp">
-      <Filter>Source Files\Space Invaders\Characters</Filter>
+      <Filter>Source Files\API\Space Invaders\Characters</Filter>
     </ClCompile>
     <ClCompile Include="src\SIGame.cpp">
-      <Filter>Source Files\Space Invaders\Characters</Filter>
+      <Filter>Source Files\API\Space Invaders\Characters</Filter>
     </ClCompile>
     <ClCompile Include="src\BonusManager.cpp">
-      <Filter>Source Files\Space Invaders\Managers</Filter>
+      <Filter>Source Files\API\Space Invaders\Managers</Filter>
     </ClCompile>
     <ClCompile Include="src\Navy.cpp">
-      <Filter>Source Files\Space Invaders\Managers</Filter>
+      <Filter>Source Files\API\Space Invaders\Managers</Filter>
     </ClCompile>
     <ClCompile Include="lib\HRT\HRTimer.cpp">
       <Filter>Source Files\External</Filter>
@@ -378,34 +378,34 @@
       <Filter>Source Files\External</Filter>
     </ClCompile>
     <ClCompile Include="src\Boometer.cpp">
-      <Filter>Source Files\Space Invaders\Characters</Filter>
+      <Filter>Source Files\API\Space Invaders\Characters</Filter>
     </ClCompile>
     <ClCompile Include="src\Global.cpp">
-      <Filter>Source Files\Space Invaders\Global</Filter>
+      <Filter>Source Files\API\Space Invaders\Global</Filter>
     </ClCompile>
     <ClCompile Include="src\GlobalTiming.cpp">
-      <Filter>Source Files\Space Invaders\Global</Filter>
+      <Filter>Source Files\API\Space Invaders\Global</Filter>
     </ClCompile>
     <ClCompile Include="API\ExplosiveChar.cpp">
       <Filter>Source Files\API</Filter>
     </ClCompile>
     <ClCompile Include="src\SIMessage.cpp">
-      <Filter>Source Files\Space Invaders</Filter>
+      <Filter>Source Files\API\Space Invaders</Filter>
     </ClCompile>
     <ClCompile Include="src\ShootsManager.cpp">
-      <Filter>Source Files\Space Invaders\Managers</Filter>
+      <Filter>Source Files\API\Space Invaders\Managers</Filter>
     </ClCompile>
     <ClCompile Include="src\SICharactersFactory.cpp">
-      <Filter>Source Files\Space Invaders\Managers</Filter>
+      <Filter>Source Files\API\Space Invaders\Managers</Filter>
     </ClCompile>
     <ClCompile Include="src\Main.cpp">
-      <Filter>Source Files\Space Invaders</Filter>
+      <Filter>Source Files\API\Space Invaders</Filter>
     </ClCompile>
     <ClCompile Include="src\SISceneGraph.cpp">
-      <Filter>Source Files\Space Invaders\Managers</Filter>
+      <Filter>Source Files\API\Space Invaders\Managers</Filter>
     </ClCompile>
     <ClCompile Include="src\Background.cpp">
-      <Filter>Source Files\Space Invaders\Characters</Filter>
+      <Filter>Source Files\API\Space Invaders\Characters</Filter>
     </ClCompile>
     <ClCompile Include="src\GUIGadget.cpp">
       <Filter>Source Files\API</Filter>
@@ -417,10 +417,10 @@
       <Filter>Source Files\API\Particles</Filter>
     </ClCompile>
     <ClCompile Include="Amanda.cpp">
-      <Filter>Source Files\Space Invaders\Characters</Filter>
+      <Filter>Source Files\API\Space Invaders\Characters</Filter>
     </ClCompile>
     <ClCompile Include="src\LevelParser.cpp">
-      <Filter>Source Files\Space Invaders\Characters</Filter>
+      <Filter>Source Files\API\Space Invaders\Parsers</Filter>
     </ClCompile>
   </ItemGroup>
   <ItemGroup>

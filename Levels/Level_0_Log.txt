@@ -114,18 +114,6 @@ Start tag: CHARACTER
 Text: 
         
 Start tag: NAME
-Text: AMANDA
-End tag: NAME
-Text: 
-    
-End tag: CHARACTER
-Text: 
-
-    
-Start tag: CHARACTER
-Text: 
-        
-Start tag: NAME
 Text: CIRCLESHIP
 End tag: NAME
 Text: 
@@ -201,6 +189,46 @@ Text:
             
 Start tag: X
 Text: 0.001
+End tag: X
+Text: 	
+Comments: 
+Text: d-->
+            
+Start tag: Y
+Text: 0.0
+End tag: Y
+Text: 
+            
+Start tag: Z
+Text: 0.0
+End tag: Z
+Text: 
+        
+End tag: SPEED
+Text: 
+    
+End tag: CHARACTER
+Text: 
+
+    
+Start tag: CHARACTER
+Text: 
+        
+Start tag: NAME
+Text: AMANDA
+End tag: NAME
+Text: 
+        
+Start tag: HEALTH
+Text: 20
+End tag: HEALTH
+Text: 
+        
+Start tag: SPEED
+Text: 
+            
+Start tag: X
+Text: 0.004
 End tag: X
 Text: 	
 Comments: 

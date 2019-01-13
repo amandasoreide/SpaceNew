@@ -10,9 +10,12 @@
 */
 
 #include <Navy.h>
+#include <atlstr.h>
 
 #include <ShootsManager.h>	/// Header File class Manager for the shoots
-
+#include <cstdlib>
+#include <iostream>
+#include <ctime>
 #include <Ship.h>
 #include <Amanda.h>
 #include <Shoot.h>
@@ -20,6 +23,8 @@
 #include <ExecutionMode.h>
 #include <GlobalDefs.h>
 #include <glext.h>
+#include <iostream>
+#include <random>
 
 #define AMA_WIDTH	1.0F
 #define AMA_HEIGHT	0.6F
@@ -54,9 +59,9 @@ UGKS_String AMA_NameTransition[AMA_MAXTRANSITION] =
 
 void CAmanda::InitTransforms()
 {
-	Scale.v[XDIM] = 0.25;
-	Scale.v[YDIM] = 0.25;
-	Scale.v[ZDIM] = 0.25;
+	Scale.v[XDIM] = 0.3;
+	Scale.v[YDIM] = 0.3;
+	Scale.v[ZDIM] = 0.3;
 
 	Rotation.v[XDIM] = 90.0;
 	Rotation.v[YDIM] = 0.0;
@@ -71,7 +76,12 @@ void CAmanda::Init()
 	SubType = AMA_SUPPLY_SHIP;
 	Type = CHARS_AMANDA;
 
-	Speed.v[XDIM] = 0.002f;	//Units/ms
+	shield = CA_SHIELD;
+	specialattack = CA_SPECIALATTACK;
+	teleport = CA_TELEPORT;
+	threeattacks = CA_THREEATTACKS;
+
+	Speed.v[XDIM] = 0.09f;	//Units/ms
 
 	Explosion.Init(SIGLBD_MAX_UPDATETIME);
 	Explosion.Health = CS_MAX_EXPLOSION_LIFE;
@@ -121,6 +131,22 @@ void CAmanda::AI_Healthing()
 void CAmanda::AI_Move()
 {
 	PositionPrev = Position;
+
+	// I make a random variable sum
+	std::srand(std::time(nullptr)); // use current time as seed for random generator
+	int random_variable = std::rand();
+	
+	int x = 1 + std::rand() / ((RAND_MAX + 1u) / 40);
+	int a = x;
+
+	if (x == 8 && teleport > 0) {
+
+		teleport--;
+		int telex = (1 + std::rand() / ((RAND_MAX + 1u) / 10)) - 5;
+		int teley = (1 + std::rand() / ((RAND_MAX + 1u) / 5));
+		Position.v[XDIM] = telex;
+		Position.v[YDIM] = teley;
+	}
 	//Argument means the amount of miliseconds spent during the last 10 frames/game iterations
 	//UGKPHY_EULER integrator. No acceleration taken into account
 	MoveRelTo(Speed.v[XDIM] * Timer[AMA_UPD_PERIOD].GetAlarmPeriodms(), 0.0f, 0.0f);
@@ -151,7 +177,7 @@ void CAmanda::AI_Death()
 {
 }
 
-bool CAmanda::OutEvent(AMA_SUPPLYSHIP_TRANSITIONS_AMA EventName) { 
+bool CAmanda::OutEvent(CA_AMANDA_TRANSITIONS EventName) { 
 	std::string eventname = AMA_NameTransition[EventName];
 	bool result = AI->outEvent(eventname, NULL, this);
 	return result;
@@ -352,21 +378,34 @@ void CAmanda::Update(void)
 			if (msUpdSShip > SIGLBD_MAX_UPDATETIME) msUpdSShip = SIGLBD_MAX_UPDATETIME;
 			Timer[AMA_UPD_PERIOD].SetAlarm(Timer[AMA_UPD_PERIOD].ms2Ticks(msUpdSShip));
 
-			//Shooting calculation
+		
+				//Shooting calculation
 			if ((floor((rand() % 100000 / (1 + Navy->ShootsFrequency)) / msUpdSShip)) == 1) ///Has the Supply ship to fire?
 			{
 				P.Set(Position.v[XDIM],
 					Position.v[YDIM] - .3f,
 					.05f);
-				S.Set(0.0f,
-					-AMA_SHOOT_SPEED,
-					0.0f);
+				S.Set(0.0f, -AMA_SHOOT_SPEED, 0.0f);
+				// not sure about what this is
+				if (Navy->WithShoots) {
+					ShootsManager->NewShoot(CSH_AMANDA, P, S);
+					// 3 attacks:
+					int x = 1 + std::rand() / ((RAND_MAX + 1u) / 10);
+					if (x == 1) {
+						P.Set(Position.v[XDIM],
+							Position.v[YDIM] - .3f,
+							.05f);
+						S.Set(-0.25f, -AMA_SHOOT_SPEED, 0.0f);
+						ShootsManager->NewShoot(CSH_AMANDA, P, S);
 
-				if (Navy->WithShoots)
-					ShootsManager->NewShoot(CSH_SUPPLY_SHIP, P, S);
-
+						P.Set(Position.v[XDIM],
+							Position.v[YDIM] - .3f,
+							.05f);
+						S.Set(0.25f, -AMA_SHOOT_SPEED, 0.0f);
+						ShootsManager->NewShoot(CSH_AMANDA, P, S);
+					}
+				}
 			}
-
 			//Move the supply ship
 			OutEvent(AMA_MOVING);	//v 2->2
 			AI_Move();
@@ -404,7 +443,7 @@ void CAmanda::DiscreteUpdate(void)
 				0.0f);
 
 			if (Navy->WithShoots)
-				ShootsManager->NewShoot(CSH_SUPPLY_SHIP, P, S);
+				ShootsManager->NewShoot(CSH_AMANDA, P, S);
 		}
 
 		//Move the supply ship

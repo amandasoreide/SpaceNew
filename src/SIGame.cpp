@@ -1439,6 +1439,10 @@ UGKS_String SaveCharacter(CCharacter *C)
 		cName = CHARS_Token2Lexeme(CHARS_SUPPLYSHIP);
 		break;
 
+	case CHARS_AMANDA:
+		cName = CHARS_Token2Lexeme(CHARS_AMANDA);
+		break;
+
 	case CHARS_SHIP:
 		cName = CHARS_Token2Lexeme(CHARS_SHIP);
 		break;
@@ -1964,6 +1968,10 @@ void CSIGame::ReceiveMessage(RTDESK_CMsg *pMsg)
 			Score += (CS_MAXTYPE - type) * 10;
 			if (Score > HiScore) HiScore = Score;
 			break;
+		case CHARS_AMANDA:
+			Score += (CS_MAXTYPE - type) * 10;
+			if (Score > HiScore) HiScore = Score;
+			break;
 		case CHARS_CIRCLESHIP:
 			Score += (int)ceil((float)rand() / 100);
 			if (Score > HiScore) HiScore = Score;
@@ -2052,11 +2060,16 @@ void CSIGame::AssignRTDESK2Navy()
 			UpdT = TimerManager.GetTimer(SIGLBT_UPDATE_TIMING)->ms2Ticks(DefaultUpdPeriod[CHARS_CIRCLESHIP]);
 			RndT = TimerManager.GetTimer(SIGLBT_UPDATE_TIMING)->ms2Ticks(DefaultRndPeriod[CHARS_CIRCLESHIP]);
 			break;
+		case CHARS_AMANDA:
+			UpdT = TimerManager.GetTimer(SIGLBT_UPDATE_TIMING)->ms2Ticks(DefaultUpdPeriod[CHARS_AMANDA]);
+			RndT = TimerManager.GetTimer(SIGLBT_UPDATE_TIMING)->ms2Ticks(DefaultRndPeriod[CHARS_AMANDA]);
+			break;
 		}
 
 		switch (Ship->Type)
 		{
 		case CHARS_SHIP:
+		case CHARS_AMANDA:
 		case CHARS_SUPPLYSHIP:
 		case CHARS_CIRCLESHIP:
 			Ship->UpdateSF(TimerManager.GetSF());
@@ -2091,6 +2104,7 @@ void CSIGame::LaunchInitialEvents()
 		switch (Ship->Type)
 		{
 		case CHARS_SHIP:
+		case CHARS_AMANDA:
 		case CHARS_SUPPLYSHIP:
 		case CHARS_CIRCLESHIP:
 			msg = GetMsgToFill(UMSG_MSG_BASIC_TYPE);
@@ -2108,6 +2122,9 @@ void CSIGame::LaunchInitialEvents()
 			break;
 		case CHARS_CIRCLESHIP:
 			SendMsg(msg, Ship, Ship->Timer[CCS_UPD_PERIOD].GetAlarmPeriodms());
+			break;
+		case CHARS_AMANDA:
+			SendMsg(msg, Ship, Ship->Timer[AMA_UPD_PERIOD].GetAlarmPeriodms());
 			break;
 		}
 	}
@@ -2292,6 +2309,8 @@ void CSIGame::Loading ()
 				}
 				break;
 			case CHARS_SUPPLYSHIP:
+			case CHARS_AMANDA:
+				Ship->FitMeshIntoBoundingBox();
 			case CHARS_CIRCLESHIP:
 				Ship->FitMeshIntoBoundingBox();
 			}

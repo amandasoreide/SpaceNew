@@ -290,8 +290,29 @@ End tag: HEALTH
 Text: 
         
 Start tag: MESH
-Text: cross.3ds
+Text: amanda.3ds
 End tag: MESH
+Text: 
+        
+Start tag: SHIELD
+Initialization parser error: Token SHIELD not allowed in a CHARACTER group.
+Text: 0
+End tag: SHIELD
+Initialization parser error: SHIELD clossing tag without correspondent opening tag in a CHARACTER
+Text: 
+        
+Start tag: SPECIALATTACK
+Initialization parser error: Token SPECIALATTACK not allowed in a CHARACTER group.
+Text: 0
+End tag: SPECIALATTACK
+Initialization parser error: SPECIALATTACK clossing tag without correspondent opening tag in a CHARACTER
+Text: 
+        
+Start tag: TELEPORT
+Initialization parser error: Token TELEPORT not allowed in a CHARACTER group.
+Text: 12
+End tag: TELEPORT
+Initialization parser error: TELEPORT clossing tag without correspondent opening tag in a CHARACTER
 Text: 
         
 Start tag: TEXTURE3D
@@ -304,18 +325,25 @@ Text: supplyship.bmp
 End tag: TEXTURE2D
 Text: 
         
+Start tag: THREEATTACKS
+Initialization parser error: Token THREEATTACKS not allowed in a CHARACTER group.
+Text: 0
+End tag: THREEATTACKS
+Initialization parser error: THREEATTACKS clossing tag without correspondent opening tag in a CHARACTER
+Text: 
+        
 Start tag: SPEED
 Text: 
             
 Start tag: X
-Text: 0.002
+Text: 0.08
 End tag: X
 Text: 	
 Comments: 
 Text: d-->
             
 Start tag: Y
-Text: 0.0
+Text: 0.02
 End tag: Y
 Text: 
             

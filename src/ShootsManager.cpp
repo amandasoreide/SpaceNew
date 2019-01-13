@@ -14,6 +14,9 @@
 #include <ShootsManager.h>
 #include "Quadtree.h"
 #include <SIGame.h>
+#include <iostream>
+#include <atlstr.h>
+//#include <UGKHTMLReader.h>
 
 ///Shoots manager Initilization
 void CShootsManager::Init() //Used when all the values are initialized by default
@@ -38,6 +41,13 @@ void CShootsManager::NewShoot(CSH_SHOOT_TYPE SType, Vector &Pos, Vector &Spd)
 {
 	CShoot *shootTmp;
 	unsigned int i;
+	
+	std::stringstream ss;
+	ss << "Info for new shoot:: \n";
+	ss << "pos x: " << Pos.v[XDIM] << ", y: " << Pos.v[YDIM];
+	CString msg1 = UGKS_string2CString(ss.str());
+	//MessageBox(NULL, msg1, L"Resultado parser", MB_OK);
+
 
 	shootTmp = (CShoot *)Cemetery->get(CHARS_SHOOT, SType);
 

@@ -44,8 +44,9 @@ typedef enum {
 	CSH_SHIP,				///<Shoot sent by a enemy ship. This kind of shoot has to be always after all player's shootings
 	CSH_SUPPLY_SHIP,		///<Shoot sent by a enemy Supply Ship. This kind of shoot has to be always after all player's shootings
 	CSH_CIRCLE_SHIP,		///<Shoot sent by a enemy Circle Ship. This kind of shoot has to be always after all player's shootings
-	CSH_BULLET,				///
-	CSH_MAX_SHOOTS_TYPES	///<Not a real shoot. This is for accounting purpouses only
+	CSH_BULLET,		
+	CSH_MAX_SHOOTS_TYPES,	///<Not a real shoot. This is for accounting purpouses only
+	CSH_AMANDA
 } CSH_SHOOT_TYPE;
 
 //Type of different sounds a shoot can make when shot or impacted

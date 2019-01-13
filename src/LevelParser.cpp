@@ -885,8 +885,9 @@ void CLevelReader::Characters(const UGKS_String &rText, DWORD dwAppData, bool &b
 		switch (CLeP_CharType)
 		{
 		case CHARS_AMANDA:
-			if (intAux > 0)
+			if (intAux > 0) {
 				Amanda->Health = Amanda->MaxHealth = intAux;
+			}
 			else if (intAux == CHAR_HEALTH_INFINITE)
 				Amanda->Health = Amanda->MaxHealth = CHAR_HEALTH_INFINITE;
 			break;
@@ -1094,8 +1095,7 @@ void CLevelReader::Characters(const UGKS_String &rText, DWORD dwAppData, bool &b
 		case CHARACTER_L:
 			msg = rText;
 			CLeP_CharType = (GCHARS_CharacterType)CharacterFactory->Lexeme2Token(msg);
-			switch (CLeP_CharType)
-			{
+			switch (CLeP_CharType) {
 			case CHARS_AMANDA:
 				//Create a new node to set inside the scene graph
 				Amanda = (CAmanda*)CharacterPool->get(CHARS_AMANDA, UGKOBJM_NO_SUBTYPE);
@@ -1107,20 +1107,7 @@ void CLevelReader::Characters(const UGKS_String &rText, DWORD dwAppData, bool &b
 
 				SceneGraph.AddCharacter(Amanda);
 				break;
-				
-				
-//				CString st = "Amanda ble brukt i clep_chartype";
-//				skrivTekst(st);
-/* Previous: 
-				Amanda = (CAmanda*)CharacterPool->get(CHARS_AMANDA, UGKOBJM_NO_SUBTYPE);
-				*Amanda = *defaultAmanda;
-				Amanda->AI_Init();
-				Amanda->OutEvent(AMA_BORNING);	//v 0->1
-
-				Amanda->InitTransforms2D();
-
-				SceneGraph.AddCharacter(Amanda);
-				break; */
+			
 			case CHARS_BONUS:
 				///They are predefined by the program. No allowed yet in this version.
 				break;
