@@ -123,9 +123,15 @@ void CShoot::SubtypeChange(CSH_SHOOT_TYPE	ShootType)
 				SetAABBInGlobalCoord(.033f, 0.3f, 0.0f);				
 			break;
 			case CSH_AMANDA:
-				Health = 3;	//Amount of power an enemy shoot may substract from the player
-				// MAKE THIS BIGGER TO MAKE SPECIAL SHOTS
-				SetAABBInGlobalCoord(.033f, 0.3f, 0.0f);
+				if ((1 + std::rand() / ((RAND_MAX + 1u) / 10)) == 2) {
+					Health = 30;
+					SetAABBInGlobalCoord(0.15f, 0.3f, 0.0f);
+				}
+				else {
+					Health = 3;	//Amount of power an enemy shoot may substract from the player
+					// MAKE THIS BIGGER TO MAKE SPECIAL SHOTS
+					SetAABBInGlobalCoord(.033f, 0.3f, 0.0f);
+				}
 				break;
 			case CSH_CIRCLE_SHIP:
 				Health = 10;	//Amount of power an enemy shoot may substract from the player

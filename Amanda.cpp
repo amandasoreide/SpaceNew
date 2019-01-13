@@ -29,6 +29,13 @@
 #define AMA_WIDTH	1.0F
 #define AMA_HEIGHT	0.6F
 
+#define CA_XSIZE2D 1.0f
+#define CA_YSIZE2D 0.6f
+
+#define CA_XSIZE3D 0.9f
+#define CA_YSIZE3D 0.5f
+#define CA_ZSIZE   0.0f
+
 extern CNavy			*Navy;			///<Singleton to save the general configuration of the enemy Navy
 extern CShootsManager	*ShootsManager;
 
@@ -228,6 +235,23 @@ void CAmanda::ChangeRenderMode(CHAR_RENDER_MODE Mode)
 	case CHAR_NO_RENDER:			//No render for this character: camera, collision objects,...
 		break;
 	case CHAR_2D:
+		SetAABBInGlobalCoord(CA_XSIZE2D, CA_YSIZE2D, CA_ZSIZE);
+		break;
+	case CHAR_LINES3D:
+		break;
+	case CHAR_3D:
+		SetAABBInGlobalCoord(CA_XSIZE3D, CA_YSIZE3D, CA_ZSIZE);
+		FitMeshIntoBoundingBox();
+		break;
+	default: return;
+	}
+
+	/*
+	switch (Mode)
+	{
+	case CHAR_NO_RENDER:			//No render for this character: camera, collision objects,...
+		break;
+	case CHAR_2D:
 		CharAABB.AABB[CHAR_BBSIZE][XDIM].Value = 0.9f;
 		CharAABB.AABB[CHAR_BBSIZE][YDIM].Value = 0.5f;
 		CharAABB.AABB[CHAR_BBSIZE][ZDIM].Value = 0.0f;
@@ -244,7 +268,7 @@ void CAmanda::ChangeRenderMode(CHAR_RENDER_MODE Mode)
 #endif
 		break;
 	default: return;
-	}
+	}*/
 }
 
 void CAmanda::Render()
