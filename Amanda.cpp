@@ -382,10 +382,6 @@ void CAmanda::Update(void)
 				//Shooting calculation
 			//if ((floor((rand() % 100000 / (1 + Navy->ShootsFrequency)) / msUpdSShip)) == 1) ///Has the Supply ship to fire?
 			//{
-				std::stringstream ss;
-				ss << "amanda shooting: \n";
-				CString msg = UGKS_string2CString(ss.str());
-				MessageBox(NULL, msg, L"Rendering", MB_OK);
 
 				P.Set(Position.v[XDIM],
 					Position.v[YDIM] - .3f,
@@ -393,28 +389,22 @@ void CAmanda::Update(void)
 				S.Set(0.0f, -AMA_SHOOT_SPEED, 0.0f);
 				// not sure about what this is
 				if (Navy->WithShoots) {
-					std::stringstream ss;
-					ss << "navy is withshoots \n";
-					CString msg = UGKS_string2CString(ss.str());
-					MessageBox(NULL, msg, L"Rendering", MB_OK);
-
 					ShootsManager->NewShoot(CSH_AMANDA, P, S);
 					// 3 attacks:
-					//int x = 1 + std::rand() / ((RAND_MAX + 1u) / 10);
-					int x = 1;
-					/*if (x == 1) {
-						P.Set(Position.v[XDIM],
+					int x = 1 + std::rand() / ((RAND_MAX + 1u) / 10);
+					x = 1;
+					if (x == 1) {
+						P.Set(Position.v[XDIM] - 0.25,
 							Position.v[YDIM] - .3f,
 							.05f);
-						S.Set(-0.25f, -AMA_SHOOT_SPEED, 0.0f);
 						ShootsManager->NewShoot(CSH_AMANDA, P, S);
-
-						P.Set(Position.v[XDIM],
+						// Wish I could make this angle, maybe later
+						//S.Set(0.25f, -AMA_SHOOT_SPEED, 0.0f);
+						P.Set(Position.v[XDIM] + 0.25,
 							Position.v[YDIM] - .3f,
 							.05f);
-						S.Set(0.25f, -AMA_SHOOT_SPEED, 0.0f);
 						ShootsManager->NewShoot(CSH_AMANDA, P, S);
-					}*/
+					}
 				//}
 			}
 			//Move the supply ship

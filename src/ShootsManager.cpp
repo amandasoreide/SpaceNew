@@ -47,9 +47,8 @@ void CShootsManager::NewShoot(CSH_SHOOT_TYPE SType, Vector &Pos, Vector &Spd)
 	ss << "pos x: " << Pos.v[XDIM] << ", y: " << Pos.v[YDIM];
 	ss << "\n sType: " << SType;
 	CString msg1 = UGKS_string2CString(ss.str());
-	MessageBox(NULL, msg1, L"Resultado parser", MB_OK);
+	//MessageBox(NULL, msg1, L"Resultado parser", MB_OK);
 
-	// her er feilen
 	shootTmp = (CShoot *)Cemetery->get(CHARS_SHOOT, SType);
 
 	//Assing sounds references to the new shoot created from scratch
@@ -74,6 +73,7 @@ void CShootsManager::NewShoot(CSH_SHOOT_TYPE SType, Vector &Pos, Vector &Spd)
 	shootTmp->ChangeRenderMode(RenderMode);	shootTmp->SubtypeChange(SType);
 
 	msUpdShoot = abs(shootTmp->CharAABB.AABB[CHAR_BBSIZE][YDIM].Value/shootTmp->Speed.v[YDIM]);
+
 	if(msUpdShoot > UPDATE_SHOOT) msUpdShoot = UPDATE_SHOOT;
 	shootTmp->msUpdMsg		= msUpdShoot;
 	shootTmp->ticksUpdMsg	= TimeUpdShoot;
